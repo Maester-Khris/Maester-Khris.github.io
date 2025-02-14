@@ -1,0 +1,70 @@
+.icon-skill{
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+    border-radius: 25px;
+    border: 2px solid #0096FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.icon-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.my-subtitle{
+    color: #23459c;
+    font-size: 12px!important;
+    font-weight: bold;
+}
+
+
+.skiilset-container{
+    position: relative;
+}
+.skiilset-container:hover .skills-view{
+    width: 600px;
+    transition-duration: 1s;
+}
+.skills-view{
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 500px;
+    height: 100%;
+    background-color: lightblue;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.skills-view-background{
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/devops-automation.jpg');
+    opacity: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skills-view-icon{
+    width:400px!important;
+    position: absolute; 
+    right: 20px;
+    color: black; 
+    z-index: 1; 
+    font-size: 24px; 
+    text-wrap: wrap;
+}
+.skills-view-icon h4{
+    color: #23459c!important;
+}
+.skills-list{
+    width: 80%!important;
+    float: right;
+}
+/* transform: translateX(25%); */
