@@ -93,8 +93,8 @@
             color: white !important;
         }
 
-        ul li{
-            color: #3C3E41!important;
+        ul li {
+            color: #3C3E41 !important;
         }
 
         @media (max-width: 1024px) {
@@ -164,6 +164,16 @@
             .skills-list {
                 width: 100% !important;
             }
+
+           
+        }
+        @media (max-width: 768px) {
+            .background-image-area{
+                height: 500px!important;
+            }
+            .user-info-bottom .button-wrapper a:first-child{
+                margin-right: 10px!important;
+            }
         }
     </style>
 </head>
@@ -171,6 +181,33 @@
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
     <!-- Start Header -->
+    <!-- <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="/assets/images/cropped_image.png" alt="logo"
+                                style="width:48px!important;height:48px!important;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                        <ul class="primary-menu nav nav-pills">
+                            <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
     <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
         <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
             <!-- Start Header Left -->
@@ -189,32 +226,47 @@
             <div class="col-lg-10 col-6">
                 <div class="header-center">
                     <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                        <!-- Start Mainmanu Nav -->
                         <ul class="primary-menu nav nav-pills">
                             <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
-                            </li>
                         </ul>
+                        <!-- End Mainmanu Nav -->
                     </nav>
+                    <!-- Start Header Right  -->
+                    <div class="header-right">
+                        
+                        <div class="hamberger-menu d-block d-xl-none">
+                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                        </div>
+                        <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Header Right  -->
                 </div>
             </div>
+            <!-- End Header Center -->
         </div>
     </header>
 
 
 
     <div class="popup-mobile-menu">
-        <div class="inner">
+        <div class="inner" style="padding: 20px;">
             <div class="menu-top">
                 <div class="menu-header">
                     <a class="logo" href="index.html">
-                        <img src="/assets/images/logo/logos-circle.png" alt="Personal Portfolio">
+                        <img src="/assets/images/cropped_image.png" alt="logo"
+                                style="width:48px!important;height:48px!important;">
                     </a>
                     <div class="close-button">
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription">Inbio is a personal portfolio template. You can customize all.</p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills">
@@ -223,24 +275,12 @@
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
                 </ul>
                 <!-- social sharea area -->
-                <div class="social-share-style-1 mt--40">
-                    <span class="title">find with me</span>
+                <div class="social-share-style-1 mt--10" style="margin-top: 10px!important;">
+                    <span class="title">get in touch with me</span>
                     <ul class="social-share d-flex liststyle">
-                        <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                                </svg></a>
-                        </li>
-                        <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                </svg></a>
-                        </li>
-                        <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/joelgouend-thesysengineer/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                                     <path
@@ -248,7 +288,8 @@
                                     </path>
                                     <rect x="2" y="9" width="4" height="12"></rect>
                                     <circle cx="4" cy="4" r="2"></circle>
-                                </svg></a>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -728,19 +769,17 @@
                                                                 <div class="heading">
                                                                     <div class="title">
                                                                         <h4>Full Stack engineer</h4>
-                                                                        <span>Wiconet - part time (since Jan
+                                                                        <span>Wiconet - part time (Jan 2024 - Aou
                                                                             2024)</span>
                                                                     </div>
                                                                 </div>
                                                                 <p class="description">
-                                                                    Wiconet is a startup created inside a laboratory of
-                                                                    applied science that focused on Machine learning,
-                                                                    Network and cutting-edge technique to solve real
-                                                                    society problems.
-                                                                    My day to day work focused on <strong>Python - React
-                                                                        - Nodejs</strong>. One my accomplishement is the
-                                                                    building of a machine learning wen service for
-                                                                    advanced text processing.
+                                                                    Wiconet is an early stage startup created inside computer science applied research
+                                                                    laboratory whose work is focused on Machine learning,
+                                                                    Computer Networking and cutting-edge techniques applied to real life problems.
+                                                                    The main technology stack I was
+                                                                    working with involved <strong>Python - React
+                                                                        - Nodejs</strong>.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -751,20 +790,17 @@
                                                                 <div class="heading">
                                                                     <div class="title">
                                                                         <h4>Full stack Engineer</h4>
-                                                                        <span>Firesoftware - Full time (2021 -
-                                                                            2023)</span>
+                                                                        <span>Firesoftware - Full time (Sep 2021 -
+                                                                            May 2024)</span>
                                                                     </div>
                                                                 </div>
                                                                 <p class="description">
-                                                                    Firesoftware is an established company with more
-                                                                    than 12 years of existance and solution providing. I
-                                                                    integrated the team as Software engineer Intern,
-                                                                    then advance to the software development project
-                                                                    manager.
-                                                                    My day to day task inclued planning and executing
-                                                                    meeting with client, executing the whole process of
-                                                                    software lifecyle. My techincal stack here was
-                                                                    principally <strong>Java - Php - Angular</strong>.
+                                                                    I integrated the team as Software engineer Intern,
+                                                                    then advanced to the level of software development
+                                                                    project manager. My day to day tasks included planning and executing
+                                                                    meeting with client, going through the whole process of
+                                                                    software lifecycle. The main technology stack I was
+                                                                    working with involved <strong>Java - Angular - Php</strong>.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -798,7 +834,7 @@
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
                             class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
-                            
+
                             <!-- Start Single Portfolio  -->
                             <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-toggle="modal" data-target="#javaModalCenter">
@@ -832,8 +868,8 @@
                                 </div>
                             </div>
 
-                             <!-- Start Single Portfolio  -->
-                             <div class="rn-portfolio-slick">
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-toggle="modal" data-target="#javaServicesModalCenter">
                                     <div class="inner">
                                         <div class="thumbnail">
@@ -845,7 +881,8 @@
                                         <div class="content">
                                             <div class="category-info">
                                                 <div class="category-list">
-                                                    <a href="javascript:void(0)">SPRINGBOOT, MSSQL, T-SQL, LDAP, KAFKA</a>
+                                                    <a href="javascript:void(0)">SPRINGBOOT, MSSQL, T-SQL, LDAP,
+                                                        KAFKA</a>
                                                 </div>
                                                 <div class="meta">
                                                     <span><a href="javascript:void(0)"><i class="bi bi-github"
@@ -861,14 +898,14 @@
                                 </div>
                             </div>
 
-                             <!-- Start Single Portfolio  -->
+                            <!-- Start Single Portfolio  -->
                             <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-toggle="modal" data-target="#taskalertFrontModalCenter">
                                     <div class="inner">
                                         <div class="thumbnail">
                                             <a href="javascript:void(0)">
-                                                <img src="/assets/images/taskalert_front.png" alt="Personal Portfolio Images"
-                                                    style="height:300px;">
+                                                <img src="/assets/images/taskalert_front.png"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -893,14 +930,14 @@
                                 </div>
                             </div>
 
-                              <!-- Start Single Portfolio  -->
-                              <div class="rn-portfolio-slick">
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-toggle="modal" data-target="#taskalertBackModalCenter">
                                     <div class="inner">
                                         <div class="thumbnail">
                                             <a href="javascript:void(0)">
-                                                <img src="/assets/images/taskalert_backend.png" alt="Personal Portfolio Images"
-                                                    style="height:300px;">
+                                                <img src="/assets/images/taskalert_backend.png"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -988,8 +1025,8 @@
                                 </div>
                             </div>
 
-                             <!-- Start Single Portfolio  -->
-                             <div class="rn-portfolio-slick">
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-toggle="modal" data-target="#python-nlp">
                                     <div class="inner">
                                         <div class="thumbnail">
@@ -1001,7 +1038,8 @@
                                         <div class="content">
                                             <div class="category-info">
                                                 <div class="category-list">
-                                                    <a href="javascript:void(0)">Python, Flask, Daphne, BERT LLM, NLP, SPacy</a>
+                                                    <a href="javascript:void(0)">Python, Flask, Daphne, BERT LLM, NLP,
+                                                        SPacy</a>
                                                 </div>
                                                 <div class="meta">
                                                     <span><a href="javascript:void(0)"><i class="bi bi-github"
@@ -1057,56 +1095,7 @@
 
 
         <!-- ============== Start Modals Area for Portfolio element ==============-->
-        <div class="modal fade" id="python-scrapper" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="portfolio-popup-thumbnail">
-                                    <div class="image">
-                                        <img class="w-100" src="/assets/images/scrapper.png" alt="slide"
-                                            style="height:400px;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="text-content">
-                                    <h3>
-                                        <span>Project description</span>
-                                        Python asynchronous web data scraper
-                                    </h3>
-                                    <p class="mb--30">
-                                        This project aims to develop an asynchronous web scraper using Python with the
-                                        Django framework,
-                                        leveraging Daphne and ASGI for non-blocking operations. The scrape utilize
-                                        Beautiful Soup
-                                        for extracting static data and Selenium with Chrome Driver for dynamic websites,
-                                        particularly
-                                        those built with client-side rendering frameworks like Angular. Future
-                                        enhancements will include
-                                        the integration of Celery to improve performance through background task
-                                        processing.
-                                    </p>
-                                    <div class="button-group mt--20">
-                                        <a href="https://github.com/Maester-Khris/django-web-worker" target="_blank"
-                                            class="rn-btn">
-                                            <span>Source Code</span>
-                                            <i class="bi bi-github" style="font-size: 14px;"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
         <div class="modal fade" id="mlModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1129,9 +1118,7 @@
                             <div class="col-lg-6">
                                 <div class="text-content">
                                     <h3>
-                                        <span>Project description</span> ML-Based Real-Time Chat Message Filtering with
-                                        Naive
-                                        Bayes Emotion Analysis
+                                        <span>Project description</span> ML-Based Real-Time Chat Message Filtering through Emotion Analysis with Naive Bayes 
                                     </h3>
                                     <p class="mb--30">
                                         The "AI Chat Monitor" project addresses the need for intelligent monitoring in
@@ -1145,7 +1132,8 @@
                                         like fatigue and limited processing capacity, especially when handling millions
                                         of chat messages.
                                         To tackle this, we propose an intelligent agent designed to monitor
-                                        conversations and ensure adherence to platform rules.
+                                        conversations and ensure adherence to platform rules. <br>
+                                        <strong>Main tech stack</strong>: Node.js, Express, Python, Django, Websocket, Apache Kafka, MySQL, Redis, Multi nomial naive Bayes, Scikit-learn, Pandas, Pickle
                                     </p>
                                     <div class="button-group mt--20">
                                         <a href="https://github.com/Maester-Khris/AI-Chat-Monitor" target="_blank"
@@ -1279,12 +1267,20 @@
                                         <span>Project description</span> Taskalert: Frontend
                                     </h3>
                                     <p class="mb--30">
-                                        The Taskalert project is an innovative real-time notes reminder application designed to enhance user engagement and productivity. Built using the MEAN stack (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages PusherJS for dynamic push notifications, ensuring timely reminders and seamless communication.
-                                        <ul>
-                                            <li> Full Stack Application: Developed with Angular and Angular Material 3 for a responsive front end.</li>
-                                            <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also supports MongoDB Atlas text search.</li>
-                                            <li> Advanced Feature: Centralized State Management of user tasks state accross multiple devices using NgRx</li>
-                                        </ul>
+                                        The Taskalert project is an innovative real-time notes reminder application
+                                        designed to enhance user engagement and productivity. Built using the MEAN stack
+                                        (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
+                                        PusherJS for dynamic push notifications, ensuring timely reminders and seamless
+                                        communication.
+                                    <ul>
+                                        <li> Full Stack Application: Developed with Angular and Angular Material 3 for a
+                                            responsive front end.</li>
+                                        <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also
+                                            supports MongoDB Atlas text search.</li>
+                                        <li> Advanced Feature: Centralized State Management of user tasks state accross
+                                            multiple devices using NgRx</li>
+                                        <li><strong>Main tech stack</strong>: Angular, Angular Material, Http Interceptor, NgRx, Netlify </li>
+                                    </ul>
                                     </p>
                                     <div class="button-group mt--20">
                                         <a href="https://github.com/Maester-Khris/Taskalertv2" class="rn-btn disabled">
@@ -1321,12 +1317,12 @@
                                         <div id="carouselTaskBackend" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
-                                                    <img src="/assets/images/taskalert_backend1.png" class="d-block w-100"
-                                                        style="height:400px" alt="design 1">
+                                                    <img src="/assets/images/taskalert_backend1.png"
+                                                        class="d-block w-100" style="height:400px" alt="design 1">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="/assets/images/taskalert_backend2.png" class="d-block w-100"
-                                                        style="height:400px" alt="design 1">
+                                                    <img src="/assets/images/taskalert_backend2.png"
+                                                        class="d-block w-100" style="height:400px" alt="design 1">
                                                 </div>
                                             </div>
                                             <a class="carousel-control-prev" href="#carouselTaskBackend" role="button"
@@ -1349,15 +1345,26 @@
                                         <span>Project description</span> Taskalert: Backend
                                     </h3>
                                     <p class="mb--30">
-                                        The Taskalert project is an innovative real-time notes reminder application designed to enhance user engagement and productivity. Built using the MEAN stack (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages PusherJS for dynamic push notifications, ensuring timely reminders and seamless communication.
-                                        <ul>
-                                            <li> Full Stack Application: Developed with Angular and Angular Material 3 for a responsive front end.</li>
-                                            <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also supports MongoDB Atlas text search.</li>
-                                            <li> Advanced Feature, Collaborative Task Editing:  we plan to implement RabbitMQ as a message broker, which will facilitate real-time synchronization of text edits. Additionally, Django Channels combined with WebSockets will allow for instant updates across the front-end application</li>
-                                        </ul>
+                                        The Taskalert project is an innovative real-time notes reminder application
+                                        designed to enhance user engagement and productivity. Built using the MEAN stack
+                                        (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
+                                        PusherJS for dynamic push notifications, ensuring timely reminders and seamless
+                                        communication.
+                                    <ul>
+                                        <li> Full Stack Application: Developed with Angular and Angular Material 3 for a
+                                            responsive front end.</li>
+                                        <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also
+                                            supports MongoDB Atlas text search.</li>
+                                        <li> Advanced Feature, Collaborative Task Editing: we plan to implement RabbitMQ
+                                            as a message broker, which will facilitate real-time synchronization of text
+                                            edits. Additionally, Django Channels combined with WebSockets will allow for
+                                            instant updates across the front-end application</li>
+                                        <li><strong>Main tech Stack</strong>: Python, Django, DjangoRest, Django Channels, drf_spectacular, MongoDB, MongoEngine, PyMongo, RabbitMQ</li>
+                                    </ul>
                                     </p>
                                     <div class="button-group mt--20">
-                                        <a href="https://github.com/Maester-Khris/Taskalertv2_django_backend" class="rn-btn disabled">
+                                        <a href="https://github.com/Maester-Khris/Taskalertv2_django_backend"
+                                            class="rn-btn disabled">
                                             <span>VIEW PROJECT</span>
                                             <i class="bi bi-github" style="font-size: 14px;"></i>
                                         </a>
@@ -1375,62 +1382,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="javaModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="portfolio-popup-thumbnail">
-                                    <div class="image">
-                                        <img class="w-100" src="/assets/images/skillrater.png" alt="slide"
-                                            style="height:500px;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="text-content">
-                                    <h3>
-                                        <span>Project description</span> Springboot Live Skill Voter app
-                                    </h3>
-                                    <p class="mb--30">
-                                        We designed a web app that allows users or guest to decide which
-                                        Language/Framerwork/Tools is the best by participating to a live perpetual vote.
-                                        To simulate data coming from multiple sources in a real-time fashion way, we
-                                        implemented a multi-threaded environment where threads produce new vote on
-                                        existing resources.
-                                        This project, built with Java 8 and Spring boot Framework implements real-time
-                                        data updates using asynchronous client data submission, leveraging Axios for
-                                        robust client-server communication. Also it employs server-sent events through
-                                        reactive programming and best practices for concurrency management utilizing
-                                        Spring boot Reactor Sinks and Mono.fromRunnable
-                                        APIs to create a an asynchronous non-blocking web-thread producer for efficient
-                                        event handling.
-                                    </p>
-                                    <div class="button-group mt--20">
-                                        <a href="https://github.com/Maester-Khris/java-spring-reactive-rater"
-                                            target="_blank" class="rn-btn">
-                                            <span>Source Code</span>
-                                            <i class="bi bi-github" style="font-size: 14px;"></i>
-                                        </a>
-                                        <a href="https://spring-skillrater.onrender.com/" target="_blank"
-                                            class="rn-btn live-preview" style="">
-                                            <span>Live preview</span>
-                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="modal fade" id="python-nlp" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1473,26 +1425,149 @@
                             <div class="col-lg-6">
                                 <div class="text-content">
                                     <h3>
-                                        <span>Project description</span> Text Ninja: ML Based Advanced NLP text processing tool
+                                        <span>Project description</span> Text Ninja: ML Based Advanced NLP text
+                                        processing tool
                                     </h3>
-                                <p class="">
-                                    Text Ninja is a strategic enhancement designed to complement the custom conversational AI agent, Gemini, addressing two significant challenges: cognitive overload and overgeneralization in responses. As part of the Snappy project, Text Ninja aims to improve the interaction quality when Gemini operates in active chatbot mode during conversations.
-                                    To tackle these issues, Text Ninja incorporates two main modules: Text Summarization and Text Contextualization.
-                                </p>
-                                <ul>
-                                  <li><strong>Text Summarization</strong>: This module employs an extractive approach utilizing a multilingual
-                                    pre-trained BERT neural network model.</li>
-                                  <li><strong>Text Contextualization</strong>: Inspired by NLP text augmentation techniques, this module performs
-                                    contextualized keyword data augmentation.This is achieved using a transformer-based neural network with an
-                                    AutoSeqtoSeq architecture and a multilingual pre-trained BERT model for Next Word Prediction tasks.</li>
-                                </ul>
-                                    
-                                       
+                                    <p class="">
+                                        Text Ninja is a strategic enhancement designed to complement the custom
+                                        conversational AI agent, Gemini, addressing two significant challenges:
+                                        cognitive overload and overgeneralization in responses. As part of the Snappy
+                                        project, Text Ninja aims to improve the interaction quality when Gemini operates
+                                        in active chatbot mode during conversations.
+                                        To tackle these issues, Text Ninja incorporates two main modules: Text
+                                        Summarization and Text Contextualization.
+                                    </p>
+                                    <ul>
+                                        <li><strong>Text Summarization</strong>: This module employs an extractive
+                                            approach utilizing a multilingual
+                                            pre-trained BERT neural network model.</li>
+                                        <li><strong>Text Contextualization</strong>: Inspired by NLP text augmentation
+                                            techniques, this module performs
+                                            contextualized keyword data augmentation.This is achieved using a
+                                            transformer-based neural network with an
+                                            AutoSeqtoSeq architecture and a multilingual pre-trained BERT model for Next
+                                            Word Prediction tasks.</li>
+                                        <li><strong>Main tech stack</strong>: 
+                                            Python, Flask, Flasgger, Spacy, Bert LLM, AutoSeq2Seq </li>
+                                    </ul>
+
+
                                     <div class="button-group mt--20">
                                         <a href="https://github.com/Maester-Khris/NLP-ML-Text-Generation"
                                             target="_blank" class="rn-btn">
                                             <span>Source Code</span>
                                             <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="python-scrapper" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/scrapper.png" alt="slide"
+                                            style="height:400px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span>
+                                        Python asynchronous web data scraper
+                                    </h3>
+                                    <p class="mb--30">
+                                        This project aims to develop an asynchronous web scraper using Python with the
+                                        Django framework,
+                                        leveraging Daphne and ASGI for non-blocking operations. The scrape utilize
+                                        Beautiful Soup
+                                        for extracting static data and Selenium with Chrome Driver for dynamic websites,
+                                        particularly
+                                        those built with client-side rendering frameworks like Angular. Future
+                                        enhancements will include
+                                        the integration of Celery to improve performance through background task
+                                        processing. <br>
+                                        <strong>Main tech stack</strong>: 
+                                            Python, Django, Django Channels, Websocket, Daphne, BeautifulSoup, Selenium, Thread
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/django-web-worker" target="_blank"
+                                            class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="javaModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/skillrater.png" alt="slide"
+                                            style="height:500px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Springboot Live Skill Voter app
+                                    </h3>
+                                    <p class="mb--30">
+                                        We designed a web app that allows users or guest to decide which
+                                        Language/Framerwork/Tools is the best by participating to a live perpetual vote.
+                                        To simulate data coming from multiple sources in a real-time fashion way, we
+                                        implemented a multi-threaded environment where threads produce new vote on
+                                        existing resources.
+                                        This project implements real-time
+                                        data updates using asynchronous client data submission, leveraging Axios for
+                                        robust client-server communication. Also it employs server-sent events through
+                                        reactive programming and best practices for concurrency management utilizing
+                                        Spring boot Reactor Sinks and Mono.fromRunnable
+                                        APIs to create a an asynchronous non-blocking web-thread producer for efficient
+                                        event handling.  <br>
+                                        <strong>Main tech stack</strong>: Java 8, Springboot, SpringWebFLux, Flyway, Mysql, Server Sent Event, Websocket, Docker, Github Action 
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/java-spring-reactive-rater"
+                                            target="_blank" class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                        <a href="https://spring-skillrater.onrender.com/" target="_blank"
+                                            class="rn-btn live-preview" style="">
+                                            <span>Live preview</span>
+                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -1524,20 +1599,33 @@
                             <div class="col-lg-6">
                                 <div class="text-content">
                                     <h3>
-                                        <span>Project description</span> Insight Hub: Java Springboot microservices system
+                                        <span>Project description</span> Insight Hub: Java Springboot microservices
+                                        system
                                     </h3>
                                     <p class="">
-                                        The Issue Tracker project is an advanced solution aimed at effectively managing software issues
-                                         and project progress through a modern microservices architecture, which enhances both scalability
-                                          and maintainability. The system ensures high availability and security through resilience patterns and a centralized authentication mechanism with Docker-deployed LDAP, while relying on a robust tech stack that includes Spring Boot, Microsoft SQL Server, and various testing frameworks to guarantee reliability.<br>
-                                        <ul>
-                                            <li> Main Challenge: Managing real-time data synchronization and ensuring high availability amidst user load fluctuations.</li>
-                                        <li> Approach Adopted: Utilization of microservices architecture with resilience patterns and centralized authentication.</li>
-                                        <li> Popular Tools Involved: Docker, LDAP, Spring Boot 3, Kafka, Microsoft SQL Server.</li>
-                                        </ul>
+                                        The Issue Tracker project is an advanced solution aimed at effectively managing
+                                        software issues
+                                        and project progress through a modern microservices architecture, which enhances
+                                        both scalability
+                                        and maintainability. The system ensures high availability and security through
+                                        resilience patterns and a centralized authentication mechanism with
+                                        Docker-deployed LDAP, while relying on a robust tech stack that includes Spring
+                                        Boot, Microsoft SQL Server, and various testing frameworks to guarantee
+                                        reliability.<br>
+                                    <ul>
+                                        <li> Main Challenge: Managing real-time data synchronization and ensuring high
+                                            availability amidst user load fluctuations.</li>
+                                        <li> Approach Adopted: Utilization of microservices architecture with resilience
+                                            patterns and centralized authentication.</li>
+                                        <li> Popular Tools Involved: Docker, LDAP, Spring Boot 3, Kafka, Microsoft SQL
+                                            Server.</li>
+                                        <li>
+                                            <strong>Main tech stack</strong>: Java 8, Springboot, Spring Cloud, Microsoft SQL Server, Light Active Directory, Docker, Resilience4J, Jenkins, Junit </li>
+                                    </ul>
+
                                     </p>
-                                    
-                                       
+
+
                                     <div class="button-group mt--20">
                                         <!-- <a href="https://github.com/Maester-Khris/java-spring-reactive-rater"
                                             target="_blank" class="rn-btn">
