@@ -13,15 +13,97 @@ export const portfolioProjects = [
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
     },
     {
+        projectId: 'ai-healthcare-ml',           // unique slug for routing / modal look‑up
+        title: 'AI Healthcare sickness severity classification',
+        description:`<p>I designed and deployed a patient‑sickness–severity classifier that interprets short, free‑text symptom descriptions and assigns one of four urgency levels: “routine”, “moderate”, “severe” or “critical”. By fine‑tuning Google’s Gemini 2.5 Flash on a tightly curated medical dataset and serving the model on GCP Vertex AI, the solution enables real‑time triage inside tele‑health workflows.</p>
+            <p><strong>Custom Dataset</strong></p>
+            <ul>
+            <li>Collected 237 de‑identified symptom narratives sourced from prior consultations.</li>
+            <li>Each record was manually labelled by clinicians with one of four severity classes.</li>
+            <li>Performed text normalisation and removed protected health information to respect HIPAA and PIPEDA rules.</li>
+            </ul>
+            <p><strong>Model Development</strong></p>
+            <ul>
+            <li>Started from the lightweight <strong>Gemini 2.5 Flash</strong> checkpoint hosted on Vertex AI Model Garden.</li>
+            <li>Fine‑tuned using supervised instruction‑tuning; the prompt template shows a symptom sentence followed by a special <code>&lt;class&gt;</code> token.</li>
+            <li>Applied stratified 80‑20 split and early‑stopping to avoid over‑fitting on the small corpus.</li>
+            </ul>
+            <p><strong>Deployment Pipeline</strong></p>
+            <ul>
+            <li>Packaged the fine‑tuned checkpoint as a custom model artifact and uploaded it to Vertex AI.</li>
+            <li>Created an <strong>Endpoint</strong> with automatic scaling and integrated Stackdriver logging for auditability.</li>
+            <li>Wrapped prediction logic in a Cloud Function exposed as a REST endpoint; the function cleans incoming text, calls the Vertex endpoint, and maps logits to human‑readable severity labels.</li>
+            <li>Used Cloud Endpoints API Key + IAM Service Account to secure both internal and external calls.</li>
+            </ul>
+            <p><strong>Key Challenges & Solutions</strong></p>
+            <ul>
+            <li><strong>Small dataset</strong> – Augmented minority classes with GPT‑generated paraphrases until class distribution was balanced.</li>
+            <li><strong>Regulatory compliance</strong> – Implemented vertex‑level encryption and VPC‑SC to keep traffic inside the private perimeter.</li>
+            <li><strong>Cold‑start latency</strong> – Enabled min‑replica autoscaling on Vertex AI to maintain one warm pod at all times.</li>
+            </ul>
+            <p><strong>Next Steps</strong></p>
+            <ul>
+            <li>Append confidence scores to predictions for downstream UI colour‑coding.</li>
+            <li>Introduce continual‑learning jobs that retrain weekly on newly triaged cases.</li>
+            <li>Add Cloud Monitoring dashboards that trigger on spikes in “critical” predictions.</li>
+            </ul>
+            <p>The result is a production‑grade, low‑latency service that helps clinicians prioritise patient care while meeting stringent privacy and performance requirements.</p>
+            `,
+        keywords: ['GCP', 'Vertex AI','LLM Fine-tuning','Ml Model deployment'],
+        images: ['vertexai.png','llm_finetuning.png','aicoordinator_arch.png'],
+        live_url: '',
+        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator/tree/main/fine_tuning_training'
+    },
+    {
         projectId: 'firo-financial-csr-bot',
         title: 'Firo: Financial CSR Bot',
         description:
             'Gen‑AI assistant for customer‑support reps in banking. Fine‑tuned on 50k anonymized chats, '
             + 'deployed with Vertex AI and Dialogflow CX. React‑based front‑end provides real‑time confidence and source citations.',
-        keywords: ['AI', 'LLM Fine‑tuning', 'Vertex AI', 'GCP', 'DialogFlow', 'React.js'],
+        keywords: ['AWS Bedrock', 'React.js'],
         images: ['bot.png'],
         live_url: 'https://financial-csr-aibot-47pg.vercel.app/',
         github: 'https://github.com/Maester-Khris/financial-csr-aibot'
+    },
+    {
+        projectId: 'ml-text-classifier',
+        title: 'Firo ML: User interaction topic classification',
+        description: `<p> I built an end‑to‑end topic‑classification service that tags free‑form customer messages with precise business areas, streamlining triage in a highly regulated financial‑services environment.</p>
+            <p><strong>Data Acquisition</strong></p>
+            <ul>
+            <li>Started from a Kaggle corpus of transcribed user interactions, each carrying a generic topic label.</li>
+            <li>Many of those labels were unsuitable for finance, so they served only as a rough initial scaffold.</li>
+            </ul>
+            <p><strong>Main Challenges & Mitigations</strong></p>
+            <ul>
+            <li><strong>Too few domain‑relevant classes</strong> – I expanded the label set with zero‑shot classification via sentence‑transformers to create fine‑grained finance topics such as <em>Debit Card Disputes</em> and <em>Investment Queries</em>.</li>
+            <li><strong>Severe class imbalance</strong> – Minority classes were boosted using data‑augmentation techniques implemented with an open‑source Python library for synonym replacement and paraphrasing.</li>
+            <li><strong>Data‑governance constraints</strong> – All message text was anonymised before processing; names, account numbers and emails were tokenised to preserve privacy.</li>
+            </ul>
+            <p><strong>Modelling Workflow</strong></p>
+            <ul>
+            <li>Embedded each anonymised sentence with a compact Sentence‑BERT encoder (768‑D vectors).</li>
+            <li>Trained multiple classifiers: SVC, Linear SVM, Logistic Regression, Random Forest and HistGradientBoosting.</li>
+            <li>Selected the top performer through a naïve “best‑accuracy wins” vote; Linear SVM took the crown in the current run.</li>
+            </ul>
+            <p><strong>Key Takeaways</strong></p>
+            <ul>
+            <li>Label quality mattered more than exotic model tuning; zero‑shot expansion delivered the biggest accuracy jump.</li>
+            <li>Responsible AI was non‑negotiable; the tokenisation pipeline ensured no client PII ever left the secure perimeter.</li>
+            <li>A lean selection strategy gave faster iteration freedom while leaving room for ensembles later on.</li>
+            </ul>
+            <p><strong>Next Steps</strong></p>
+            <ul>
+            <li>Add confidence‑weighted routing so low‑score predictions auto‑escalate to human agents.</li>
+            <li>Implement a nightly continual‑learning loop that retrains on mis‑routed tickets and fresh data.</li>
+            <li>Ship an explainability dashboard (SHAP or LIME) to keep compliance teams in the loop.</li>
+            </ul>
+            <p>The result is a production‑ready classifier that meets accuracy targets while upholding stringent financial‑data standards.</p>
+            `,
+        keywords: ['Data Science','Machine Learning','NLP','Topic Classification','ML Model Deployment'],
+        images: ['multiclass classification.png','eda1.png','eda2.png','model_deployment.png'],
+        live_url: 'https://colab.research.google.com/drive/1Rshf8DBmcvw6QUJ_T-KettrUG8WgxewU?usp=sharing',
+        github: 'https://github.com/Maester-Khris/financial-csr-aibot/blob/main/notebooks'
     },
     {
         projectId: 'remote-system-monitoring',
