@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nick Joel Gouend || My Portfolio</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description"
+        content="InBio is a one-page responsive personal portfolio layout which can be utilized to demonstrate your inventiveness. It’s an ideal decision for a developer, engineer, specialist, designer, content writer, Instructor, Photographer, Freelancer, Politician, Software engineer, Teacher or some other expert who needs to speak to his abilities and inventive work. InBio is well documented, very easy to use, Easily Customized, loads faster and provides better performance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/cropped_image.png">
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/vendor/aos.css">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom-styles.css">
+    <style>
+        .sticky .header-wrapper .logo img {
+            max-width: 100% !important;
+        }
+
+        .progress {
+            position: relative !important;
+        }
+
+        .progress-bar {
+            position: unset !important;
+        }
+
+        span.percent-label {
+            right: 7px !important;
+            z-index: 10 !important;
+            font-weight: bolder !important;
+            color: #2796aa !important;
+        }
+
+        .progress-wrapper h4.maintitle {
+            margin-bottom: 10px !important;
+        }
+
+        .progress-charts {
+            margin-top: 12px !important;
+        }
+
+        span.percent-label {
+            top: -14px !important;
+        }
+
+        .progress-charts .heading-h6 {
+            margin-bottom: 5px !important;
+        }
+
+        .modal i.bi.bi-github {
+            margin-left: 10px;
+        }
+
+        .experience-list {
+            width: 50%;
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev
+
+        /*, .carousel-indicators */
+            {
+            filter: invert(100%);
+        }
+
+        .live-badge {
+            position: absolute;
+            top: 6px;
+            right: 0px;
+            font-size: 13px;
+            padding: 5px 8px;
+            border-radius: 11px;
+            background-color: #F05340;
+        }
+
+        a.live-preview {
+            color: #F05340 !important;
+        }
+
+        a.live-preview:hover {
+            background-color: #F05340 !important;
+            color: white !important;
+        }
+
+        ul li {
+            color: #3C3E41 !important;
+        }
+
+        @media (max-width: 1024px) {
+            .experience-container {
+                flex-wrap: wrap;
+            }
+
+            .experience-list {
+                width: 100%;
+                flex-grow: 1;
+                margin-left: 0px !important;
+            }
+
+            .skills-container {
+                width: 90% !important;
+                height: auto !important;
+                border-radius: 10px;
+            }
+
+            .skills-view {
+                position: relative;
+                width: 100% !important;
+                clip-path: none;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .skills-view-icon {
+                transform: translateX(0px) !important;
+                padding: 10px;
+                width: 100% !important;
+                height: 100% !important;
+                right: 0px !important;
+            }
+
+            .skiilset-container {
+                position: relative;
+            }
+
+            .experience-left {
+                margin-bottom: 10px !important;
+            }
+
+            .experience-left.exp_back {
+                height: 510px !important;
+            }
+
+            .experience-left.exp_front,
+            .experience-left.exp_cloud {
+                height: 400px !important;
+            }
+
+            .experience-left h4 {
+                display: none;
+            }
+
+            .experience-right {
+                position: absolute;
+                /* float: left; */
+                bottom: 0px !important;
+                right: 0px !important;
+                left: 0px !important;
+                height: 200px !important;
+                overflow: hidden;
+            }
+
+            .skills-list {
+                width: 100% !important;
+            }
+
+
+        }
+
+        @media (max-width: 768px) {
+            .background-image-area {
+                height: 500px !important;
+            }
+
+            .user-info-bottom .button-wrapper a:first-child {
+                margin-right: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+
+    <!-- Start Header -->
+    <!-- <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="/assets/images/cropped_image.png" alt="logo"
+                                style="width:48px!important;height:48px!important;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                        <ul class="primary-menu nav nav-pills">
+                            <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <!-- Start Header Left -->
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="/assets/images/cropped_image.png" alt="logo"
+                                style="width:48px!important;height:48px!important;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Left -->
+            <!-- Start Header Center -->
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                        <!-- Start Mainmanu Nav -->
+                        <ul class="primary-menu nav nav-pills">
+                            <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+                        </ul>
+                        <!-- End Mainmanu Nav -->
+                    </nav>
+                    <!-- Start Header Right  -->
+                    <div class="header-right">
+
+                        <div class="hamberger-menu d-block d-xl-none">
+                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                        </div>
+                        <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Header Right  -->
+                </div>
+            </div>
+            <!-- End Header Center -->
+        </div>
+    </header>
+
+
+
+    <div class="popup-mobile-menu">
+        <div class="inner" style="padding: 20px;">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a class="logo" href="index.html">
+                        <img src="/assets/images/cropped_image.png" alt="logo"
+                            style="width:48px!important;height:48px!important;">
+                    </a>
+                    <div class="close-button">
+                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <ul class="primary-menu nav nav-pills">
+                    <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
+                </ul>
+                <!-- social sharea area -->
+                <div class="social-share-style-1 mt--10" style="margin-top: 10px!important;">
+                    <span class="title">get in touch with me</span>
+                    <ul class="social-share d-flex liststyle">
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/joelgouend-thesysengineer/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+    </div>
+
+
+    <main class="main-page-wrapper">
+
+        <!-- Hero section -->
+        <div id="home" class="rn-slide-area">
+            <div class="slide slider-style-3">
+                <div class="container">
+                    <div class="row slider-wrapper">
+                        <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+                            <div class="slider-info">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-12">
+                                        <div class="user-info-top">
+                                            <div class="user-info-header">
+                                                <div class="user">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                                <h2 class="title">
+                                                    Hi, I’m <span>Nick Joel</span>
+                                                </h2>
+                                                <p class="disc">
+                                                    I am a Full stack developer, focusing now on Cloud & Infrastuctre
+                                                    management. My main stacks are MEAN, MERN, LAPP and Spring
+                                                    Ecosystem.
+                                                </p>
+                                            </div>
+                                            <div class="user-info-footer">
+                                                <div class="info">
+                                                    <i data-feather="check-square"></i>
+                                                    <span>Full stack developer <small
+                                                            class="my-subtitle">Proficient</small></span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="check-square"></i>
+                                                    <span>Data Analysis <small
+                                                            class="my-subtitle">Intermediate</small></span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="check-square"></i>
+                                                    <span>DevOps & Cloud <small
+                                                            class="my-subtitle">Beginner</small></span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="mail"></i>
+                                                    <span>jombeh121@gmail.com</span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="github"></i>
+                                                    <span class="position-relative d-inline-block"
+                                                        style="width:85px;">Mr. Khris <a class="position-absolute"
+                                                            target="_blank" href="https://github.com/Maester-Khris"
+                                                            style="top:-5px;right:1px;color:#2796aa;">
+                                                            <i class="bi bi-box-arrow-up-right"
+                                                                style="font-size: 10px;"></i>
+                                                        </a> </span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="map-pin"></i>
+                                                    <span>Toronto, Ontario</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-12">
+                                        <div class="user-info-bottom">
+                                            <span>Let's get in touch: </span>
+                                            <div class="button-wrapper d-flex">
+                                                <a class="rn-btn mr--30" href="/assets/files/joel_gouend_resume.pdf"
+                                                    download=""><span>Download CV</span></a>
+                                                <a class="rn-btn" href="mailto:jombeh121@gmail.com"><span>CONTACT
+                                                        ME</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
+                            <div class="background-image-area"
+                                style="height: 700px; overflow: hidden; padding-bottom: 20px;">
+                                <!-- Adjust padding as needed -->
+                                <img src="/assets/images/photo_portfolio.jpg" alt="Personal Portfolio"
+                                    style="width: 100%; object-fit: cover; object-position: top; border-radius: 10px; margin-bottom: -20px;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Resume Area -->
+        <div class="rn-resume-area rn-section-gap section-separator" id="resume">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-center">
+                            <span class="subtitle">4+ Years of Experience</span>
+                            <h2 class="title">My Resume</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--45">
+                    <div class="col-lg-12">
+                        <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="rn-nav-list nav nav-tabs d-flex justify-content-center" id="myTabs" role="tablist">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">education</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link " id="professional-tab" data-toggle="tab" href="#professional"
+                                    role="tab" aria-controls="professional" aria-selected="true">professional
+                                    Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab"
+                                    aria-controls="experience" aria-selected="false">experience</a>
+                            </li>
+                        </ul>
+
+                        <!-- Start Tab Content Wrapper  -->
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                            class="rn-nav-content tab-content" id="myTabContents">
+                            <!-- <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel" aria-labelledby="education-tab">
+                                <div class="personal-experience-inner mt--40">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-12">
+                                            <div class="content">
+                                                <span class="subtitle">2015 - 2023</span>
+                                                <h4 class="maintitle">Education</h4>
+                                                <div class="d-flex flex-row experience-container">
+                                                    <div class="experience-list">
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4>Master Degree in Computer science</h4>
+                                                                        <span>University of Yaoundé I (2020 - 2023)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    I delve into Advanced software design principles, fundamental problem solving method.
+                                                                    My coursework also included Agile Development, Data Science, and Introduction to Research
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="experience-list" style="margin-left: 15px;">
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4>Bachelor in Computer science</h4>
+                                                                        <span>University of Yaounde I (2015 - 2020)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    I was focused on Programming and Software Modeling, I developed proficiency in various programming languages. 
+                                                                    I explored Algorithmic & Data Structures, Networking, and relevant topics.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="tab-pane show active fade" id="professional" role="tabpanel"
+                                aria-labelledby="professional-tab">
+                                <div class="personal-experience-inner mt--40">
+                                    <div class="row row--40">
+                                        <div class="col-lg-12">
+                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                                data-aos-once="true" class="section-title text-center">
+                                                <h2 class="title">My Skill Set </h2>
+                                                <span class="subtitle">Ranked by proficiency level</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt_experience">
+                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                                data-aos-once="true" class="experience-style-two skiilset-container">
+                                                <div class="experience-left exp_back">
+                                                    <div class="col-md-9">
+                                                        <div class="progress-wrapper">
+                                                            <div class="content">
+                                                                <span class="subtitle">Skills</span>
+                                                                <h4 class="maintitle">Backend & System Design</h4>
+
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Java & Spring
+                                                                        Ecosystem: Web, Cloud, Security, Data</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 90%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Python: Django &
+                                                                        Flask</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 80%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">MERN, MEAN Stack</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.5s"
+                                                                            data-wow-delay=".3s" role="progressbar"
+                                                                            style="width: 70%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">LAPP: Linux Apache
+                                                                        Php PostgreSQL</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 70%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Architectural Design
+                                                                        pattern, Methodology & Agile Framework</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.7s"
+                                                                            data-wow-delay=".5s" role="progressbar"
+                                                                            style="width: 70%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="experience-right">
+                                                    <div class="skills-view">
+                                                        <div class="skills-view-background"
+                                                            style="background: center 15% url('/assets/images/back.jpg');">
+                                                        </div>
+                                                        <div class="skills-view-icon">
+                                                            <h4>Backend & System Design</h4>
+                                                            <div
+                                                                class="skills-list d-flex flex-row flex-wrap justify-content-end">
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/nodejs-icon-logo-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/java-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/python-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/php2-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/spring-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/django-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/flask-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/laravel-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/brand-scrum-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/distributed-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                                data-aos-once="true" class="experience-style-two skiilset-container">
+                                                <div class="experience-left exp_front">
+                                                    <div class="col-md-9">
+                                                        <div class="progress-wrapper">
+                                                            <div class="content">
+                                                                <span class="subtitle">Skills</span>
+                                                                <h4 class="maintitle">Frontend, Mobile & UI/UX</h4>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Framework, tools:
+                                                                        Angular, React, Boostrap, Tailwind, Jquery</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.5s"
+                                                                            data-wow-delay=".3s" role="progressbar"
+                                                                            style="width: 100%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Mobile: Ionic
+                                                                        Framework, Capacitor, Flutter</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">UI/UX Design: Figma
+                                                                    </h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.7s"
+                                                                            data-wow-delay=".5s" role="progressbar"
+                                                                            style="width: 60%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="experience-right">
+                                                    <div class="skills-view">
+                                                        <div class="skills-view-background"
+                                                            style="background: center 20% url('/assets/images/front3.jpg');">
+                                                        </div>
+                                                        <div class="skills-view-icon">
+                                                            <h4>Frontend & UI</h4>
+                                                            <div
+                                                                class="skills-list d-flex flex-row flex-wrap justify-content-end">
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/angular-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/react-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/bootstrap-4-logo-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/tailwind-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/ionic-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/flutter-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/figma-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                                data-aos-once="true" class="experience-style-two skiilset-container">
+                                                <div class="experience-left exp_cloud">
+                                                    <div class="col-md-9">
+                                                        <div class="progress-wrapper">
+                                                            <div class="content">
+                                                                <span class="subtitle">Skills</span>
+                                                                <h4 class="maintitle">DevOps, Cloud & Infrastructure
+                                                                </h4>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">DevOps: Git, Github,
+                                                                        Github action, Jenkins</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.5s"
+                                                                            data-wow-delay=".3s" role="progressbar"
+                                                                            style="width: 75%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Cloud AWS</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 50%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Infrastructure:
+                                                                        Docker, Kubernetes & Terraform</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.7s"
+                                                                            data-wow-delay=".5s" role="progressbar"
+                                                                            style="width: 30%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="experience-right">
+                                                    <div class="skills-view">
+                                                        <div class="skills-view-background"></div>
+                                                        <div class="skills-view-icon">
+                                                            <h4>Devops, Cloud & Infrastructure</h4>
+                                                            <div
+                                                                class="skills-list d-flex flex-row flex-wrap justify-content-end">
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/git-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/github-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/gitlab-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/jenkins-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/docker-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/kubernetes-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/aws-logo-logo-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                                <div class="icon-skill"><img class="icon-logo"
+                                                                        src="/assets/toolslogo/terraform-svgrepo-com.svg"
+                                                                        alt="My Happy SVG" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+                                <div class="personal-experience-inner mt--40">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-12">
+                                            <div class="content">
+                                                <span class="subtitle">2021 - Present</span>
+                                                <h4 class="maintitle">Professional Experience</h4>
+                                                <div class="d-flex flex-row experience-container">
+                                                    <div class="experience-list">
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4>Full Stack engineer</h4>
+                                                                        <span>Wiconet - part time (Jan 2024 - Aou
+                                                                            2024)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    Wiconet is an early stage startup created inside
+                                                                    computer science applied research
+                                                                    laboratory whose work is focused on Machine
+                                                                    learning,
+                                                                    Computer Networking and cutting-edge techniques
+                                                                    applied to real life problems.
+                                                                    The main technology stack I was
+                                                                    working with involved <strong>Python - React
+                                                                        - Nodejs</strong>.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="experience-list" style="margin-left: 15px;">
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4>Full stack Engineer</h4>
+                                                                        <span>Firesoftware - Full time (Sep 2021 -
+                                                                            May 2024)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    I integrated the team as Software engineer Intern,
+                                                                    then advanced to the level of software development
+                                                                    project manager. My day to day tasks included
+                                                                    planning and executing
+                                                                    meeting with client, going through the whole process
+                                                                    of
+                                                                    software lifecycle. The main technology stack I was
+                                                                    working with involved <strong>Java - Angular -
+                                                                        Php</strong>.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Start Portfolio Area -->
+        <div id="portfolio" class="rn-portfolio-area portfolio-style-three rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-center">
+                            <span class="subtitle">Visit my portfolio and keep your feedback</span>
+                            <h2 class="title">My Portfolio</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--25 mt_md--5 mt_sm--5">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                            class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#DaModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/powerbi_dashboard.png" alt="Personal Portfolio Images"
+                                                    style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">DATA ANALYSIS, POWER BI, VISUALIZATION</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative">
+                                                <a href="javascript:void(0)">Powerbi dashboard on public dataset<i
+                                                        class="feather-arrow-up-right"></i></a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#javaModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/skillrater.png" alt="Personal Portfolio Images"
+                                                    style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">JAVA, SPRINGBOOT, Rest API, Docker,
+                                                        MySQL</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative">
+                                                <a href="javascript:void(0)">Reactive Springboot skillrater app<i
+                                                        class="feather-arrow-up-right"></i></a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#javaServicesModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/insighthub.png" alt="Personal Portfolio Images"
+                                                    style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">SPRINGBOOT, MSSQL, T-SQL, LDAP,
+                                                        KAFKA</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative">
+                                                <a href="javascript:void(0)">Insight Hub: Springboot Microservices<i
+                                                        class="feather-arrow-up-right"></i></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#taskalertFrontModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/taskalert_front.png"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">ANGULAR, ANGULAR MATERIAL, NETLIFY</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative">
+                                                <a href="javascript:void(0)">Taskalert v2: Frontend application<i
+                                                        class="feather-arrow-up-right"></i></a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#taskalertBackModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/taskalert_backend.png"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">PYTHON, DJANGO, MONGODB, RABBITMQ</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative">
+                                                <a href="javascript:void(0)">Taskalert v2: Backend application<i
+                                                        class="feather-arrow-up-right"></i></a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#mlModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/django_nodejs.png"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">PYTHON, DJANGO, NODE.JS, APACHE
+                                                        KAFKA</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">Python AI based real-time
+                                                    chat message
+                                                    filtering<i class="feather-arrow-up-right"></i></a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#python-scrapper">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/scrapper.png" alt="Personal Portfolio Images"
+                                                    style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">Python, Django, ASGY, Selenium</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative;">
+                                                <a href="javascript:void(0)">
+                                                    Python asynchronous <br> web data scraper
+                                                    <i class="feather-arrow-up-right"></i>
+                                                </a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#python-nlp">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/textninja.png" alt="Personal Portfolio Images"
+                                                    style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">Python, Flask, Daphne, BERT LLM, NLP,
+                                                        SPacy</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title" style="position: relative;">
+                                                <a href="javascript:void(0)">
+                                                    Python advanced NLP <br> text processing
+                                                    <i class="feather-arrow-up-right"></i>
+                                                </a>
+                                                <span class="badge badge-success live-badge">
+                                                    Live <i class="bi bi-lightning-charge-fill"
+                                                        style="font-size: 17px;color:#0000FF;"></i></span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-toggle="modal" data-target="#figmaUI">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="/assets/images/portfolio/portfolio-05.jpg"
+                                                    alt="Personal Portfolio Images" style="height:300px;">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">FIGMA</a>
+                                                </div>
+                                                <div class="meta">
+                                                    <span><a href="javascript:void(0)"><i class="bi bi-github"
+                                                                style="font-size: 14px;"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">Mobile application UI and
+                                                    interaction
+                                                    design <i class="feather-arrow-up-right"></i></a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============== Start Modals Area for Portfolio element ==============-->
+        <div class="modal fade" id="DaModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span>Power BI Dashboard visualization
+                                    </h3>
+                                    <p class="mb--30">
+                                        <iframe title="learn_visuals_next" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0852ec94-f01b-445e-9f6d-b6e4cf04b6cb&autoAuth=true&ctid=a59642f3-f516-4e5d-9a8b-3ba6bdd55283" frameborder="0" allowFullScreen="true"></iframe>
+                                    </p>
+                                    <div class="alert alert-warning" role="alert">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> Notes: The dashboard is not yet publicly available due to some data access policy limitation on the tenant. We are working to make the visualization available for the public. Inbetween you can access the files in the github repository.
+                                    </div>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/Powerbi-dashboard" target="_blank"
+                                            class="rn-btn">
+                                            <span>VIEW PROJECT FILES</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="mlModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/ai_monitor_architecture1.2.png"
+                                            alt="slide" style="height:300px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> ML-Based Real-Time Chat Message Filtering
+                                        through Emotion Analysis with Naive Bayes
+                                    </h3>
+                                    <p class="mb--30">
+                                        The "AI Chat Monitor" project addresses the need for intelligent monitoring in
+                                        live
+                                        communication services, such as chat applications. While these services are
+                                        often free
+                                        for personal use, challenges arise in multi-participant environments where
+                                        compliance
+                                        with platform policies is critical. Relying solely on human agents can lead to
+                                        issues
+                                        like fatigue and limited processing capacity, especially when handling millions
+                                        of chat messages.
+                                        To tackle this, we propose an intelligent agent designed to monitor
+                                        conversations and ensure adherence to platform rules. <br>
+                                        <strong>Main tech stack</strong>: Node.js, Express, Python, Django, Websocket,
+                                        Apache Kafka, MySQL, Redis, Multi nomial naive Bayes, Scikit-learn, Pandas,
+                                        Pickle
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/AI-Chat-Monitor" target="_blank"
+                                            class="rn-btn">
+                                            <span>VIEW PROJECT</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="figmaUI" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="/assets/images/ui_design1.png" class="d-block w-100"
+                                                        style="height:500px" alt="design 1">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="/assets/images/ui_design2.png" class="d-block w-100"
+                                                        style="height:500px" alt="design 1">
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleFade" role="button"
+                                                data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleFade" role="button"
+                                                data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Mobile Application UI and Interaction Design
+                                    </h3>
+                                    <p class="mb--30">
+                                        This project centers on designing the user interface (UI) and interaction
+                                        patterns for a
+                                        mobile application.
+                                        Using Figma, a leading design tool, the project involves crafting visually
+                                        appealing and
+                                        user-friendly designs
+                                        that enhance the overall user experience. The focus is on creating intuitive
+                                        layouts,
+                                        interactive elements, and
+                                        cohesive visual styles that ensure seamless and engaging interactions on mobile
+                                        devices.
+                                        The end result is a polished, high-fidelity design prototype that guides the
+                                        development
+                                        of a compelling mobile application.
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="#" class="rn-btn disabled">
+                                            <span>VIEW PROJECT</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="taskalertFrontModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <div id="carouselTaskFrontend" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="/assets/images/taskalert_front1.png" class="d-block w-100"
+                                                        style="height:400px" alt="design 1">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="/assets/images/taskalert_front2.png" class="d-block w-100"
+                                                        style="height:400px" alt="design 1">
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselTaskFrontend" role="button"
+                                                data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselTaskFrontend" role="button"
+                                                data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Taskalert: Frontend
+                                    </h3>
+                                    <p class="mb--30">
+                                        The Taskalert project is an innovative real-time notes reminder application
+                                        designed to enhance user engagement and productivity. Built using the MEAN stack
+                                        (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
+                                        PusherJS for dynamic push notifications, ensuring timely reminders and seamless
+                                        communication.
+                                    <ul>
+                                        <li> Full Stack Application: Developed with Angular and Angular Material 3 for a
+                                            responsive front end.</li>
+                                        <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also
+                                            supports MongoDB Atlas text search.</li>
+                                        <li> Advanced Feature: Centralized State Management of user tasks state accross
+                                            multiple devices using NgRx</li>
+                                        <li><strong>Main tech stack</strong>: Angular, Angular Material, Http
+                                            Interceptor, NgRx, Netlify </li>
+                                    </ul>
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/Taskalertv2" class="rn-btn disabled">
+                                            <span>VIEW PROJECT</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                        <a href="https://taskalertmaterial.netlify.app/" target="_blank"
+                                            class="rn-btn live-preview" style="">
+                                            <span>Live preview</span>
+                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="taskalertBackModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <div id="carouselTaskBackend" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="/assets/images/taskalert_backend1.png"
+                                                        class="d-block w-100" style="height:400px" alt="design 1">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="/assets/images/taskalert_backend2.png"
+                                                        class="d-block w-100" style="height:400px" alt="design 1">
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselTaskBackend" role="button"
+                                                data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselTaskBackend" role="button"
+                                                data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Taskalert: Backend
+                                    </h3>
+                                    <p class="mb--30">
+                                        The Taskalert project is an innovative real-time notes reminder application
+                                        designed to enhance user engagement and productivity. Built using the MEAN stack
+                                        (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
+                                        PusherJS for dynamic push notifications, ensuring timely reminders and seamless
+                                        communication.
+                                    <ul>
+                                        <li> Full Stack Application: Developed with Angular and Angular Material 3 for a
+                                            responsive front end.</li>
+                                        <li> Dynamic Backend: RESTful API for CRUD operations and BREAD methods. It also
+                                            supports MongoDB Atlas text search.</li>
+                                        <li> Advanced Feature, Collaborative Task Editing: we plan to implement RabbitMQ
+                                            as a message broker, which will facilitate real-time synchronization of text
+                                            edits. Additionally, Django Channels combined with WebSockets will allow for
+                                            instant updates across the front-end application</li>
+                                        <li><strong>Main tech Stack</strong>: Python, Django, DjangoRest, Django
+                                            Channels, drf_spectacular, MongoDB, MongoEngine, PyMongo, RabbitMQ</li>
+                                    </ul>
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/Taskalertv2_django_backend"
+                                            class="rn-btn disabled">
+                                            <span>VIEW PROJECT</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                        <a href="https://nkml.pythonanywhere.com/" target="_blank"
+                                            class="rn-btn live-preview" style="">
+                                            <span>Live preview</span>
+                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="python-nlp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <div id="carouselNlp" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="/assets/images/api integration.png" class="d-block w-100"
+                                                        style="height:300px" alt="design 1">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="/assets/images/proof_test.png" class="d-block w-100"
+                                                        style="height:300px" alt="design 1">
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselNlp" role="button"
+                                                data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselNlp" role="button"
+                                                data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Text Ninja: ML Based Advanced NLP text
+                                        processing tool
+                                    </h3>
+                                    <p class="">
+                                        Text Ninja is a strategic enhancement designed to complement the custom
+                                        conversational AI agent, Gemini, addressing two significant challenges:
+                                        cognitive overload and overgeneralization in responses. As part of the Snappy
+                                        project, Text Ninja aims to improve the interaction quality when Gemini operates
+                                        in active chatbot mode during conversations.
+                                        To tackle these issues, Text Ninja incorporates two main modules: Text
+                                        Summarization and Text Contextualization.
+                                    </p>
+                                    <ul>
+                                        <li><strong>Text Summarization</strong>: This module employs an extractive
+                                            approach utilizing a multilingual
+                                            pre-trained BERT neural network model.</li>
+                                        <li><strong>Text Contextualization</strong>: Inspired by NLP text augmentation
+                                            techniques, this module performs
+                                            contextualized keyword data augmentation.This is achieved using a
+                                            transformer-based neural network with an
+                                            AutoSeqtoSeq architecture and a multilingual pre-trained BERT model for Next
+                                            Word Prediction tasks.</li>
+                                        <li><strong>Main tech stack</strong>:
+                                            Python, Flask, Flasgger, Spacy, Bert LLM, AutoSeq2Seq </li>
+                                    </ul>
+
+
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/NLP-ML-Text-Generation"
+                                            target="_blank" class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="python-scrapper" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/scrapper.png" alt="slide"
+                                            style="height:400px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span>
+                                        Python asynchronous web data scraper
+                                    </h3>
+                                    <p class="mb--30">
+                                        This project aims to develop an asynchronous web scraper using Python with the
+                                        Django framework,
+                                        leveraging Daphne and ASGI for non-blocking operations. The scrape utilize
+                                        Beautiful Soup
+                                        for extracting static data and Selenium with Chrome Driver for dynamic websites,
+                                        particularly
+                                        those built with client-side rendering frameworks like Angular. Future
+                                        enhancements will include
+                                        the integration of Celery to improve performance through background task
+                                        processing. <br>
+                                        <strong>Main tech stack</strong>:
+                                        Python, Django, Django Channels, Websocket, Daphne, BeautifulSoup, Selenium,
+                                        Thread
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/django-web-worker" target="_blank"
+                                            class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="javaModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/skillrater.png" alt="slide"
+                                            style="height:500px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Springboot Live Skill Voter app
+                                    </h3>
+                                    <p class="mb--30">
+                                        We designed a web app that allows users or guest to decide which
+                                        Language/Framerwork/Tools is the best by participating to a live perpetual vote.
+                                        To simulate data coming from multiple sources in a real-time fashion way, we
+                                        implemented a multi-threaded environment where threads produce new vote on
+                                        existing resources.
+                                        This project implements real-time
+                                        data updates using asynchronous client data submission, leveraging Axios for
+                                        robust client-server communication. Also it employs server-sent events through
+                                        reactive programming and best practices for concurrency management utilizing
+                                        Spring boot Reactor Sinks and Mono.fromRunnable
+                                        APIs to create a an asynchronous non-blocking web-thread producer for efficient
+                                        event handling. <br>
+                                        <strong>Main tech stack</strong>: Java 8, Springboot, SpringWebFLux, Flyway,
+                                        Mysql, Server Sent Event, Websocket, Docker, Github Action
+                                    </p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/Maester-Khris/java-spring-reactive-rater"
+                                            target="_blank" class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                        <a href="https://spring-skillrater.onrender.com/" target="_blank"
+                                            class="rn-btn live-preview" style="">
+                                            <span>Live preview</span>
+                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="javaServicesModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="/assets/images/insighthub.png" alt="slide"
+                                            style="height:500px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3>
+                                        <span>Project description</span> Insight Hub: Java Springboot microservices
+                                        system
+                                    </h3>
+                                    <p class="">
+                                        The Issue Tracker project is an advanced solution aimed at effectively managing
+                                        software issues
+                                        and project progress through a modern microservices architecture, which enhances
+                                        both scalability
+                                        and maintainability. The system ensures high availability and security through
+                                        resilience patterns and a centralized authentication mechanism with
+                                        Docker-deployed LDAP, while relying on a robust tech stack that includes Spring
+                                        Boot, Microsoft SQL Server, and various testing frameworks to guarantee
+                                        reliability.<br>
+                                    <ul>
+                                        <li> Main Challenge: Managing real-time data synchronization and ensuring high
+                                            availability amidst user load fluctuations.</li>
+                                        <li> Approach Adopted: Utilization of microservices architecture with resilience
+                                            patterns and centralized authentication.</li>
+                                        <li> Popular Tools Involved: Docker, LDAP, Spring Boot 3, Kafka, Microsoft SQL
+                                            Server.</li>
+                                        <li>
+                                            <strong>Main tech stack</strong>: Java 8, Springboot, Spring Cloud,
+                                            Microsoft SQL Server, Light Active Directory, Docker, Resilience4J, Jenkins,
+                                            Junit
+                                        </li>
+                                    </ul>
+
+                                    </p>
+
+
+                                    <div class="button-group mt--20">
+                                        <!-- <a href="https://github.com/Maester-Khris/java-spring-reactive-rater"
+                                            target="_blank" class="rn-btn">
+                                            <span>Source Code</span>
+                                            <i class="bi bi-github" style="font-size: 14px;"></i>
+                                        </a>
+                                        <a href="https://spring-skillrater.onrender.com/" target="_blank"
+                                            class="rn-btn live-preview" style="">
+                                            <span>Live preview</span>
+                                            <i class="bi bi-lightning-charge-fill" style="font-size: 14px;"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="backto-top">
+            <div>
+                <i data-feather="arrow-up"></i>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop">
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">NK Portfolio © 2024, customization made on top of
+                <em><a target="_blank"
+                        href="https://github.com/ahmedsharifkhan/InBio-One-Page-Personal-Portfolio-Template"
+                        style="color: #2796aa;">In-Bio themes</a></em>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- JS ============================================ -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/modernizer.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/wow.js"></script>
+    <script src="assets/js/vendor/aos.js"></script>
+    <script src="assets/js/vendor/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
