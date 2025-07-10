@@ -24,142 +24,11 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet"> 
+  <link href="assets/css/additional.css" rel="stylesheet">
 
   <style>
-     /* modal header */
-     .modal-title { font-weight: 600; }
-    /* carousel rounded corners */
-    .carousel-inner img { border-radius: 0.5rem; }
-    /* ========================================================================================= */
-    /* ---------- Portfolio card ---------- */
-    .portfolio-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s;
-      background: #fff;
-    }
-    .portfolio-card:hover { transform: translateY(-4px); }
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-    .portfolio-card:hover .portfolio-overlay { opacity: 1; }
-    .portfolio-actions a {
-      color: #fff;
-      font-size: 1.4rem;
-      margin: 0 0.4rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.75rem;
-      height: 2.75rem;
-      border: 2px solid #fff;
-      border-radius: 50%;
-      transition: transform 0.25s;
-    }
-    .portfolio-actions a:hover { transform: scale(1.1); }
-
-    /* modal header */
-    .modal-title { font-weight: 600; }
-    /* carousel rounded corners */
-    .carousel-inner img { border-radius: 0.5rem; }
-
-    /* ---------- Generic “glowing–border‑shadow” card ---------- */
-.skill-card{
-  position:relative;
-  border-radius:1rem;           /* softer corners than default .card */
-  overflow:hidden;              /* keep the glow tidy */
-  background:#fff;
-  padding:2rem;
-  transition:transform .30s ease,
-             box-shadow  .30s ease;
-}
-
-/* coloured double‑gradient border */
-.skill-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  border-radius:inherit;
-
-  /* draw the 2‑pixel border */
-  padding:2px;                          /* border thickness   */
-  background:var(--border-gradient);     /* set per theme      */
-
-  /* hollow‑out the middle so only the “border” shows */
-  -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;           /* Chrome / Safari    */
-          mask-composite:exclude;       /* Firefox            */
-
-  pointer-events:none;                  /* box keeps clicks free */
-}
-
-/* subtle coloured drop shadow */
-.skill-card{
-  box-shadow:
-      0 6px 24px -4px rgba(var(--skill-rgb),.25),
-      0 0 1px                    rgba(0,0,0,.08);
-}
-
-/* lift‑on‑hover */
-.skill-card:hover{
-  transform:translateY(-6px);
-  box-shadow:
-      0 10px 32px -4px rgba(var(--skill-rgb),.35),
-      0 0 4px         rgba(var(--skill-rgb),.30);
-}
-
-
-/* ---------- Theme‑specific colour tokens ---------- */
-
-/* Backend & System Design (Bootstrap primary) */
-.skill-card--primary{
-  --skill-rgb:13,110,253;                                                       /* #0d6efd  */
-  --border-gradient:linear-gradient(135deg,
-                                    rgba(13,110,253,.60)  0%,
-                                    rgba(174,187,255,.30) 100%);
-}
-
-/* Machine Learning (Bootstrap success) */
-.skill-card--success{
-  --skill-rgb:25,135,84;                                                        /* #198754  */
-  --border-gradient:linear-gradient(135deg,
-                                    rgba(25,135,84,.60)   0%,
-                                    rgba(163,228,195,.30) 100%);
-}
-
-/* DevOps & Cloud (Bootstrap warning) */
-.skill-card--warning{
-  --skill-rgb:255,193,7;                                                        /* #ffc107  */
-  --border-gradient:linear-gradient(135deg,
-                                    rgba(255,193,7,.70)   0%,
-                                    rgba(255,230,160,.40) 100%);
-}
-
-/* (Optional) keep lists tidy inside the new padding */
-.skill-card ul,
-.skill-card ol{
-  margin-bottom:0;
-}
-
-.carousel-control-next,
-        .carousel-control-prev
-
-        /*, .carousel-indicators */
-            {
-            filter: invert(100%);
-        }
+    
   </style>
 
   <!-- =======================================================
@@ -184,6 +53,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#community">Community</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -436,7 +306,7 @@
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </div>
-        <p>A Little about my jouney as a software engineer, starting from university to my most recents roles in company. </p>
+        <p>A little about my carreer and journey as a software engineer, starting from university to my most recents roles in company. </p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -478,7 +348,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
                 <h2>My Education</h2>
                 <div class="timeline">
@@ -510,6 +379,120 @@
                   </div>
                 </div>
               </div>
+              <div class="resume-block" data-aos="fade-up">
+                <h2>Industry credentials</h2>
+                <!-- <div class="d-flex">
+                  <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                    <div class="h-full d-flex align-items-center justify-content-center me-2">
+                      <img class="img-fluid" src="assets/img/Oracle_badge.png" alt="">
+                    </div>
+                    <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                      <div class="mb-0">
+                        <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                        <span class="ceritified">Certified</span>
+                      </div>
+                      <h4 class="fs-5 fw-semibold mb-0">Oracle Java Programer I Associate</h4>
+                    </div>
+                  </div>
+                  <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                    <div class="h-full d-flex align-items-center justify-content-center me-2">
+                      <img class="img-fluid" src="assets/img/Power-Bi-Data-Analyst-Associate.png" alt="">
+                    </div>
+                    <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                      <div class="mb-0">
+                        <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                        <span class="ceritified">Certified</span>
+                      </div>
+                      <h4 class="fs-5 fw-semibold mb-0">PowerBI Data Analyst Associate</h4>
+                    </div>
+                  </div>
+                  <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                    <div class="h-full d-flex align-items-center justify-content-center me-2">
+                      <img class="img-fluid" src="assets/img/azure-ai.png" alt="">
+                    </div>
+                    <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                      <div class="mb-0">
+                        <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                        <span class="ceritified">Certified</span>
+                      </div>
+                      <h4 class="fs-5 fw-semibold mb-0">Microsoft Azure AI Fundamentals</h4>
+                    </div>
+                  </div>
+                  <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                    <div class="h-full d-flex align-items-center justify-content-center me-2">
+                      <img class="img-fluid" src="assets/img/data_engineer.png" alt="">
+                    </div>
+                    <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                      <div class="mb-0">
+                        <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                        <span class="ceritified">Certified</span>
+                      </div>
+                      <h4 class="fs-5 fw-semibold mb-0">AWS Data Engineer Associate</h4>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="carousel-wrapper overflow-hidden position-relative">
+                  <div class="cert-carousel d-flex">
+                    <!-- Carousel item 1 -->
+                    <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                      <div class="h-full d-flex align-items-center justify-content-center me-2">
+                        <img class="img-fluid" src="assets/img/Oracle_badge.png" alt="">
+                      </div>
+                      <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                        <div class="mb-0">
+                          <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                          <span class="ceritified">Certified</span>
+                        </div>
+                        <h4 class="fs-5 fw-semibold mb-0">Oracle Java Programer I Associate</h4>
+                      </div>
+                    </div>
+                    
+                    <!-- Carousel item 2 -->
+                    <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                      <div class="h-full d-flex align-items-center justify-content-center me-2">
+                        <img class="img-fluid" src="assets/img/Power-Bi-Data-Analyst-Associate.png" alt="">
+                      </div>
+                      <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                        <div class="mb-0">
+                          <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                          <span class="ceritified">Certified</span>
+                        </div>
+                        <h4 class="fs-5 fw-semibold mb-0">PowerBI Data Analyst Associate</h4>
+                      </div>
+                    </div>
+                
+                    <!-- Carousel item 3 -->
+                    <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                      <div class="h-full d-flex align-items-center justify-content-center me-2">
+                        <img class="img-fluid" src="assets/img/azure-ai.png" alt="">
+                      </div>
+                      <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                        <div class="mb-0">
+                          <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                          <span class="ceritified">Certified</span>
+                        </div>
+                        <h4 class="fs-5 fw-semibold mb-0">Microsoft Azure AI Fundamentals</h4>
+                      </div>
+                    </div>
+                
+                    <!-- Carousel item 4 -->
+                    <!-- <div class="rounded border cert-items-container p-2 d-flex flex-row">
+                      <div class="h-full d-flex align-items-center justify-content-center me-2">
+                        <img class="img-fluid" src="assets/img/data_engineer.png" alt="">
+                      </div>
+                      <div class="h-full flex-1 d-flex flex-column justify-content-center">
+                        <div class="mb-0">
+                          <i class="bi bi-patch-check-fill d-inline-block me-1" style="color:#0077B5;"></i>
+                          <span class="ceritified">Certified</span>
+                        </div>
+                        <h4 class="fs-5 fw-semibold mb-0">AWS Data Engineer Associate</h4>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+                
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -533,6 +516,92 @@
         </div>
       </div>
     </section>
+
+    <!-- Community: Galerie Section -->
+    <section id="community" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Community Involvement</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+      </div>
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <!-- Left side: Carousel or static image -->
+          <div class="col-md-4">
+            <div class="h-100 rounded shadow-sm overflow-hidden position-relative bg-light d-flex align-items-center justify-content-center">
+              <!-- Placeholder carousel or image -->
+              <img src="assets/img/social/lobby.jpg" class="img-fluid w-100" alt="Community Preview">
+            </div>
+          </div>
+    
+          <!-- Right side: Mosaic Grid -->
+          <div class="col-md-8">
+            <div class="row g-3">
+              <!-- Mosaic item -->
+              <div class="col-6 col-lg-5">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/google1.jpg" class="img-fluid" alt="Event 1">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 1</div> -->
+                </div>
+              </div>
+    
+              <div class="col-6 col-lg-4">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/google2.jpg" class="img-fluid" alt="Event 2">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 2</div> -->
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/mariana.jpg" class="img-fluid" alt="Event 2">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 2</div> -->
+                </div>
+              </div>
+    
+              <div class="col-6 col-lg-4">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/kiratirashi.jpg" class="img-fluid" alt="Event 3">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 3</div> -->
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/group_photo.jpg" class="img-fluid" alt="Event 1">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 1</div> -->
+                </div>
+              </div> 
+
+              <div class="col-6 col-lg-4">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/idea_forge.jpg" class="img-fluid" alt="Event 1">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 1</div> -->
+                </div>
+              </div> 
+              
+              <div class="col-6 col-lg-8">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/talking.jpg" class="img-fluid" alt="Event 1">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 1</div> -->
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="mosaic-tile position-relative overflow-hidden rounded shadow-sm">
+                  <img src="assets/img/social/crowd.jpg" class="img-fluid" alt="Event 1">
+                  <!-- <div class="caption position-absolute w-100 text-center text-white">Event 1</div> -->
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
     <!-- Contact Section isotope-layout  isotope-container-->
     <section id="contact" class="contact section light-background">
