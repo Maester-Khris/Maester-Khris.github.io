@@ -1,7 +1,13 @@
  /* modal header */
- .modal-title { font-weight: 600; }
+ .modal-title {
+   font-weight: 600;
+ }
+
  /* carousel rounded corners */
- .carousel-inner img { border-radius: 0.5rem; }
+ .carousel-inner img {
+   border-radius: 0.5rem;
+ }
+
  /* ========================================================================================= */
  /* ---------- Portfolio card ---------- */
  .portfolio-card {
@@ -12,7 +18,11 @@
    transition: transform 0.3s;
    background: #fff;
  }
- .portfolio-card:hover { transform: translateY(-4px); }
+
+ .portfolio-card:hover {
+   transform: translateY(-4px);
+ }
+
  .portfolio-overlay {
    position: absolute;
    inset: 0;
@@ -23,7 +33,11 @@
    opacity: 0;
    transition: opacity 0.25s;
  }
- .portfolio-card:hover .portfolio-overlay { opacity: 1; }
+
+ .portfolio-card:hover .portfolio-overlay {
+   opacity: 1;
+ }
+
  .portfolio-actions a {
    color: #fff;
    font-size: 1.4rem;
@@ -37,196 +51,244 @@
    border-radius: 50%;
    transition: transform 0.25s;
  }
- .portfolio-actions a:hover { transform: scale(1.1); }
+
+ .portfolio-actions a:hover {
+   transform: scale(1.1);
+ }
 
  /* modal header */
- .modal-title { font-weight: 600; }
+ .modal-title {
+   font-weight: 600;
+ }
+
  /* carousel rounded corners */
- .carousel-inner img { border-radius: 0.5rem; }
+ .carousel-inner img {
+   border-radius: 0.5rem;
+ }
 
  /* ---------- Generic “glowing–border‑shadow” card ---------- */
-.skill-card{
-position:relative;
-border-radius:1rem;           /* softer corners than default .card */
-overflow:hidden;              /* keep the glow tidy */
-background:#fff;
-padding:2rem;
-transition:transform .30s ease,
-          box-shadow  .30s ease;
-}
+ .skill-card {
+   position: relative;
+   border-radius: 1rem;
+   /* softer corners than default .card */
+   overflow: hidden;
+   /* keep the glow tidy */
+   background: #fff;
+   padding: 2rem;
+   transition: transform .30s ease,
+     box-shadow .30s ease;
+ }
 
-/* coloured double‑gradient border */
-.skill-card::before{
-content:'';
-position:absolute;
-inset:0;
-border-radius:inherit;
+ /* coloured double‑gradient border */
+ .skill-card::before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   border-radius: inherit;
 
-/* draw the 2‑pixel border */
-padding:2px;                          /* border thickness   */
-background:var(--border-gradient);     /* set per theme      */
+   /* draw the 2‑pixel border */
+   padding: 2px;
+   /* border thickness   */
+   background: var(--border-gradient);
+   /* set per theme      */
 
-/* hollow‑out the middle so only the “border” shows */
--webkit-mask:
+   /* hollow‑out the middle so only the “border” shows */
+   -webkit-mask:
      linear-gradient(#000 0 0) content-box,
      linear-gradient(#000 0 0);
--webkit-mask-composite:xor;           /* Chrome / Safari    */
-       mask-composite:exclude;       /* Firefox            */
+   -webkit-mask-composite: xor;
+   /* Chrome / Safari    */
+   mask-composite: exclude;
+   /* Firefox            */
 
-pointer-events:none;                  /* box keeps clicks free */
-}
+   pointer-events: none;
+   /* box keeps clicks free */
+ }
 
-/* subtle coloured drop shadow */
-.skill-card{
-box-shadow:
-   0 6px 24px -4px rgba(var(--skill-rgb),.25),
-   0 0 1px                    rgba(0,0,0,.08);
-}
+ /* subtle coloured drop shadow */
+ .skill-card {
+   box-shadow:
+     0 6px 24px -4px rgba(var(--skill-rgb), .25),
+     0 0 1px rgba(0, 0, 0, .08);
+ }
 
-/* lift‑on‑hover */
-.skill-card:hover{
-transform:translateY(-6px);
-box-shadow:
-   0 10px 32px -4px rgba(var(--skill-rgb),.35),
-   0 0 4px         rgba(var(--skill-rgb),.30);
-}
+ /* lift‑on‑hover */
+ .skill-card:hover {
+   transform: translateY(-6px);
+   box-shadow:
+     0 10px 32px -4px rgba(var(--skill-rgb), .35),
+     0 0 4px rgba(var(--skill-rgb), .30);
+ }
 
 
-/* ---------- Theme‑specific colour tokens ---------- */
+ /* ---------- Theme‑specific colour tokens ---------- */
 
-/* Backend & System Design (Bootstrap primary) */
-.skill-card--primary{
---skill-rgb:13,110,253;                                                       /* #0d6efd  */
---border-gradient:linear-gradient(135deg,
-                                 rgba(13,110,253,.60)  0%,
-                                 rgba(174,187,255,.30) 100%);
-}
+ /* Backend & System Design (Bootstrap primary) */
+ .skill-card--primary {
+   --skill-rgb: 13, 110, 253;
+   /* #0d6efd  */
+   --border-gradient: linear-gradient(135deg,
+       rgba(13, 110, 253, .60) 0%,
+       rgba(174, 187, 255, .30) 100%);
+ }
 
-/* Machine Learning (Bootstrap success) */
-.skill-card--success{
---skill-rgb:25,135,84;                                                        /* #198754  */
---border-gradient:linear-gradient(135deg,
-                                 rgba(25,135,84,.60)   0%,
-                                 rgba(163,228,195,.30) 100%);
-}
+ /* Machine Learning (Bootstrap success) */
+ .skill-card--success {
+   --skill-rgb: 25, 135, 84;
+   /* #198754  */
+   --border-gradient: linear-gradient(135deg,
+       rgba(25, 135, 84, .60) 0%,
+       rgba(163, 228, 195, .30) 100%);
+ }
 
-/* DevOps & Cloud (Bootstrap warning) */
-.skill-card--warning{
---skill-rgb:255,193,7;                                                        /* #ffc107  */
---border-gradient:linear-gradient(135deg,
-                                 rgba(255,193,7,.70)   0%,
-                                 rgba(255,230,160,.40) 100%);
-}
+ /* DevOps & Cloud (Bootstrap warning) */
+ .skill-card--warning {
+   --skill-rgb: 255, 193, 7;
+   /* #ffc107  */
+   --border-gradient: linear-gradient(135deg,
+       rgba(255, 193, 7, .70) 0%,
+       rgba(255, 230, 160, .40) 100%);
+ }
 
-/* (Optional) keep lists tidy inside the new padding */
-.skill-card ul,
-.skill-card ol{
-margin-bottom:0;
-}
+ /* (Optional) keep lists tidy inside the new padding */
+ .skill-card ul,
+ .skill-card ol {
+   margin-bottom: 0;
+ }
 
-.carousel-control-next,
-     .carousel-control-prev
+ .carousel-control-next,
+ .carousel-control-prev
 
-     /*, .carousel-indicators */
-         {
-         filter: invert(100%);
-     }
+ /*, .carousel-indicators */
+   {
+   filter: invert(100%);
+ }
 
-.cert-items-container{
-    max-height: 120px!important;
-    max-width: 350px;
-    width: 350px;
-    height: 120px;
-    margin: 10px;
-}
-.cert-items-container .ceritified{
-    font-size:17px;
-    font-weight: bold;
-    color:#1A85BC;
-}
-.cert-items-container img {
-    max-width: 100%; /* Ensure it doesn't exceed its parent's width */
-    max-height: 100%; /* Ensure it doesn't exceed its parent's height */
-    display: block; /* Removes extra space below inline images */
-    object-fit: contain; /* Scales the image down to fit within the content box,
+ .cert-items-container {
+   max-height: 120px !important;
+   max-width: 350px;
+   width: 350px;
+   height: 120px;
+   margin: 10px;
+ }
+
+ .cert-items-container .ceritified {
+   font-size: 17px;
+   font-weight: bold;
+   color: #1A85BC;
+ }
+
+ .cert-items-container img {
+   max-width: 100%;
+   /* Ensure it doesn't exceed its parent's width */
+   max-height: 100%;
+   /* Ensure it doesn't exceed its parent's height */
+   display: block;
+   /* Removes extra space below inline images */
+   object-fit: contain;
+   /* Scales the image down to fit within the content box,
                             preserving its aspect ratio. It will be "letterboxed" if necessary. */
-  }
+ }
 
-  .carousel-wrapper {
-    width: 100%;
-    max-width: 1140px;
-    margin: auto;
-  }
-  
-  .cert-carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    animation: scroll-x 10s linear infinite;
-  }
-  
-  @keyframes scroll-x {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  
-  /* Clone content to make infinite scroll illusion (optional via JS) */
-  .cert-carousel > * {
-    flex: 0 0 auto;
-  }
-  
-  /* Existing styles */
-  .cert-items-container {
-    max-height: 120px !important;
-    max-width: 350px;
-    width: 350px;
-    height: 120px;
-    margin: 10px 0;
-  }
-  
-  .cert-items-container .ceritified {
-    font-size: 17px;
-    font-weight: bold;
-    color: #1A85BC;
-  }
-  
-  .cert-items-container img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    object-fit: contain;
-  }
-  
-  .h-full {
-    height: 100%;
-  }
-  
+ .carousel-wrapper {
+   width: 100%;
+   max-width: 1140px;
+   margin: auto;
+ }
 
-  .mosaic-tile {
-    height: 200px;
-  }
-  
-  .mosaic-tile img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    transition: transform 0.4s ease;
-  }
-  
-  .mosaic-tile:hover img {
-    transform: scale(1.05);
-  }
-  
-  .mosaic-tile .caption {
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 0;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
+ .cert-carousel {
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 10px;
+   animation: scroll-x 10s linear infinite;
+ }
+
+ @keyframes scroll-x {
+   0% {
+     transform: translateX(0);
+   }
+
+   100% {
+     transform: translateX(-50%);
+   }
+ }
+
+
+ /* Clone content to make infinite scroll illusion (optional via JS) */
+ .cert-carousel>* {
+   flex: 0 0 auto;
+ }
+
+ /* Existing styles */
+ .cert-items-container {
+   max-height: 120px !important;
+   max-width: 350px;
+   width: 350px;
+   height: 120px;
+   margin: 10px 0;
+ }
+
+ .cert-items-container .ceritified {
+   font-size: 17px;
+   font-weight: bold;
+   color: #1A85BC;
+ }
+
+ .cert-items-container img {
+   max-width: 100%;
+   max-height: 100%;
+   display: block;
+   object-fit: contain;
+ }
+
+ .h-full {
+   height: 100%;
+ }
+
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.mosaic-tile {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.mosaic-tile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mosaic-tile.span-2 {
+  grid-column: span 2;
+}
+.mosaic-tile:hover img {
+   transform: scale(1.05);
+ }
+ .mosaic-tile .caption {
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 5px 0;
+   font-weight: bold;
+   font-size: 1rem;
+ }
+
+/* =========================== */
+ /* .mosaic-tile {
+   height: 200px;
+ }
+ .mosaic-tile img {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+   transition: transform 0.4s ease;
+ } */
+ 
