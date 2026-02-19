@@ -246,42 +246,73 @@
  }
 
 
-.mosaic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.mosaic-tile {
-  position: relative;
-  overflow: hidden;
-  height: 200px;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-}
-
-.mosaic-tile img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.mosaic-tile.span-2 {
-  grid-column: span 2;
-}
-.mosaic-tile:hover img {
-   transform: scale(1.05);
- }
- .mosaic-tile .caption {
-   bottom: 0;
-   background: rgba(0, 0, 0, 0.5);
-   padding: 5px 0;
-   font-weight: bold;
-   font-size: 1rem;
+ .justified-gallery {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   padding: 10px 0;
  }
 
-/* =========================== */
+ /* Prevent the last row from stretching to full width */
+ .justified-gallery::after {
+   content: "";
+   flex-grow: 1000;
+ }
+
+ .gallery-item {
+   flex-grow: 1;
+   height: 260px;
+   /* Base height for all images */
+   position: relative;
+   overflow: hidden;
+   border-radius: 12px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+
+ .gallery-item:hover {
+   transform: scale(1.02);
+   z-index: 10;
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+ }
+
+ .gallery-item img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   vertical-align: bottom;
+   transition: transform 0.6s ease;
+ }
+
+ .gallery-item:hover img {
+   transform: scale(1.08);
+ }
+
+ @media (max-width: 992px) {
+   .gallery-item {
+     height: 220px;
+   }
+ }
+
+ @media (max-width: 768px) {
+   .gallery-item {
+     height: 180px;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .justified-gallery {
+     gap: 6px;
+   }
+
+   .gallery-item {
+     height: 150px;
+     flex-basis: 45%;
+     /* Two images per row on very small screens */
+   }
+ }
+
+ /* =========================== */
  /* .mosaic-tile {
    height: 200px;
  }
@@ -291,4 +322,3 @@
    width: 100%;
    transition: transform 0.4s ease;
  } */
- 

@@ -1,5 +1,35 @@
 export const portfolioProjects = [
     {
+        projectId: 'ai-evaluator-observability',
+        title: 'AI Evaluator: Agentic Observability Platform',
+        description:
+            'A high-fidelity evaluation suite designed to bridge the gap between experimental LLM outputs and production-grade reliability. ' +
+            'Engineered an Agentic RAG architecture that moves beyond zero-shot prompting by implementing multi-step reasoning loops, ' +
+            'self-correction mechanisms for hallucination reduction, and a hybrid retrieval strategy using Qdrant (semantic) and PostgreSQL (relational). ' +
+            'Features a custom-built HITL (Human-in-the-Loop) dashboard to facilitate RLHF, using Zustand for low-latency state management across complex evaluation traces.',
+        keywords: ['Agentic Workflows', 'Qdrant Vector DB', 'LangGraph', 'Zustand', 'Python'],
+        images: [
+            'aievaluator.png',
+        ],
+        live_url: 'https://ai-evaluator-mk72409rm-nkops-projects.vercel.app',
+        github: 'https://github.com/Maester-Khris/AI-Evaluator'
+    },
+    {
+        projectId: 'postair-content-sharing',
+        title: 'Postair: High-Throughput Content Engine',
+        description:
+            'An enterprise-grade content distribution platform architected to solve the "thundering herd" problem in real-time sharing. ' +
+            'Utilizes a non-blocking Node.js core with Redis Streams to decouple heavy I/O operations from the main event loop, ensuring sub-50ms p99 latency under load. ' +
+            'Implemented the Transactional Outbox pattern to guarantee data consistency across MongoDB and Kafka, and optimized frontend delivery using React Context for atomic auth state and efficient re-render cycles.' +
+            'reducing p99 latency by 48% through aggressive caching and lean query optimization.',
+        keywords: ['Node.js', 'Redis Streams', 'EDA', 'MongoDB', 'Performance Optimization'],
+        images: [
+            'ng-postair.png',
+        ],
+        live_url: 'https://angular-state-management-rllho8kxo-nkops-projects.vercel.app',
+        github: 'https://github.com/Maester-Khris/Angular-state-management'
+    },
+    {
         projectId: 'ai-healthcare-city-monitor',           // unique slug for routing / modal look‑up
         title: 'AI Healthcare City Monitor',
         description:
@@ -15,7 +45,7 @@ export const portfolioProjects = [
     {
         projectId: 'ai-healthcare-ml',           // unique slug for routing / modal look‑up
         title: 'AI Healthcare sickness severity classification',
-        description:`<p>I designed and deployed a patient‑sickness–severity classifier that interprets short, free‑text symptom descriptions and assigns one of four urgency levels: “routine”, “moderate”, “severe” or “critical”. By fine‑tuning Google’s Gemini 2.5 Flash on a tightly curated medical dataset and serving the model on GCP Vertex AI, the solution enables real‑time triage inside tele‑health workflows.</p>
+        description: `<p>I designed and deployed a patient‑sickness–severity classifier that interprets short, free‑text symptom descriptions and assigns one of four urgency levels: “routine”, “moderate”, “severe” or “critical”. By fine‑tuning Google’s Gemini 2.5 Flash on a tightly curated medical dataset and serving the model on GCP Vertex AI, the solution enables real‑time triage inside tele‑health workflows.</p>
             <p><strong>Custom Dataset</strong></p>
             <ul>
             <li>Collected 237 de‑identified symptom narratives sourced from prior consultations.</li>
@@ -49,8 +79,8 @@ export const portfolioProjects = [
             </ul>
             <p>The result is a production‑grade, low‑latency service that helps clinicians prioritise patient care while meeting stringent privacy and performance requirements.</p>
             `,
-        keywords: ['GCP', 'Vertex AI','LLM Fine-tuning','Ml Model deployment'],
-        images: ['vertexai.png','llm_finetuning.png','aicoordinator_arch.png'],
+        keywords: ['GCP', 'Vertex AI', 'LLM Fine-tuning', 'Ml Model deployment'],
+        images: ['vertexai.png', 'llm_finetuning.png', 'aicoordinator_arch.png'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator/tree/main/fine_tuning_training'
     },
@@ -100,8 +130,8 @@ export const portfolioProjects = [
             </ul>
             <p>The result is a production‑ready classifier that meets accuracy targets while upholding stringent financial‑data standards.</p>
             `,
-        keywords: ['Data Science','Machine Learning','NLP','Topic Classification','ML Model Deployment'],
-        images: ['multiclass classification.png','eda1.png','eda2.png','model_deployment.png'],
+        keywords: ['Data Science', 'Machine Learning', 'NLP', 'Topic Classification', 'ML Model Deployment'],
+        images: ['multiclass classification.png', 'eda1.png', 'eda2.png', 'model_deployment.png'],
         live_url: 'https://colab.research.google.com/drive/1Rshf8DBmcvw6QUJ_T-KettrUG8WgxewU?usp=sharing',
         github: 'https://github.com/Maester-Khris/financial-csr-aibot/blob/main/notebooks'
     },
@@ -196,7 +226,7 @@ export const portfolioProjects = [
     {
         projectId: 'taskalert-frontend',
         title: 'Taskalert v2: Frontend Application',
-        description:` The Taskalert project is an innovative real-time notes reminder application
+        description: ` The Taskalert project is an innovative real-time notes reminder application
             designed to enhance user engagement and productivity. Built using the MEAN stack
             (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
             PusherJS for dynamic push notifications, ensuring timely reminders and seamless
@@ -219,7 +249,7 @@ export const portfolioProjects = [
     {
         projectId: 'taskalert-backend',
         title: 'Taskalert v2: Backend Application',
-        description:` The Taskalert project is an innovative real-time notes reminder application
+        description: ` The Taskalert project is an innovative real-time notes reminder application
             designed to enhance user engagement and productivity. Built using the MEAN stack
             (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
             PusherJS for dynamic push notifications, ensuring timely reminders and seamless
@@ -244,7 +274,7 @@ export const portfolioProjects = [
     {
         projectId: 'ai-chat-filter',
         title: 'Python AI Real‑Time Chat Message Filtering',
-        description:`The "AI Chat Monitor" project addresses the need for intelligent monitoring in
+        description: `The "AI Chat Monitor" project addresses the need for intelligent monitoring in
             live communication services, such as chat applications. While these services are often free
             for personal use, challenges arise in multi-participant environments where
             compliance
@@ -311,7 +341,7 @@ export const portfolioProjects = [
     {
         projectId: 'mobile-ui-figma',
         title: 'Mobile Application UI & Interaction Design',
-        description:`This project centers on designing the user interface (UI) and interaction
+        description: `This project centers on designing the user interface (UI) and interaction
             patterns for a
             mobile application.
             Using Figma, a leading design tool, the project involves crafting visually
@@ -326,7 +356,7 @@ export const portfolioProjects = [
             development
             of a compelling mobile application.`,
         keywords: ['FIGMA'],
-        images: ['portfolio-05.jpg','ui_design1.png','ui_design2.png','figma_design1.png'],
+        images: ['portfolio-05.jpg', 'ui_design1.png', 'ui_design2.png', 'figma_design1.png'],
         live_url: '',
         github: ''
     }
