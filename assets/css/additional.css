@@ -96,10 +96,11 @@
    -webkit-mask:
      linear-gradient(#000 0 0) content-box,
      linear-gradient(#000 0 0);
+   mask:
+     linear-gradient(#000 0 0) content-box,
+     linear-gradient(#000 0 0);
    -webkit-mask-composite: xor;
-   /* Chrome / Safari    */
    mask-composite: exclude;
-   /* Firefox            */
 
    pointer-events: none;
    /* box keeps clicks free */
@@ -165,78 +166,29 @@
  }
 
  .cert-items-container {
-   max-height: 120px !important;
-   max-width: 350px;
-   width: 350px;
-   height: 120px;
-   margin: 10px;
- }
-
- .cert-items-container .ceritified {
-   font-size: 17px;
-   font-weight: bold;
-   color: #1A85BC;
- }
-
- .cert-items-container img {
-   max-width: 100%;
-   /* Ensure it doesn't exceed its parent's width */
-   max-height: 100%;
-   /* Ensure it doesn't exceed its parent's height */
-   display: block;
-   /* Removes extra space below inline images */
-   object-fit: contain;
-   /* Scales the image down to fit within the content box,
-                            preserving its aspect ratio. It will be "letterboxed" if necessary. */
- }
-
- .carousel-wrapper {
+   min-height: 120px;
    width: 100%;
-   max-width: 1140px;
-   margin: auto;
- }
-
- .cert-carousel {
+   max-width: 400px;
+   margin: 0 auto;
    display: flex;
-   flex-wrap: nowrap;
-   gap: 10px;
-   animation: scroll-x 10s linear infinite;
+   flex-direction: row;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
 
- @keyframes scroll-x {
-   0% {
-     transform: translateX(0);
-   }
-
-   100% {
-     transform: translateX(-50%);
-   }
- }
-
-
- /* Clone content to make infinite scroll illusion (optional via JS) */
- .cert-carousel>* {
-   flex: 0 0 auto;
- }
-
- /* Existing styles */
- .cert-items-container {
-   max-height: 120px !important;
-   max-width: 350px;
-   width: 350px;
-   height: 120px;
-   margin: 10px 0;
+ .cert-items-container:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
  }
 
  .cert-items-container .ceritified {
-   font-size: 17px;
+   font-size: 15px;
    font-weight: bold;
    color: #1A85BC;
  }
 
  .cert-items-container img {
    max-width: 100%;
-   max-height: 100%;
+   max-height: 80px;
    display: block;
    object-fit: contain;
  }
@@ -313,12 +265,17 @@
  }
 
  /* =========================== */
- /* .mosaic-tile {
-   height: 200px;
+
+ .about .personal-info .info-item .value {
+   word-break: break-word;
  }
- .mosaic-tile img {
-   object-fit: cover;
-   height: 100%;
-   width: 100%;
-   transition: transform 0.4s ease;
- } */
+
+ @media (max-width: 480px) {
+   .about .personal-info {
+     padding: 1.25rem !important;
+   }
+
+   .about .personal-info .info-item .value {
+     font-size: 0.9rem;
+   }
+ }
