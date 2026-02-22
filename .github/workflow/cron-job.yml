@@ -1,0 +1,14 @@
+name: Keep Render Alive
+on:
+  schedule:
+    - cron: '*/14 * * * *' # Runs every 14 minutes
+  workflow_dispatch: # Allows you to trigger it manually
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Services
+        run: |
+          curl -I https://angular-state-management.onrender.com
+          curl -I https://angular-state-management-1.onrender.com
