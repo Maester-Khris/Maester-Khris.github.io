@@ -26,7 +26,7 @@ export const portfolioProjects = [
         images: [
             'ng-postair.png',
         ],
-        live_url: 'https://angular-state-management-rllho8kxo-nkops-projects.vercel.app',
+        live_url: 'https://angular-state-management-5jrw2uoc9-nkops-projects.vercel.app',
         github: 'https://github.com/Maester-Khris/Angular-state-management'
     },
     {
