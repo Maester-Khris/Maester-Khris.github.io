@@ -438,3 +438,123 @@
     display: none;
   }
 }
+
+
+/* =============================================================================
+   VERTICAL SIDE NAVBAR
+   Fully out of document flow — position: fixed, no layout compensation anywhere.
+   ============================================================================= */
+
+.side-nav {
+  position: fixed;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: #18181f;
+  border: 1px solid #2a2a35;
+  border-radius: 28px;
+  padding: 14px 8px;
+}
+
+.side-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.side-nav-divider {
+  width: 24px;
+  height: 1px;
+  background: #2a2a35;
+  margin: 6px 0;
+}
+
+.side-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.side-nav-link svg {
+  stroke: #888;
+  flex-shrink: 0;
+  transition: stroke 0.2s ease;
+}
+
+.side-nav-link:hover {
+  background: #2a2a35;
+}
+
+.side-nav-link:hover svg {
+  stroke: #ccc;
+}
+
+.side-nav-link.is-active {
+  background: #e87040;
+}
+
+.side-nav-link.is-active svg {
+  stroke: #fff;
+}
+
+/* Tooltip — opacity-only reveal, no layout shift */
+.side-nav-tooltip {
+  position: absolute;
+  left: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1e1e28;
+  border: 1px solid #2e2e3a;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #ccc;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  font-family: var(--hero-display-font, sans-serif);
+}
+
+.side-nav-link:hover .side-nav-tooltip {
+  opacity: 1;
+}
+
+/* ── Mobile: horizontal bar, bottom-center, no tooltips ─────────────────────── */
+@media (max-width: 767px) {
+  .side-nav {
+    left: 50%;
+    top: auto;
+    bottom: 24px;
+    transform: translateX(-50%);
+    border-radius: 28px;
+    padding: 8px 14px;
+  }
+
+  .side-nav-list {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .side-nav-divider {
+    width: 1px;
+    height: 24px;
+    margin: 0 6px;
+  }
+
+  .side-nav-tooltip {
+    display: none;
+  }
+}
