@@ -279,3 +279,162 @@
      font-size: 0.9rem;
    }
  }
+
+
+/* =============================================================================
+   HERO V2 — full-height dark hero with typing effect + terminal window
+   All values are driven by CSS variables so the palette can be swapped in one place.
+   ============================================================================= */
+
+/* ── Design tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --hero-bg:           #0c0c0f;
+  --hero-text:         #f0ede8;
+  --hero-accent-from:  #e87040;
+  --hero-accent-to:    #f5a76c;
+  --hero-display-font: "Space Grotesk", sans-serif;
+  --hero-mono-font:    "JetBrains Mono", monospace;
+}
+
+/* ── Section shell ──────────────────────────────────────────────────────────── */
+#hero.hero-v2 {
+  min-height: 100vh;
+  background: var(--hero-bg);
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+#hero.hero-v2 .hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Left: typing block ─────────────────────────────────────────────────────── */
+.hero-left {
+  color: var(--hero-text);
+}
+
+.hero-label {
+  font-family: var(--hero-display-font);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  color: color-mix(in srgb, var(--hero-text) 55%, transparent);
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+
+.hero-typed-line {
+  font-family: var(--hero-display-font);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  min-height: 1.3em;
+  background: linear-gradient(90deg, var(--hero-accent-from), var(--hero-accent-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* blinking block cursor sits outside the gradient span */
+.hero-cursor {
+  display: inline-block;
+  width: .55em;
+  height: .9em;
+  vertical-align: text-bottom;
+  background: var(--hero-accent-from);
+  margin-left: 3px;
+  border-radius: 1px;
+  animation: hero-blink .9s step-end infinite;
+}
+
+@keyframes hero-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Right: terminal window ─────────────────────────────────────────────────── */
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: 520px;
+  background: #13131a;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .07),
+    0 24px 60px rgba(0, 0, 0, .55);
+  overflow: hidden;
+  animation: terminal-float 4s ease-in-out infinite;
+  font-family: var(--hero-mono-font);
+}
+
+@keyframes terminal-float {
+  0%, 100% { transform: translateY(0);     }
+  50%       { transform: translateY(-10px); }
+}
+
+.terminal-bar {
+  background: #1e1e28;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.terminal-dot.red    { background: #ff5f57; }
+.terminal-dot.yellow { background: #febc2e; }
+.terminal-dot.green  { background: #28c840; }
+
+.terminal-title {
+  font-size: .72rem;
+  color: rgba(255, 255, 255, .35);
+  margin: 0 auto;
+}
+
+.terminal-body {
+  height: 210px;
+  overflow: hidden;
+  padding: 14px 16px;
+  font-size: .76rem;
+  line-height: 1.65;
+  color: #c9c9d4;
+}
+
+/* terminal line token classes */
+.tl          { display: block; white-space: pre; }
+.tl-prompt   { color: #6a9a6a; }
+.tl-cmd      { color: #c9c9d4; }
+.tl-dim      { color: rgba(201, 201, 212, .45); }
+.tl-ok       { color: #6a9a6a; }
+.tl-warn     { color: var(--hero-accent-from); font-weight: 600; }
+.tl-status   { color: #7eb6e8; }
+
+/* ── Mobile collapse ────────────────────────────────────────────────────────── */
+@media (max-width: 719px) {
+  #hero.hero-v2 .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-right {
+    display: none;
+  }
+}
