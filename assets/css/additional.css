@@ -1287,6 +1287,87 @@
    background: var(--exp-accent);
  }
 
+ /* ── Credentials card grid ─────────────────────────────────────────────────── */
+ .cred-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(3, 1fr);
+   gap: 8px;
+   flex: 1;
+   min-height: 0;
+ }
+
+ .cred-badge {
+   background: #0e0e16;
+   border: 1px solid #1f222a;
+   border-radius: 10px;
+   padding: 10px 12px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   min-width: 0;
+   overflow: hidden;
+ }
+
+ .cred-badge--inprogress {
+   border-style: dashed;
+   border-color: #2a2a20;
+   opacity: 0.75;
+ }
+
+ .cred-icon {
+   width: 32px;
+   height: 32px;
+   border-radius: 8px;
+   border: 1px solid;
+   flex-shrink: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+ }
+
+ .cred-text {
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+   min-width: 0;
+ }
+
+ .cred-name {
+   font-size: 11px;
+   font-weight: 600;
+   color: #ccc;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+
+ .cred-sub {
+   font-family: var(--hero-mono-font, "JetBrains Mono", monospace);
+   font-size: 9.5px;
+   color: #444;
+   white-space: nowrap;
+ }
+
+ .cred-status {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+ }
+
+ .cred-dot {
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   flex-shrink: 0;
+ }
+
+ .cred-status-lbl {
+   font-size: 9px;
+   font-family: var(--hero-mono-font, "JetBrains Mono", monospace);
+ }
+
  /* ── Mobile: stack vertically ──────────────────────────────────────────────── */
  @media (max-width: 767px) {
    .expertise-section {
