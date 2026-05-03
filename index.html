@@ -305,109 +305,167 @@
       </div>
     </section>
 
-    <section id="skills" class="skills section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4 skills-animation">
-          <h2 class="fw-bold text-center mb-4">Technical Expertise & System Architecture</h2>
+    <!-- Expertise Section -->
+    <section id="skills" class="expertise-section">
+      <div class="expertise-heading">
+        <span class="expertise-label">Technical Stack</span>
+        <h2 class="expertise-title">Areas of Expertise</h2>
+      </div>
 
-          <div class="col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="card skill-card skill-card--primary shadow-md border-0 p-2 w-100 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-primary fw-semibold mb-3">
-                  <i class="bi bi-layers me-2"></i>Backend Engineering
-                </h5>
-                <ul class="mb-4 small text-dark lh-lg ps-3">
-                  <li><strong>Java Ecosystem</strong>: Spring Boot (Cloud, Security), Hibernate, Reactive Streams</li>
-                  <li><strong>Node.js Stack</strong>: NestJS, Express, Prisma ORM, Performance Tuning</li>
-                  <li><strong>Python AI Ops</strong>: FastAPI, AsyncIO, Celery (Distributed Workers)</li>
-                  <li><strong>Persistence</strong>: PostgreSQL (pgvector), MongoDB, Redis (Streams/Caching)</li>
-                </ul>
-                <div class="mt-auto">
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span class="text-muted">Mastery</span><span class="fw-bold">90%</span>
-                  </div>
-                  <div class="progress" style="height: 6px;">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"></div>
-                  </div>
-                </div>
-              </div>
+      <div class="expertise-deck" id="expertise-deck">
+
+        <!-- Card 1: Backend Engineering -->
+        <div class="exp-card is-active" style="--exp-accent:#5b8fcc">
+          <div class="exp-collapsed">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+              <path d="M7 7h10M7 11h6"/>
+            </svg>
+            <span class="exp-vert-label">Backend Engineering</span>
+          </div>
+          <div class="exp-expanded">
+            <div class="exp-exp-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+                <path d="M7 7h10M7 11h6"/>
+              </svg>
+              <h3 class="exp-title">Backend Engineering</h3>
+            </div>
+            <ul class="exp-list">
+              <li><span class="exp-dash">—</span><span><strong>API Design</strong> REST at production grade — idempotency, versioning, ETag, conditional requests &amp; cache semantics</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Performance</strong> high-concurrency systems, CPU vs I/O thread modelling, distributed caching, cache stampede prevention</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Data Layer</strong> query optimization, batch processing, indexing strategies, denormalization &amp; partitioning decisions</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Debugging</strong> stress testing, memory leak investigation, profiling under load</span></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Spring Boot</span>
+              <span class="exp-tag">NestJS</span>
+              <span class="exp-tag">FastAPI</span>
+              <span class="exp-tag">Redis</span>
+              <span class="exp-tag">Kafka</span>
+              <span class="exp-tag">PostgreSQL</span>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="card skill-card shadow-md border-0 p-2 w-100 h-100"
-              style="border-left: 4px solid #6f42c1 !important;">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-semibold mb-3" style="color: #6f42c1;">
-                  <i class="bi bi-diagram-3 me-2"></i>System & UI Architecture
-                </h5>
-                <ul class="mb-4 small text-dark lh-lg ps-3">
-                  <li><strong>Distributed Patterns</strong>: Event Sourcing, CQRS, Transactional Outbox Pattern</li>
-                  <li><strong>Frontend Design</strong>: Smart/Dumb Components, Higher-Order Components (HOC)</li>
-                  <li><strong>State Orchestration</strong>: Composition, State Lifting, Context API vs. Zustand</li>
-                  <li><strong>API Design</strong>: RESTful, gRPC, WebSocket Streaming (TTFB Optimization)</li>
-                </ul>
-                <div class="mt-auto">
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span class="text-muted">Expertise</span><span class="fw-bold">85%</span>
-                  </div>
-                  <div class="progress" style="height: 6px;">
-                    <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #6f42c1;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="card skill-card skill-card--success shadow-md border-0 p-2 w-100 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-success fw-semibold mb-3">
-                  <i class="bi bi-cpu me-2"></i>Agentic AI & ML
-                </h5>
-                <ul class="mb-4 small text-dark lh-lg ps-3">
-                  <li><strong>Agentic AI</strong>: LangChain, LangGraph, Self-Correction Loops, Multi-agent Systems</li>
-                  <li><strong>Vector Search</strong>: Qdrant, Pinecone, Semantic Hybrid Retrieval</li>
-                  <li><strong>LLM Ecosystem</strong>: Gemini, Groq, Claude, RAG Architecture</li>
-                  <li><strong>Data Ops</strong>: PySpark, Airflow, AWS Glue, Feature Engineering</li>
-                </ul>
-                <div class="mt-auto">
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span class="text-muted">Proficiency</span><span class="fw-bold">75%</span>
-                  </div>
-                  <div class="progress" style="height: 6px;">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="card skill-card skill-card--warning shadow-md border-0 p-2 w-100 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-warning fw-semibold mb-3">
-                  <i class="bi bi-cloud-check me-2"></i>Cloud & Observability
-                </h5>
-                <ul class="mb-4 small text-dark lh-lg ps-3">
-                  <li><strong>Infrastructure</strong>: AWS (EKS, S3, RDS), Terraform (IaC), Kubernetes, Docker</li>
-                  <li><strong>Monitoring</strong>: OpenTelemetry (Distributed Tracing), Prometheus, Grafana</li>
-                  <li><strong>Log Analysis</strong>: ElasticSearch (ELK), Splunk, CloudWatch</li>
-                  <li><strong>CI/CD</strong>: GitHub Actions, CodePipeline, Automated Semantic Versioning</li>
-                </ul>
-                <div class="mt-auto">
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span class="text-muted">Proficiency</span><span class="fw-bold">70%</span>
-                  </div>
-                  <div class="progress" style="height: 6px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <div class="exp-progress-track"><div class="exp-progress-bar" style="width:90%"></div></div>
         </div>
+
+        <!-- Card 2: System Architecture -->
+        <div class="exp-card" style="--exp-accent:#9b7fd4">
+          <div class="exp-collapsed">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            <span class="exp-vert-label">System Architecture</span>
+          </div>
+          <div class="exp-expanded">
+            <div class="exp-exp-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+              <h3 class="exp-title">System Architecture</h3>
+            </div>
+            <ul class="exp-list">
+              <li><span class="exp-dash">—</span><span><strong>Distributed Systems</strong> event-driven design, CQRS, Transactional Outbox, eventual consistency tradeoffs</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Scalability</strong> horizontal scaling patterns, async messaging, backpressure management</span></li>
+              <li><span class="exp-dash">—</span><span><strong>API Contracts</strong> schema-first design, breaking change governance, gRPC &amp; WebSocket streaming</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Reliability</strong> circuit breakers, retry policies, graceful degradation</span></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Kafka</span>
+              <span class="exp-tag">gRPC</span>
+              <span class="exp-tag">Event Sourcing</span>
+              <span class="exp-tag">CQRS</span>
+              <span class="exp-tag">Outbox</span>
+            </div>
+          </div>
+          <div class="exp-progress-track"><div class="exp-progress-bar" style="width:85%"></div></div>
+        </div>
+
+        <!-- Card 3: AI Systems Integration -->
+        <div class="exp-card" style="--exp-accent:#4a9a6f">
+          <div class="exp-collapsed">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+            <span class="exp-vert-label">AI Systems Integration</span>
+          </div>
+          <div class="exp-expanded">
+            <div class="exp-exp-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              <h3 class="exp-title">AI Systems Integration</h3>
+            </div>
+            <ul class="exp-list">
+              <li><span class="exp-dash">—</span><span><strong>Production LLMs</strong> integrating &amp; operating models in live systems — latency budgeting, fallback routing, cost control</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Agentic Pipelines</strong> multi-agent orchestration, self-correction loops, tool-use &amp; memory management</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Retrieval</strong> RAG architecture, semantic hybrid search, vector store selection &amp; tuning</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Data</strong> feature engineering pipelines, workflow orchestration, batch inference</span></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">LangGraph</span>
+              <span class="exp-tag">RAG</span>
+              <span class="exp-tag">Qdrant</span>
+              <span class="exp-tag">Airflow</span>
+              <span class="exp-tag">Groq</span>
+            </div>
+          </div>
+          <div class="exp-progress-track"><div class="exp-progress-bar" style="width:75%"></div></div>
+        </div>
+
+        <!-- Card 4: Cloud & Observability -->
+        <div class="exp-card" style="--exp-accent:#e87040">
+          <div class="exp-collapsed">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+            <span class="exp-vert-label">Cloud &amp; Observability</span>
+          </div>
+          <div class="exp-expanded">
+            <div class="exp-exp-header">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+              <h3 class="exp-title">Cloud &amp; Observability</h3>
+            </div>
+            <ul class="exp-list">
+              <li><span class="exp-dash">—</span><span><strong>Infrastructure</strong> cloud-native deployments, container orchestration, IaC — built to survive on-call at 2am</span></li>
+              <li><span class="exp-dash">—</span><span><strong>CI/CD</strong> automated pipelines with build, test, security scan &amp; semantic versioning gates</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Observability</strong> distributed tracing, structured logging, SLO-based alerting — finding the signal in the noise</span></li>
+              <li><span class="exp-dash">—</span><span><strong>Incident</strong> RCA discipline, runbook authoring, post-mortem culture</span></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">AWS</span>
+              <span class="exp-tag">Terraform</span>
+              <span class="exp-tag">K8s</span>
+              <span class="exp-tag">OpenTelemetry</span>
+              <span class="exp-tag">Grafana</span>
+              <span class="exp-tag">Splunk</span>
+            </div>
+          </div>
+          <div class="exp-progress-track"><div class="exp-progress-bar" style="width:70%"></div></div>
+        </div>
+
       </div>
     </section>
 
@@ -792,6 +850,20 @@
       }
 
       playTerminal();
+    })();
+  </script>
+
+  <!-- Expertise accordion -->
+  <script>
+    (() => {
+      const deck = document.getElementById('expertise-deck');
+      if (!deck) return;
+      deck.addEventListener('click', e => {
+        const card = e.target.closest('.exp-card');
+        if (!card || card.classList.contains('is-active')) return;
+        deck.querySelectorAll('.exp-card.is-active').forEach(c => c.classList.remove('is-active'));
+        card.classList.add('is-active');
+      });
     })();
   </script>
 
