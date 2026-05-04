@@ -1731,7 +1731,9 @@
    font-family: var(--pf-sans);
  }
 
- .pf-header { margin-bottom: 24px; }
+ .pf-header {
+   margin-bottom: 24px;
+ }
 
  .pf-label {
    display: block;
@@ -1768,7 +1770,10 @@
    transition: background 0.2s, border-color 0.2s, color 0.2s;
  }
 
- .pf-pill:hover { border-color: var(--pf-accent); color: var(--pf-accent); }
+ .pf-pill:hover {
+   border-color: var(--pf-accent);
+   color: var(--pf-accent);
+ }
 
  .pf-pill.is-active {
    background: var(--pf-accent);
@@ -1791,9 +1796,14 @@
    transition: transform 0.25s, border-color 0.25s;
  }
 
- .pf-card:hover { transform: translateY(-3px); border-color: var(--pf-border-hover); }
+ .pf-card:hover {
+   transform: translateY(-3px);
+   border-color: var(--pf-border-hover);
+ }
 
- .pf-card.pf-hidden { display: none; }
+ .pf-card.pf-hidden {
+   display: none;
+ }
 
  .pf-thumb {
    position: relative;
@@ -1812,12 +1822,14 @@
    transition: transform 0.35s ease;
  }
 
- .pf-card:hover .pf-thumb-img { transform: scale(1.04); }
+ .pf-card:hover .pf-thumb-img {
+   transform: scale(1.04);
+ }
 
  .pf-thumb-overlay {
    position: absolute;
    inset: 0;
-   background: rgba(232,112,64,.06);
+   background: rgba(232, 112, 64, .06);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -1825,10 +1837,12 @@
    transition: opacity 0.25s;
  }
 
- .pf-card:hover .pf-thumb-overlay { opacity: 1; }
+ .pf-card:hover .pf-thumb-overlay {
+   opacity: 1;
+ }
 
  .pf-view-pill {
-   background: rgba(232,112,64,.9);
+   background: rgba(232, 112, 64, .9);
    color: #fff;
    border-radius: 20px;
    font-size: 12px;
@@ -1836,7 +1850,9 @@
    font-family: var(--pf-sans);
  }
 
- .pf-body { padding: 18px 20px; }
+ .pf-body {
+   padding: 18px 20px;
+ }
 
  .pf-tag-row {
    font-family: var(--pf-mono);
@@ -1891,7 +1907,7 @@
  .pf-overlay {
    position: fixed;
    inset: 0;
-   background: rgba(0,0,0,.75);
+   background: rgba(0, 0, 0, .75);
    backdrop-filter: blur(6px);
    -webkit-backdrop-filter: blur(6px);
    z-index: 200;
@@ -1903,7 +1919,10 @@
    transition: opacity 0.25s;
  }
 
- .pf-overlay.is-open { opacity: 1; pointer-events: all; }
+ .pf-overlay.is-open {
+   opacity: 1;
+   pointer-events: all;
+ }
 
  /* Modal */
  .pf-modal {
@@ -1952,7 +1971,7 @@
    position: absolute;
    top: 16px;
    right: 16px;
-   background: rgba(0,0,0,.5);
+   background: rgba(0, 0, 0, .5);
    border: none;
    border-radius: 10px;
    width: 34px;
@@ -1965,14 +1984,16 @@
    transition: background 0.2s;
  }
 
- .pf-modal-close:hover { background: rgba(0,0,0,.75); }
+ .pf-modal-close:hover {
+   background: rgba(0, 0, 0, .75);
+ }
 
  .pf-modal-type-badge {
    position: absolute;
    top: 16px;
    left: 16px;
-   background: rgba(232,112,64,.15);
-   border: 1px solid rgba(232,112,64,.3);
+   background: rgba(232, 112, 64, .15);
+   border: 1px solid rgba(232, 112, 64, .3);
    color: #e87040;
    font-family: var(--pf-mono);
    font-size: 10px;
@@ -2042,11 +2063,18 @@
  }
 
  .pf-modal-desc ul,
- .pf-modal-desc ol { padding-left: 20px; margin: 8px 0; }
+ .pf-modal-desc ol {
+   padding-left: 20px;
+   margin: 8px 0;
+ }
 
- .pf-modal-desc li { margin-bottom: 6px; }
+ .pf-modal-desc li {
+   margin-bottom: 6px;
+ }
 
- .pf-modal-desc strong { color: #aaa; }
+ .pf-modal-desc strong {
+   color: #aaa;
+ }
 
  .pf-highlights-grid {
    display: grid;
@@ -2107,7 +2135,10 @@
    color: #333;
  }
 
- .pf-modal-actions { display: flex; gap: 10px; }
+ .pf-modal-actions {
+   display: flex;
+   gap: 10px;
+ }
 
  .pf-btn-ghost {
    background: transparent;
@@ -2125,7 +2156,10 @@
    transition: border-color 0.2s, color 0.2s;
  }
 
- .pf-btn-ghost:hover { border-color: #555; color: #fff; }
+ .pf-btn-ghost:hover {
+   border-color: #555;
+   color: #fff;
+ }
 
  .pf-btn-primary {
    background: var(--pf-accent);
@@ -2143,16 +2177,25 @@
    transition: background 0.2s;
  }
 
- .pf-btn-primary:hover { background: #d4623a; color: #fff; }
+ .pf-btn-primary:hover {
+   background: #d4623a;
+   color: #fff;
+ }
 
  @media (max-width: 900px) {
-   .pf-grid { grid-template-columns: repeat(2, 1fr); }
+   .pf-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
  }
 
  @media (max-width: 767px) {
-   .pf-grid { grid-template-columns: 1fr; }
+   .pf-grid {
+     grid-template-columns: 1fr;
+   }
 
-   .pf-overlay { align-items: flex-start; }
+   .pf-overlay {
+     align-items: flex-start;
+   }
 
    .pf-modal {
      max-width: 100%;
@@ -2162,9 +2205,233 @@
      border-radius: 0;
    }
 
-   .pf-modal-body { padding: 20px; }
+   .pf-modal-body {
+     padding: 20px;
+   }
 
-   .pf-modal-footer { padding: 16px 20px; }
+   .pf-modal-footer {
+     padding: 16px 20px;
+   }
 
-   .pf-highlights-grid { grid-template-columns: 1fr; }
+   .pf-highlights-grid {
+     grid-template-columns: 1fr;
+   }
+ }
+
+
+ /* =============================================================================
+    CONTACT BAR — compact single-row strip with glow, social icons, action buttons
+    ============================================================================= */
+
+ :root {
+   --ct-bg: #0c0c0f;
+   --ct-border: #1a1a22;
+   --ct-accent: #e87040;
+   --ct-text: #f0ede8;
+   --ct-muted: #444;
+   --ct-icon-bg: #111318;
+   --ct-icon-border: #1f222a;
+   --ct-icon-stroke: #555;
+   --ct-sans: 'Space Grotesk', sans-serif;
+ }
+
+ .ct-bar {
+   position: relative;
+   min-height: 100px;
+   max-height: 150px;
+   background: var(--ct-bg);
+   border-top: 1px solid var(--ct-border);
+   padding: 0 5%;
+   padding-top: 20px;
+   padding-bottom: 48px;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   font-family: var(--ct-sans);
+ }
+
+ .ct-glow {
+   position: absolute;
+   left: -40px;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 200px;
+   height: 200px;
+   background: radial-gradient(circle, rgba(232, 112, 64, .06) 0%, transparent 70%);
+   pointer-events: none;
+ }
+
+ .ct-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 32px;
+   width: 100%;
+   position: relative;
+   z-index: 1;
+ }
+
+ /* Vertical dividers */
+ .ct-divider {
+   width: 1px;
+   height: 40px;
+   background: var(--ct-border);
+   flex-shrink: 0;
+ }
+
+ /* Left zone */
+ .ct-left {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   min-width: 0;
+ }
+
+ .ct-label {
+   font-size: 10px;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   color: var(--ct-accent);
+   font-weight: 500;
+ }
+
+ .ct-title {
+   font-size: 20px;
+   font-weight: 700;
+   color: var(--ct-text);
+   white-space: nowrap;
+ }
+
+ .ct-tagline {
+   font-size: 13px;
+   color: var(--ct-muted);
+   white-space: nowrap;
+ }
+
+ /* Middle zone — social icon buttons */
+ .ct-mid {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   align-items: center;
+   flex-shrink: 0;
+ }
+
+ .ct-icon-btn {
+   width: 32px;
+   height: 32px;
+   border-radius: 8px;
+   background: var(--ct-icon-bg);
+   border: 1px solid var(--ct-icon-border);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   transition: background 0.2s, border-color 0.2s;
+ }
+
+ .ct-icon-btn svg {
+   stroke: var(--ct-icon-stroke);
+   transition: stroke 0.2s;
+ }
+
+ .ct-icon-btn:hover {
+   background: #1e2028;
+   border-color: #2e2e3a;
+ }
+
+ .ct-icon-btn:hover svg {
+   stroke: #ccc;
+ }
+
+ /* Right zone — action buttons */
+ .ct-right {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   align-items: center;
+   flex-shrink: 0;
+ }
+
+ .ct-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 7px;
+   padding: 9px 18px;
+   border-radius: 9px;
+   font-size: 13px;
+   font-weight: 600;
+   font-family: var(--ct-sans);
+   text-decoration: none;
+   border: 1px solid transparent;
+   transition: background 0.2s, border-color 0.2s, color 0.2s;
+   white-space: nowrap;
+   cursor: pointer;
+ }
+
+ /* Ghost — Email */
+ .ct-btn--ghost {
+   background: #111318;
+   border-color: #1f222a;
+   color: #888;
+ }
+
+ .ct-btn--ghost:hover {
+   border-color: #2e2e3a;
+   color: #ccc;
+ }
+
+ /* LinkedIn blue */
+ .ct-btn--linkedin {
+   background: #111318;
+   border-color: #1f222a;
+   color: #5b8fcc;
+ }
+
+ .ct-btn--linkedin:hover {
+   border-color: #2e4a6e;
+   background: #0e1622;
+   color: #5b8fcc;
+ }
+
+ /* Primary — Resume */
+ .ct-btn--primary {
+   background: var(--ct-accent);
+   border-color: var(--ct-accent);
+   color: #fff;
+ }
+
+ .ct-btn--primary:hover {
+   background: #d0623a;
+   border-color: #d0623a;
+   color: #fff;
+ }
+
+ /* Mobile */
+ @media (max-width: 767px) {
+   .ct-bar {
+     max-height: none;
+     min-height: auto;
+     padding: 20px 5%;
+   }
+
+   .ct-row {
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 16px;
+   }
+
+   .ct-divider {
+     display: none;
+   }
+
+   .ct-mid {
+     display: none;
+   }
+
+   .ct-right {
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: 8px;
+   }
  }
