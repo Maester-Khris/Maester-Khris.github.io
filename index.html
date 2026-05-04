@@ -646,7 +646,8 @@
             <span class="rv2-org">Wiconet</span>
             <h3 class="rv2-role">Fullstack Software Engineer</h3>
             <span class="rv2-date">Jan 2024 — Sep 2024</span>
-            <p class="rv2-desc">Early-stage research startup applying ML and computer networking to real-world problems. Owned the full delivery cycle from API to UI in a fast, research-driven environment.</p>
+            <p class="rv2-desc">Early-stage research startup applying ML and computer networking to real-world problems.
+              Owned the full delivery cycle from API to UI in a fast, research-driven environment.</p>
             <div class="rv2-tags">
               <span class="rv2-tag">Python</span>
               <span class="rv2-tag">React</span>
@@ -660,7 +661,8 @@
             <span class="rv2-org">University of Yaoundé I</span>
             <h3 class="rv2-role">Master's — Computer Science</h3>
             <span class="rv2-date">2021 — 2023</span>
-            <p class="rv2-desc">Algorithms &amp; data structures, software testing, TDD, architectural design patterns, Agile, data science and ML fundamentals.</p>
+            <p class="rv2-desc">Algorithms &amp; data structures, software testing, TDD, architectural design patterns,
+              Agile, data science and ML fundamentals.</p>
             <div class="rv2-tags">
               <span class="rv2-tag">Algorithms</span>
               <span class="rv2-tag">TDD</span>
@@ -683,7 +685,8 @@
             <span class="rv2-org">Firesoftware</span>
             <h3 class="rv2-role">Fullstack Engineer → Project Lead</h3>
             <span class="rv2-date">Sep 2021 — May 2024</span>
-            <p class="rv2-desc">Joined as an intern, grew into delivery ownership. Led client meetings, managed the full software lifecycle and drove technical decisions across Java backend and Angular frontend.</p>
+            <p class="rv2-desc">Joined as an intern, grew into delivery ownership. Led client meetings, managed the full
+              software lifecycle and drove technical decisions across Java backend and Angular frontend.</p>
             <div class="rv2-tags">
               <span class="rv2-tag">Java</span>
               <span class="rv2-tag">Angular</span>
@@ -697,7 +700,8 @@
             <span class="rv2-org">NPower Canada</span>
             <h3 class="rv2-role">Junior Data Analyst Program</h3>
             <span class="rv2-date">Apr 2025 — Jul 2025</span>
-            <p class="rv2-desc">Intensive training in data analytics — visualization, storytelling with data, exploration and data-driven decision making.</p>
+            <p class="rv2-desc">Intensive training in data analytics — visualization, storytelling with data,
+              exploration and data-driven decision making.</p>
             <div class="rv2-tags">
               <span class="rv2-tag">Data Viz</span>
               <span class="rv2-tag">Analytics</span>
@@ -711,22 +715,20 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>My Portfolio</h2>
-        <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
-              stroke-width="2"></path>
-          </svg>
-        </div>
+    <section id="portfolio" class="pf-section">
+      <div class="pf-header">
+        <span class="pf-label">Work</span>
+        <h2 class="pf-title">My Portfolio</h2>
       </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <div class="row g-4 " id="portfolio-list" data-aos="fade-up" data-aos-delay="300">
-          </div>
-        </div>
+      <div class="pf-filters" id="pf-filters">
+        <button class="pf-pill is-active" data-filter="all">All</button>
+        <button class="pf-pill" data-filter="ai">AI &amp; Agentic</button>
+        <button class="pf-pill" data-filter="backend">Backend</button>
+        <button class="pf-pill" data-filter="cloud">Cloud &amp; ML</button>
+        <button class="pf-pill" data-filter="data">Data Science</button>
+        <button class="pf-pill" data-filter="fullstack">Fullstack</button>
       </div>
+      <div class="pf-grid" id="pf-grid"></div>
     </section>
 
 
@@ -765,16 +767,21 @@
     </section>
   </main>
 
+  <!-- Portfolio modal overlay -->
+  <div class="pf-overlay" id="pf-overlay" aria-hidden="true">
+    <div class="pf-modal" id="pf-modal" role="dialog" aria-modal="true"></div>
+  </div>
+
   <div id="modals-root"></div>
 
-  <footer id="footer" class="footer">
+  <!-- <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright text-center ">
         <p>NK Portfolio, customization made on top of © <strong class="px-1 sitename">EasyFolio</strong><span>All Rights
             Reserved</span></p>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 
   <!-- Scroll Top -->
@@ -956,117 +963,382 @@
   </script>
 
   <script type="module">
-    /* ---------- Portfolio data ---------- */
     import { portfolioProjects } from './portfolioData.js';
 
-    function buildCarousel(project) {
-      if (project.images.length === 1) {
-        return `<img src="assets/img/${project.images[0]}"
-          class="img-fluid rounded mb-4 w-100" alt="${project.title}" style=""/>`;
-      }
+    const PF_META = {
+      'ai-evaluator-observability': {
+        category: 'ai', shortDesc: 'Agentic RAG evaluation suite with HITL dashboard',
+        type: 'AI System', year: '2024', thumbWord: 'AGENT',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+          { title: 'Agentic RAG', detail: 'Multi-step reasoning loops with self-correction for hallucination reduction' },
+          { title: 'Hybrid Retrieval', detail: 'Qdrant semantic + PostgreSQL relational for precision recall' },
+          { title: 'HITL Dashboard', detail: 'Human-in-the-loop RLHF feedback with Zustand state management' },
+          { title: 'Observability', detail: 'Per-step evaluation traces with latency and quality scoring' },
+        ]
+      },
+      'postair-content-sharing': {
+        category: 'backend', shortDesc: 'Sub-50ms p99 content distribution with Transactional Outbox',
+        type: 'Backend System', year: '2024', thumbWord: 'STREAM',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+          { title: 'Redis Streams', detail: 'Decoupled I/O from event loop — sub-50ms p99 under load' },
+          { title: 'Transactional Outbox', detail: 'Guaranteed consistency across MongoDB and Kafka' },
+          { title: 'Thundering Herd', detail: 'Back-pressure + async messaging prevents cascade failures' },
+          { title: 'Atomic State', detail: 'React Context optimized for lean re-render cycles' },
+        ]
+      },
+      'ai-healthcare-city-monitor': {
+        category: 'cloud', shortDesc: 'Real-time ER congestion prediction across Toronto hospitals',
+        type: 'Cloud ML', year: '2024', thumbWord: 'PREDICT',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+          { title: 'SageMaker', detail: 'Real-time ambulance telemetry fed to AWS SageMaker inference endpoints' },
+          { title: 'Dynamic Scheduling', detail: 'Planners reallocate staff using live congestion scores' },
+          { title: 'Leaflet Maps', detail: 'Hospital heatmap with real-time updates across Toronto' },
+          { title: 'Event-driven', detail: 'Streaming telemetry pipeline for low-latency model calls' },
+        ]
+      },
+      'ai-healthcare-ml': {
+        category: 'cloud', shortDesc: 'Gemini 2.5 Flash fine-tuned on Vertex AI for severity triage',
+        type: 'ML Deployment', year: '2024', thumbWord: 'FINETUNE',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+          { title: 'LLM Fine-tuning', detail: 'Gemini 2.5 Flash fine-tuned on 237 de-identified symptom narratives' },
+          { title: 'Vertex AI', detail: 'Autoscaling endpoint with min-replica to prevent cold starts' },
+          { title: 'Data Augmentation', detail: 'GPT-generated paraphrases balanced minority severity classes' },
+          { title: 'Compliance', detail: 'VPC-SC + vertex encryption — private perimeter for HIPAA/PIPEDA' },
+        ]
+      },
+      'firo-financial-csr-bot': {
+        category: 'ai', shortDesc: 'Gen-AI assistant for banking CSR reps with confidence scores',
+        type: 'Conversational AI', year: '2024', thumbWord: 'CONVERSE',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+          { title: 'Fine-tuned Model', detail: 'Trained on 50k anonymized chats for banking domain accuracy' },
+          { title: 'Source Citations', detail: 'Real-time confidence display with citations in React UI' },
+          { title: 'Dialogflow CX', detail: 'Multi-turn conversation management with intent branching' },
+          { title: 'Vertex AI', detail: 'GCP deployment with Vertex AI for scalable inference' },
+        ]
+      },
+      'ml-text-classifier': {
+        category: 'data', shortDesc: 'Finance topic classifier on 50k transcripts with SBERT',
+        type: 'Data Science', year: '2024', thumbWord: 'CLASSIFY',
+        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
+        highlights: [
+          { title: 'SBERT Embeddings', detail: '768-D vectors with SVC, Linear SVM and LR comparison' },
+          { title: 'Class Imbalance', detail: 'Synonym replacement + paraphrasing augmented minority classes' },
+          { title: 'Zero-shot Labels', detail: 'sentence-transformers generated fine-grained finance topics' },
+          { title: 'PII Governance', detail: 'Names, accounts, emails tokenised before any processing' },
+        ]
+      },
+      'remote-system-monitoring': {
+        category: 'cloud', shortDesc: 'Streaming server metrics dashboard on Django + K8s + CodePipeline',
+        type: 'DevOps', year: '2023', thumbWord: 'MONITOR',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+          { title: 'Real-time Metrics', detail: 'Django backend streams health data to React dashboard via SSE' },
+          { title: 'Kubernetes', detail: 'Containerized workloads orchestrated on K8s cluster' },
+          { title: 'CI/CD', detail: 'AWS CodePipeline automates build, test and deploy stages' },
+          { title: 'Docker', detail: 'Fully containerized backend and frontend services' },
+        ]
+      },
+      'taskalert-full-monitoring': {
+        category: 'fullstack', shortDesc: 'Angular 19 microfrontend with native federation and NgRx',
+        type: 'Fullstack', year: '2024', thumbWord: 'FEDERATE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+          { title: 'Microfrontend', detail: 'Angular 19 native federation for runtime remote loading' },
+          { title: 'NgRx', detail: 'Centralized store synchronized across federated micro-apps' },
+          { title: 'MongoDB', detail: 'Document store for flexible task and user data modeling' },
+          { title: 'No Build Coupling', detail: 'Remotes loaded at runtime without build-time dependencies' },
+        ]
+      },
+      'public-powerbi-dashboard': {
+        category: 'data', shortDesc: 'Power BI dashboard with storytelling on public dataset',
+        type: 'Data Visualization', year: '2025', thumbWord: 'ANALYSE',
+        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
+        highlights: [
+          { title: 'Power BI', detail: 'Interactive dashboard with drill-down and cross-filter visuals' },
+          { title: 'DAX Measures', detail: 'Custom calculated columns and time-intelligence measures' },
+          { title: 'Storytelling', detail: 'Narrative structure guiding stakeholders through insights' },
+          { title: 'Public Dataset', detail: 'Open data with cleaning pipeline and normalization' },
+        ]
+      },
+      'skillrater-reactive-springboot': {
+        category: 'backend', shortDesc: 'Reactive Spring Boot with SSE and multi-threaded live voting',
+        type: 'Backend System', year: '2023', thumbWord: 'REACTIVE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+          { title: 'Spring WebFlux', detail: 'Non-blocking reactive pipeline with Reactor Sinks and Mono' },
+          { title: 'Server-Sent Events', detail: 'Real-time vote updates streamed to all connected clients' },
+          { title: 'Concurrency', detail: 'Multi-threaded producers simulate concurrent user load' },
+          { title: 'Flyway + MySQL', detail: 'Versioned schema migrations with atomic transaction handling' },
+        ]
+      },
+      'insight-hub-microservices': {
+        category: 'backend', shortDesc: 'Microservices issue tracker with Kafka, Resilience4J and LDAP',
+        type: 'Distributed System', year: '2023', thumbWord: 'MICRO',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+          { title: 'Circuit Breakers', detail: 'Spring Cloud + Resilience4J for fault-tolerant service mesh' },
+          { title: 'Kafka', detail: 'Async event bus for cross-service data synchronization' },
+          { title: 'LDAP Auth', detail: 'Dockerized LDAP for centralized identity and access management' },
+          { title: 'SQL Server', detail: 'Microsoft SQL Server with T-SQL stored procedures' },
+        ]
+      },
+      'taskalert-frontend': {
+        category: 'fullstack', shortDesc: 'MEAN stack task manager with NgRx and PusherJS notifications',
+        type: 'Fullstack', year: '2023', thumbWord: 'NGRX',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+          { title: 'NgRx State', detail: 'Centralized task state synchronized across multiple devices' },
+          { title: 'PusherJS', detail: 'Real-time push notifications for deadline reminders' },
+          { title: 'Angular Material 3', detail: 'Material Design component library for responsive UI' },
+          { title: 'MongoDB Atlas', detail: 'Full-text search with Atlas search indexes' },
+        ]
+      },
+      'taskalert-backend': {
+        category: 'backend', shortDesc: 'Django REST backend with RabbitMQ and WebSocket channels',
+        type: 'Backend API', year: '2023', thumbWord: 'REST',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+          { title: 'Django REST', detail: 'CRUD + BREAD API with drf_spectacular OpenAPI docs' },
+          { title: 'Django Channels', detail: 'WebSocket layer for collaborative real-time editing' },
+          { title: 'RabbitMQ', detail: 'Message broker for async notification fanout' },
+          { title: 'MongoEngine', detail: 'ODM layer for MongoDB document modeling in Python' },
+        ]
+      },
+      'ai-chat-filter': {
+        category: 'ai', shortDesc: 'Kafka-powered AI agent monitoring live chat for policy compliance',
+        type: 'AI Pipeline', year: '2023', thumbWord: 'FILTER',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+          { title: 'Apache Kafka', detail: 'Node.js producer → Django consumer for real-time message streaming' },
+          { title: 'AI Moderation', detail: 'Intelligent compliance agent on live chat message streams' },
+          { title: 'Scale', detail: 'Designed to handle millions of concurrent chat messages' },
+          { title: 'Pipeline', detail: 'End-to-end from ingestion to policy decision in under 100ms' },
+        ]
+      },
+      'python-async-scraper': {
+        category: 'backend', shortDesc: 'Async Django scraper with Selenium for dynamic JS-rendered sites',
+        type: 'Data Engineering', year: '2023', thumbWord: 'SCRAPE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+          { title: 'ASGI + Daphne', detail: 'Non-blocking async architecture for concurrent scraping' },
+          { title: 'Selenium', detail: 'Chrome Driver for JS-rendered Angular and React sites' },
+          { title: 'BeautifulSoup', detail: 'Static page extraction with CSS selector precision' },
+          { title: 'WebSocket Progress', detail: 'Django Channels streams scraping status to client' },
+        ]
+      },
+      'advanced-nlp-text-processing': {
+        category: 'ai', shortDesc: 'BERT-based text summarization and contextual keyword augmentation',
+        type: 'NLP Research', year: '2023', thumbWord: 'BERT',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+          { title: 'Extractive Summary', detail: 'Multilingual BERT for content-preserving text summarization' },
+          { title: 'Keyword Augmentation', detail: 'AutoSeq2Seq architecture for contextual synonym replacement' },
+          { title: 'Next Word Prediction', detail: 'BERT NWP for context-aware text expansion' },
+          { title: 'Flask API', detail: 'Flasgger-documented REST API serving NLP pipeline endpoints' },
+        ]
+      },
+      'mobile-ui-figma': {
+        category: 'fullstack', shortDesc: 'High-fidelity Figma prototype with mobile interaction patterns',
+        type: 'UI/UX Design', year: '2023', thumbWord: 'DESIGN',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+          { title: 'High-fidelity', detail: 'Production-ready prototype with full component library' },
+          { title: 'Interactions', detail: 'Micro-animations and transition patterns for mobile UX' },
+          { title: 'Design System', detail: 'Cohesive tokens, spacing, and typography scales' },
+          { title: 'User Flows', detail: 'End-to-end onboarding to core feature flows' },
+        ]
+      },
+    };
 
-      const id = `${project.projectId}-carousel`;
-      const indicators = project.images.map((_, i) => `
-        <button type="button" data-bs-target="#${id}"
-                data-bs-slide-to="${i}"
-                ${i === 0 ? 'class="active"' : ''}
-                aria-label="Slide ${i + 1}"></button>
-      `).join('');
-
-      const slides = project.images.map((img, i) => `
-        <div class="carousel-item ${i === 0 ? 'active' : ''}">
-          <img src="assets/img/${img}" class="d-block w-100 mh-100" alt="${project.title} slide ${i + 1}">
-        </div>
-      `).join('');
-
-      return `
-        <div id="${id}" class="carousel slide mb-4" data-bs-ride="carousel">
-          <div class="carousel-indicators">${indicators}</div>
-          <div class="carousel-inner rounded">${slides}</div>
-          <button class="carousel-control-prev" type="button"
-                  data-bs-target="#${id}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button"
-                  data-bs-target="#${id}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      `;
-    }
-
-    /* ---------- Build grid & modals ---------- */
     document.addEventListener('DOMContentLoaded', () => {
-      const grid = document.getElementById('portfolio-list');
-      const modalRoot = document.getElementById('modals-root');
-      portfolioProjects.forEach(project => {
-        /* ----- Card ----- */
-        const col = document.createElement('div');
-        col.className = 'col-lg-4 col-md-4 portfolio-item isotope-item filter-web';
-        col.innerHTML = `
-          <div class="portfolio-card">
-            <div class="ratio ratio-16x9">
-              <img src="assets/img/${project.images[0]}"
-                   class="img-fluid object-fit-cover w-100"
-                   alt="${project.title}" loading="lazy" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-actions">
-                <a href="#"
-                   data-bs-toggle="modal"
-                   data-bs-target="#${project.projectId}-modal"
-                   title="View details">
-                   <i class="bi bi-eye"></i>
-                </a>
-              </div>
-            </div>
-            <div class="p-3 portfolio-content">
-              <span class="category text-secondary text-uppercase small">${project.keywords.slice(0, 3).join(' · ')}</span>
-              <h5 class="mt-1 mb-0 fw-semibold">${project.title}</h5>
-            </div>
-          </div>
-        `;
-        grid.appendChild(col);
+      const projectMap = new Map(portfolioProjects.map(p => [p.projectId, p]));
+      const grid = document.getElementById('pf-grid');
 
-        /* ----- Modal ----- */
-        const modal = document.createElement('div');
-        modal.className = 'modal fade';
-        modal.id = `${project.projectId}-modal`;
-        modal.tabIndex = -1;
-        modal.innerHTML = `
-          <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content p-4">
-              <div class="modal-header border-0 pb-0 mb-3">
-                <h5 class="modal-title">${project.title}</h5>
-                <button id="modal_closer" type="button" class="btn-close"
-                        data-bs-dismiss="modal" aria-label="Close">
-                </button>
-              </div>
-              <div class="modal-body pt-0 pb-3">
-                ${buildCarousel(project)}
-                 <h5 class="text-start fw-bold">Project description</h5>
-                <p class="lh-lg text-start">${project.description}</p>
-              </div>
-              <div class="modal-footer border-0 pt-0">
-                ${project.github
-            ? `<a href="${project.github}" target="_blank"
-                        class="btn btn-outline-dark px-4 py-2">
-                        <i class="bi bi-github me-2"></i>GitHub
-                    </a>` : ''}
-                ${project.live_url
-            ? `<a href="${project.live_url}" target="_blank"
-                        class="btn btn-outline-primary px-4 py-2">
-                        <i class="bi bi-box-arrow-up-right me-2"></i>Live Demo
-                    </a>` : ''}
-              </div>
-            </div>
-          </div>
-        `;
-        modalRoot.appendChild(modal);
+      /* ── Build cards ── */
+      portfolioProjects.forEach(p => {
+        const meta = PF_META[p.projectId] || {};
+        const tagRow = p.keywords.slice(0, 3).map(k => k.toUpperCase()).join(' · ');
+
+        const card = document.createElement('div');
+        card.className = 'pf-card';
+        card.dataset.projectId  = p.projectId;
+        card.dataset.category   = meta.category || 'fullstack';
+        card.dataset.stack      = p.keywords.join(',');
+        card.dataset.type       = meta.type || '';
+        card.dataset.year       = meta.year || '';
+        card.dataset.github     = p.github || '';
+        card.dataset.live       = p.live_url || '';
+        card.dataset.images     = p.images.join(',');
+        card.dataset.highlights = JSON.stringify(meta.highlights || []);
+
+        card.innerHTML =
+          '<div class="pf-thumb">' +
+            '<img src="assets/img/' + p.images[0] + '" alt="' + p.title + '" class="pf-thumb-img" loading="lazy">' +
+            '<div class="pf-thumb-overlay"><span class="pf-view-pill">View project</span></div>' +
+          '</div>' +
+          '<div class="pf-body">' +
+            '<div class="pf-tag-row">' + tagRow + '</div>' +
+            '<h3 class="pf-card-title">' + p.title + '</h3>' +
+            '<p class="pf-card-desc">' + (meta.shortDesc || '') + '</p>' +
+            '<div class="pf-card-footer">' +
+              '<span class="pf-type-label">' + (meta.type || '') + '</span>' +
+              '<span class="pf-arrow-box">' +
+                '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                  '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>' +
+                '</svg>' +
+              '</span>' +
+            '</div>' +
+          '</div>';
+
+        grid.appendChild(card);
       });
 
+      /* ── Filter pills ── */
+      const pills = document.querySelectorAll('#pf-filters .pf-pill');
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('is-active'));
+          pill.classList.add('is-active');
+          const f = pill.dataset.filter;
+          document.querySelectorAll('.pf-card').forEach(c => {
+            c.classList.toggle('pf-hidden', f !== 'all' && c.dataset.category !== f);
+          });
+        });
+      });
+
+      /* ── Modal ── */
+      const overlay = document.getElementById('pf-overlay');
+      const modal   = document.getElementById('pf-modal');
+
+      function buildModalMedia(images, projectId, type) {
+        const controls =
+          '<span class="pf-modal-type-badge">' + type + '</span>' +
+          '<button class="pf-modal-close" id="pf-close" aria-label="Close">' +
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+              '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>' +
+            '</svg>' +
+          '</button>';
+        if (images.length === 1) {
+          return '<div class="pf-modal-thumb">' +
+            '<img src="assets/img/' + images[0] + '" alt="" class="pf-modal-thumb-img">' +
+            controls +
+          '</div>';
+        }
+        const cid = 'pf-mc-' + projectId;
+        const dots = images.map((_, i) =>
+          '<button type="button" data-bs-target="#' + cid + '" data-bs-slide-to="' + i + '"' +
+          (i === 0 ? ' class="active" aria-current="true"' : '') +
+          ' aria-label="Slide ' + (i + 1) + '"></button>'
+        ).join('');
+        const slides = images.map((img, i) =>
+          '<div class="carousel-item' + (i === 0 ? ' active' : '') + '">' +
+            '<img src="assets/img/' + img + '" class="pf-modal-carousel-img" alt="Slide ' + (i + 1) + '">' +
+          '</div>'
+        ).join('');
+        return '<div class="pf-modal-thumb">' +
+          '<div id="' + cid + '" class="carousel slide h-100" data-bs-ride="carousel">' +
+            '<div class="carousel-indicators">' + dots + '</div>' +
+            '<div class="carousel-inner h-100">' + slides + '</div>' +
+            '<button class="carousel-control-prev" type="button" data-bs-target="#' + cid + '" data-bs-slide="prev">' +
+              '<span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+              '<span class="visually-hidden">Previous</span>' +
+            '</button>' +
+            '<button class="carousel-control-next" type="button" data-bs-target="#' + cid + '" data-bs-slide="next">' +
+              '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+              '<span class="visually-hidden">Next</span>' +
+            '</button>' +
+          '</div>' +
+          controls +
+        '</div>';
+      }
+
+      function openModal(card) {
+        const d = card.dataset;
+        const project    = projectMap.get(d.projectId);
+        const highlights = JSON.parse(d.highlights || '[]');
+        const images     = d.images ? d.images.split(',') : [];
+
+        const pillsHtml = d.stack.split(',').map(s =>
+          '<span class="pf-modal-pill">' + s.trim() + '</span>'
+        ).join('');
+
+        const hlHtml = highlights.length
+          ? '<div class="pf-modal-divider"></div>' +
+            '<span class="pf-modal-section-label">Engineering highlights</span>' +
+            '<div class="pf-highlights-grid">' +
+              highlights.map(h =>
+                '<div class="pf-highlight-cell">' +
+                  '<div class="pf-highlight-header">' +
+                    '<span class="pf-highlight-dot"></span>' +
+                    '<span class="pf-highlight-title">' + h.title + '</span>' +
+                  '</div>' +
+                  '<p class="pf-highlight-detail">' + h.detail + '</p>' +
+                '</div>'
+              ).join('') +
+            '</div>'
+          : '';
+
+        const rawDesc = project ? project.description : '';
+        const descHtml = typeof rawDesc === 'string' ? rawDesc : '';
+
+        const githubBtn = d.github
+          ? '<a href="' + d.github + '" target="_blank" rel="noopener" class="pf-btn-ghost">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>' +
+              '</svg>GitHub</a>'
+          : '';
+
+        const liveBtn = d.live
+          ? '<a href="' + d.live + '" target="_blank" rel="noopener" class="pf-btn-primary">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>' +
+              '</svg>Live Demo</a>'
+          : '';
+
+        modal.innerHTML =
+          buildModalMedia(images, d.projectId, d.type) +
+          '<div class="pf-modal-body">' +
+            '<div class="pf-modal-pills">' + pillsHtml + '</div>' +
+            '<h2 class="pf-modal-title"></h2>' +
+            '<span class="pf-modal-sublabel">' + d.year + ' · ' + d.type + '</span>' +
+            '<div class="pf-modal-divider"></div>' +
+            '<span class="pf-modal-section-label">Overview</span>' +
+            '<div class="pf-modal-desc">' + descHtml + '</div>' +
+            hlHtml +
+          '</div>' +
+          '<div class="pf-modal-footer">' +
+            '<span class="pf-modal-year">' + d.year + '</span>' +
+            '<div class="pf-modal-actions">' + githubBtn + liveBtn + '</div>' +
+          '</div>';
+
+        /* Fix: set title after innerHTML (dataset ref was wrong above) */
+        modal.querySelector('.pf-modal-title').textContent = d.title;
+
+        overlay.classList.add('is-open');
+        overlay.removeAttribute('aria-hidden');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('pf-close').addEventListener('click', closeModal);
+      }
+
+      function closeModal() {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+      });
+      grid.addEventListener('click', e => {
+        const card = e.target.closest('.pf-card');
+        if (card) openModal(card);
+      });
     });
   </script>
 </body>
