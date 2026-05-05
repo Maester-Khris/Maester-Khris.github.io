@@ -1012,216 +1012,25 @@
   <script type="module">
     import { portfolioProjects } from './portfolioData.js';
 
-    const PF_META = {
-      'ai-evaluator-observability': {
-        category: 'ai', shortDesc: 'Agentic RAG evaluation suite with HITL dashboard',
-        type: 'AI System', year: '2024', thumbWord: 'AGENT',
-        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
-        highlights: [
-          { title: 'Agentic RAG', detail: 'Multi-step reasoning loops with self-correction for hallucination reduction' },
-          { title: 'Hybrid Retrieval', detail: 'Qdrant semantic + PostgreSQL relational for precision recall' },
-          { title: 'HITL Dashboard', detail: 'Human-in-the-loop RLHF feedback with Zustand state management' },
-          { title: 'Observability', detail: 'Per-step evaluation traces with latency and quality scoring' },
-        ]
-      },
-      'postair-content-sharing': {
-        category: 'backend', shortDesc: 'Sub-50ms p99 content distribution with Transactional Outbox',
-        type: 'Backend System', year: '2024', thumbWord: 'STREAM',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-          { title: 'Redis Streams', detail: 'Decoupled I/O from event loop — sub-50ms p99 under load' },
-          { title: 'Transactional Outbox', detail: 'Guaranteed consistency across MongoDB and Kafka' },
-          { title: 'Thundering Herd', detail: 'Back-pressure + async messaging prevents cascade failures' },
-          { title: 'Atomic State', detail: 'React Context optimized for lean re-render cycles' },
-        ]
-      },
-      'ai-healthcare-city-monitor': {
-        category: 'cloud', shortDesc: 'Real-time ER congestion prediction across Toronto hospitals',
-        type: 'Cloud ML', year: '2024', thumbWord: 'PREDICT',
-        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
-        highlights: [
-          { title: 'SageMaker', detail: 'Real-time ambulance telemetry fed to AWS SageMaker inference endpoints' },
-          { title: 'Dynamic Scheduling', detail: 'Planners reallocate staff using live congestion scores' },
-          { title: 'Leaflet Maps', detail: 'Hospital heatmap with real-time updates across Toronto' },
-          { title: 'Event-driven', detail: 'Streaming telemetry pipeline for low-latency model calls' },
-        ]
-      },
-      'ai-healthcare-ml': {
-        category: 'cloud', shortDesc: 'Gemini 2.5 Flash fine-tuned on Vertex AI for severity triage',
-        type: 'ML Deployment', year: '2024', thumbWord: 'FINETUNE',
-        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
-        highlights: [
-          { title: 'LLM Fine-tuning', detail: 'Gemini 2.5 Flash fine-tuned on 237 de-identified symptom narratives' },
-          { title: 'Vertex AI', detail: 'Autoscaling endpoint with min-replica to prevent cold starts' },
-          { title: 'Data Augmentation', detail: 'GPT-generated paraphrases balanced minority severity classes' },
-          { title: 'Compliance', detail: 'VPC-SC + vertex encryption — private perimeter for HIPAA/PIPEDA' },
-        ]
-      },
-      'firo-financial-csr-bot': {
-        category: 'ai', shortDesc: 'Gen-AI assistant for banking CSR reps with confidence scores',
-        type: 'Conversational AI', year: '2024', thumbWord: 'CONVERSE',
-        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
-        highlights: [
-          { title: 'Fine-tuned Model', detail: 'Trained on 50k anonymized chats for banking domain accuracy' },
-          { title: 'Source Citations', detail: 'Real-time confidence display with citations in React UI' },
-          { title: 'Dialogflow CX', detail: 'Multi-turn conversation management with intent branching' },
-          { title: 'Vertex AI', detail: 'GCP deployment with Vertex AI for scalable inference' },
-        ]
-      },
-      'ml-text-classifier': {
-        category: 'data', shortDesc: 'Finance topic classifier on 50k transcripts with SBERT',
-        type: 'Data Science', year: '2024', thumbWord: 'CLASSIFY',
-        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
-        highlights: [
-          { title: 'SBERT Embeddings', detail: '768-D vectors with SVC, Linear SVM and LR comparison' },
-          { title: 'Class Imbalance', detail: 'Synonym replacement + paraphrasing augmented minority classes' },
-          { title: 'Zero-shot Labels', detail: 'sentence-transformers generated fine-grained finance topics' },
-          { title: 'PII Governance', detail: 'Names, accounts, emails tokenised before any processing' },
-        ]
-      },
-      'remote-system-monitoring': {
-        category: 'cloud', shortDesc: 'Streaming server metrics dashboard on Django + K8s + CodePipeline',
-        type: 'DevOps', year: '2023', thumbWord: 'MONITOR',
-        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
-        highlights: [
-          { title: 'Real-time Metrics', detail: 'Django backend streams health data to React dashboard via SSE' },
-          { title: 'Kubernetes', detail: 'Containerized workloads orchestrated on K8s cluster' },
-          { title: 'CI/CD', detail: 'AWS CodePipeline automates build, test and deploy stages' },
-          { title: 'Docker', detail: 'Fully containerized backend and frontend services' },
-        ]
-      },
-      'taskalert-full-monitoring': {
-        category: 'fullstack', shortDesc: 'Angular 19 microfrontend with native federation and NgRx',
-        type: 'Fullstack', year: '2024', thumbWord: 'FEDERATE',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
-        highlights: [
-          { title: 'Microfrontend', detail: 'Angular 19 native federation for runtime remote loading' },
-          { title: 'NgRx', detail: 'Centralized store synchronized across federated micro-apps' },
-          { title: 'MongoDB', detail: 'Document store for flexible task and user data modeling' },
-          { title: 'No Build Coupling', detail: 'Remotes loaded at runtime without build-time dependencies' },
-        ]
-      },
-      'public-powerbi-dashboard': {
-        category: 'data', shortDesc: 'Power BI dashboard with storytelling on public dataset',
-        type: 'Data Visualization', year: '2025', thumbWord: 'ANALYSE',
-        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
-        highlights: [
-          { title: 'Power BI', detail: 'Interactive dashboard with drill-down and cross-filter visuals' },
-          { title: 'DAX Measures', detail: 'Custom calculated columns and time-intelligence measures' },
-          { title: 'Storytelling', detail: 'Narrative structure guiding stakeholders through insights' },
-          { title: 'Public Dataset', detail: 'Open data with cleaning pipeline and normalization' },
-        ]
-      },
-      'skillrater-reactive-springboot': {
-        category: 'backend', shortDesc: 'Reactive Spring Boot with SSE and multi-threaded live voting',
-        type: 'Backend System', year: '2023', thumbWord: 'REACTIVE',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-          { title: 'Spring WebFlux', detail: 'Non-blocking reactive pipeline with Reactor Sinks and Mono' },
-          { title: 'Server-Sent Events', detail: 'Real-time vote updates streamed to all connected clients' },
-          { title: 'Concurrency', detail: 'Multi-threaded producers simulate concurrent user load' },
-          { title: 'Flyway + MySQL', detail: 'Versioned schema migrations with atomic transaction handling' },
-        ]
-      },
-      'insight-hub-microservices': {
-        category: 'backend', shortDesc: 'Microservices issue tracker with Kafka, Resilience4J and LDAP',
-        type: 'Distributed System', year: '2023', thumbWord: 'MICRO',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-          { title: 'Circuit Breakers', detail: 'Spring Cloud + Resilience4J for fault-tolerant service mesh' },
-          { title: 'Kafka', detail: 'Async event bus for cross-service data synchronization' },
-          { title: 'LDAP Auth', detail: 'Dockerized LDAP for centralized identity and access management' },
-          { title: 'SQL Server', detail: 'Microsoft SQL Server with T-SQL stored procedures' },
-        ]
-      },
-      'taskalert-frontend': {
-        category: 'fullstack', shortDesc: 'MEAN stack task manager with NgRx and PusherJS notifications',
-        type: 'Fullstack', year: '2023', thumbWord: 'NGRX',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
-        highlights: [
-          { title: 'NgRx State', detail: 'Centralized task state synchronized across multiple devices' },
-          { title: 'PusherJS', detail: 'Real-time push notifications for deadline reminders' },
-          { title: 'Angular Material 3', detail: 'Material Design component library for responsive UI' },
-          { title: 'MongoDB Atlas', detail: 'Full-text search with Atlas search indexes' },
-        ]
-      },
-      'taskalert-backend': {
-        category: 'backend', shortDesc: 'Django REST backend with RabbitMQ and WebSocket channels',
-        type: 'Backend API', year: '2023', thumbWord: 'REST',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-          { title: 'Django REST', detail: 'CRUD + BREAD API with drf_spectacular OpenAPI docs' },
-          { title: 'Django Channels', detail: 'WebSocket layer for collaborative real-time editing' },
-          { title: 'RabbitMQ', detail: 'Message broker for async notification fanout' },
-          { title: 'MongoEngine', detail: 'ODM layer for MongoDB document modeling in Python' },
-        ]
-      },
-      'ai-chat-filter': {
-        category: 'ai', shortDesc: 'Kafka-powered AI agent monitoring live chat for policy compliance',
-        type: 'AI Pipeline', year: '2023', thumbWord: 'FILTER',
-        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
-        highlights: [
-          { title: 'Apache Kafka', detail: 'Node.js producer → Django consumer for real-time message streaming' },
-          { title: 'AI Moderation', detail: 'Intelligent compliance agent on live chat message streams' },
-          { title: 'Scale', detail: 'Designed to handle millions of concurrent chat messages' },
-          { title: 'Pipeline', detail: 'End-to-end from ingestion to policy decision in under 100ms' },
-        ]
-      },
-      'python-async-scraper': {
-        category: 'backend', shortDesc: 'Async Django scraper with Selenium for dynamic JS-rendered sites',
-        type: 'Data Engineering', year: '2023', thumbWord: 'SCRAPE',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-          { title: 'ASGI + Daphne', detail: 'Non-blocking async architecture for concurrent scraping' },
-          { title: 'Selenium', detail: 'Chrome Driver for JS-rendered Angular and React sites' },
-          { title: 'BeautifulSoup', detail: 'Static page extraction with CSS selector precision' },
-          { title: 'WebSocket Progress', detail: 'Django Channels streams scraping status to client' },
-        ]
-      },
-      'advanced-nlp-text-processing': {
-        category: 'ai', shortDesc: 'BERT-based text summarization and contextual keyword augmentation',
-        type: 'NLP Research', year: '2023', thumbWord: 'BERT',
-        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
-        highlights: [
-          { title: 'Extractive Summary', detail: 'Multilingual BERT for content-preserving text summarization' },
-          { title: 'Keyword Augmentation', detail: 'AutoSeq2Seq architecture for contextual synonym replacement' },
-          { title: 'Next Word Prediction', detail: 'BERT NWP for context-aware text expansion' },
-          { title: 'Flask API', detail: 'Flasgger-documented REST API serving NLP pipeline endpoints' },
-        ]
-      },
-      'mobile-ui-figma': {
-        category: 'fullstack', shortDesc: 'High-fidelity Figma prototype with mobile interaction patterns',
-        type: 'UI/UX Design', year: '2023', thumbWord: 'DESIGN',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
-        highlights: [
-          { title: 'High-fidelity', detail: 'Production-ready prototype with full component library' },
-          { title: 'Interactions', detail: 'Micro-animations and transition patterns for mobile UX' },
-          { title: 'Design System', detail: 'Cohesive tokens, spacing, and typography scales' },
-          { title: 'User Flows', detail: 'End-to-end onboarding to core feature flows' },
-        ]
-      },
-    };
-
     document.addEventListener('DOMContentLoaded', () => {
       const projectMap = new Map(portfolioProjects.map(p => [p.projectId, p]));
       const grid = document.getElementById('pf-grid');
 
       /* ── Build cards ── */
       portfolioProjects.forEach(p => {
-        const meta = PF_META[p.projectId] || {};
         const tagRow = p.keywords.slice(0, 3).map(k => k.toUpperCase()).join(' · ');
 
         const card = document.createElement('div');
         card.className = 'pf-card';
         card.dataset.projectId = p.projectId;
-        card.dataset.category = meta.category || 'fullstack';
+        card.dataset.category = p.category || 'fullstack';
         card.dataset.stack = p.keywords.join(',');
-        card.dataset.type = meta.type || '';
-        card.dataset.year = meta.year || '';
+        card.dataset.type = p.type || '';
+        card.dataset.year = p.year || '';
         card.dataset.github = p.github || '';
         card.dataset.live = p.live_url || '';
         card.dataset.images = p.images.join(',');
-        card.dataset.highlights = JSON.stringify(meta.highlights || []);
+        card.dataset.highlights = JSON.stringify(p.highlights || []);
 
         card.innerHTML =
           '<div class="pf-thumb">' +
@@ -1231,9 +1040,9 @@
           '<div class="pf-body">' +
           '<div class="pf-tag-row">' + tagRow + '</div>' +
           '<h3 class="pf-card-title">' + p.title + '</h3>' +
-          '<p class="pf-card-desc">' + (meta.shortDesc || '') + '</p>' +
+          '<p class="pf-card-desc">' + (p.shortDesc || '') + '</p>' +
           '<div class="pf-card-footer">' +
-          '<span class="pf-type-label">' + (meta.type || '') + '</span>' +
+          '<span class="pf-type-label">' + (p.type || '') + '</span>' +
           '<span class="pf-arrow-box">' +
           '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
           '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>' +

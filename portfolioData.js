@@ -1,6 +1,49 @@
 export const portfolioProjects = [
     {
+        projectId: 'commitr-session-tracker',
+        category: 'fullstack',
+        shortDesc: 'Developer focus tracker with GitHub-style activity heatmap',
+        type: 'Fullstack',
+        year: '2025',
+        thumbWord: 'FOCUS',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+            { title: 'Session Engine', detail: 'Real-time tracking with idle, active and paused state management' },
+            { title: 'Activity Heatmap', detail: '365-day GitHub-style contribution heatmap for focus visualization' },
+            { title: 'Project Scoping', detail: 'Color-coded labeling with per-project contribution breakdowns' },
+            { title: 'Auth Layer', detail: 'Per-user data isolation with clean authentication flow' },
+        ],
+        title: 'Commitr: Developer Focus & Session Tracker',
+        description:
+            'Full-stack productivity application built for developers who treat deep work as a engineering discipline. ' +
+            'Implements a session-based time tracking engine with project scoping, color-coded labeling, and real-time state management across idle, active and paused session states. ' +
+            'Features a Stats module with a GitHub-style 365-day activity heatmap, weekly/monthly/yearly bar chart aggregations and per-project contribution breakdowns — ' +
+            'giving engineers a longitudinal view of their focus patterns. ' +
+            'Architected with a mobile-first responsive layout, settings management for session defaults, and a clean auth layer with per-user data isolation.',
+        keywords: ['React.js', 'Node.js', 'PostgreSQL', 'Data Visualization', 'Fullstack'],
+        images: [
+            'commitr-home.png',
+            'commitr-mobile-showcase.png',
+            'commitr-stats-contrib.png',
+            'commitr-stats-summary.png',
+        ],
+        live_url: 'https://commitr.nknext.dev/',
+        github: 'https://github.com/Maester-Khris/commitr'
+    },
+    {
         projectId: 'ai-evaluator-observability',
+        category: 'ai',
+        shortDesc: 'Agentic RAG evaluation suite with HITL dashboard',
+        type: 'AI System',
+        year: '2024',
+        thumbWord: 'AGENT',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+            { title: 'Agentic RAG', detail: 'Multi-step reasoning loops with self-correction for hallucination reduction' },
+            { title: 'Hybrid Retrieval', detail: 'Qdrant semantic + PostgreSQL relational for precision recall' },
+            { title: 'HITL Dashboard', detail: 'Human-in-the-loop RLHF feedback with Zustand state management' },
+            { title: 'Observability', detail: 'Per-step evaluation traces with latency and quality scoring' },
+        ],
         title: 'AI Evaluator: Agentic Observability Platform',
         description:
             'A high-fidelity evaluation suite designed to bridge the gap between experimental LLM outputs and production-grade reliability. ' +
@@ -16,6 +59,18 @@ export const portfolioProjects = [
     },
     {
         projectId: 'postair-content-sharing',
+        category: 'backend',
+        shortDesc: 'Sub-50ms p99 content distribution with Transactional Outbox',
+        type: 'Backend System',
+        year: '2024',
+        thumbWord: 'STREAM',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'Redis Streams', detail: 'Decoupled I/O from event loop — sub-50ms p99 under load' },
+            { title: 'Transactional Outbox', detail: 'Guaranteed consistency across MongoDB and Kafka' },
+            { title: 'Thundering Herd', detail: 'Back-pressure + async messaging prevents cascade failures' },
+            { title: 'Atomic State', detail: 'React Context optimized for lean re-render cycles' },
+        ],
         title: 'Postair: High-Throughput Content Engine',
         description:
             'An enterprise-grade content distribution platform architected to solve the "thundering herd" problem in real-time sharing. ' +
@@ -26,16 +81,28 @@ export const portfolioProjects = [
         images: [
             'ng-postair.png',
         ],
-        live_url: 'https://angular-state-management-fhwdup46f-nkops-projects.vercel.app',
+        live_url: 'https://postair.nknext.dev/',
         github: 'https://github.com/Maester-Khris/Angular-state-management'
     },
     {
-        projectId: 'ai-healthcare-city-monitor',           // unique slug for routing / modal look‑up
+        projectId: 'ai-healthcare-city-monitor',
+        category: 'cloud',
+        shortDesc: 'Real-time ER congestion prediction across Toronto hospitals',
+        type: 'Cloud ML',
+        year: '2024',
+        thumbWord: 'PREDICT',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+            { title: 'SageMaker', detail: 'Real-time ambulance telemetry fed to AWS SageMaker inference endpoints' },
+            { title: 'Dynamic Scheduling', detail: 'Planners reallocate staff using live congestion scores' },
+            { title: 'Leaflet Maps', detail: 'Hospital heatmap with real-time updates across Toronto' },
+            { title: 'Event-driven', detail: 'Streaming telemetry pipeline for low-latency model calls' },
+        ],
         title: 'AI Healthcare City Monitor',
         description:
             'End‑to‑end platform that predicts emergency‑room congestion across Toronto hospitals. '
             + 'Combines real‑time ambulance telemetry, AWS SageMaker inference, and Leaflet maps to help city planners reallocate staff dynamically.',
-        keywords: ['AI', 'AWS Cloud ML deployment', 'Dynamic scheduling', 'Leaflet Map'],
+        keywords: ['AI', 'AWS Cloud ML deployment', 'Dynamic scheduling', 'Leaflet Map'],
         images: [
             'city_health_map.png',
         ],
@@ -43,9 +110,21 @@ export const portfolioProjects = [
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
     },
     {
-        projectId: 'ai-healthcare-ml',           // unique slug for routing / modal look‑up
+        projectId: 'ai-healthcare-ml',
+        category: 'cloud',
+        shortDesc: 'Gemini 2.5 Flash fine-tuned on Vertex AI for severity triage',
+        type: 'ML Deployment',
+        year: '2024',
+        thumbWord: 'FINETUNE',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+            { title: 'LLM Fine-tuning', detail: 'Gemini 2.5 Flash fine-tuned on 237 de-identified symptom narratives' },
+            { title: 'Vertex AI', detail: 'Autoscaling endpoint with min-replica to prevent cold starts' },
+            { title: 'Data Augmentation', detail: 'GPT-generated paraphrases balanced minority severity classes' },
+            { title: 'Compliance', detail: 'VPC-SC + vertex encryption — private perimeter for HIPAA/PIPEDA' },
+        ],
         title: 'AI Healthcare sickness severity classification',
-        description: `<p>I designed and deployed a patient‑sickness–severity classifier that interprets short, free‑text symptom descriptions and assigns one of four urgency levels: “routine”, “moderate”, “severe” or “critical”. By fine‑tuning Google’s Gemini 2.5 Flash on a tightly curated medical dataset and serving the model on GCP Vertex AI, the solution enables real‑time triage inside tele‑health workflows.</p>
+        description: `<p>I designed and deployed a patient‑sickness–severity classifier that interprets short, free‑text symptom descriptions and assigns one of four urgency levels: "routine", "moderate", "severe" or "critical". By fine‑tuning Google's Gemini 2.5 Flash on a tightly curated medical dataset and serving the model on GCP Vertex AI, the solution enables real‑time triage inside tele‑health workflows.</p>
             <p><strong>Custom Dataset</strong></p>
             <ul>
             <li>Collected 237 de‑identified symptom narratives sourced from prior consultations.</li>
@@ -54,28 +133,28 @@ export const portfolioProjects = [
             </ul>
             <p><strong>Model Development</strong></p>
             <ul>
-            <li>Started from the lightweight <strong>Gemini 2.5 Flash</strong> checkpoint hosted on Vertex AI Model Garden.</li>
+            <li>Started from the lightweight <strong>Gemini 2.5 Flash</strong> checkpoint hosted on Vertex AI Model Garden.</li>
             <li>Fine‑tuned using supervised instruction‑tuning; the prompt template shows a symptom sentence followed by a special <code>&lt;class&gt;</code> token.</li>
             <li>Applied stratified 80‑20 split and early‑stopping to avoid over‑fitting on the small corpus.</li>
             </ul>
             <p><strong>Deployment Pipeline</strong></p>
             <ul>
-            <li>Packaged the fine‑tuned checkpoint as a custom model artifact and uploaded it to Vertex AI.</li>
+            <li>Packaged the fine‑tuned checkpoint as a custom model artifact and uploaded it to Vertex AI.</li>
             <li>Created an <strong>Endpoint</strong> with automatic scaling and integrated Stackdriver logging for auditability.</li>
-            <li>Wrapped prediction logic in a Cloud Function exposed as a REST endpoint; the function cleans incoming text, calls the Vertex endpoint, and maps logits to human‑readable severity labels.</li>
-            <li>Used Cloud Endpoints API Key + IAM Service Account to secure both internal and external calls.</li>
+            <li>Wrapped prediction logic in a Cloud Function exposed as a REST endpoint; the function cleans incoming text, calls the Vertex endpoint, and maps logits to human‑readable severity labels.</li>
+            <li>Used Cloud Endpoints API Key + IAM Service Account to secure both internal and external calls.</li>
             </ul>
             <p><strong>Key Challenges & Solutions</strong></p>
             <ul>
             <li><strong>Small dataset</strong> – Augmented minority classes with GPT‑generated paraphrases until class distribution was balanced.</li>
             <li><strong>Regulatory compliance</strong> – Implemented vertex‑level encryption and VPC‑SC to keep traffic inside the private perimeter.</li>
-            <li><strong>Cold‑start latency</strong> – Enabled min‑replica autoscaling on Vertex AI to maintain one warm pod at all times.</li>
+            <li><strong>Cold‑start latency</strong> – Enabled min‑replica autoscaling on Vertex AI to maintain one warm pod at all times.</li>
             </ul>
             <p><strong>Next Steps</strong></p>
             <ul>
             <li>Append confidence scores to predictions for downstream UI colour‑coding.</li>
             <li>Introduce continual‑learning jobs that retrain weekly on newly triaged cases.</li>
-            <li>Add Cloud Monitoring dashboards that trigger on spikes in “critical” predictions.</li>
+            <li>Add Cloud Monitoring dashboards that trigger on spikes in "critical" predictions.</li>
             </ul>
             <p>The result is a production‑grade, low‑latency service that helps clinicians prioritise patient care while meeting stringent privacy and performance requirements.</p>
             `,
@@ -86,10 +165,22 @@ export const portfolioProjects = [
     },
     {
         projectId: 'firo-financial-csr-bot',
+        category: 'ai',
+        shortDesc: 'Gen-AI assistant for banking CSR reps with confidence scores',
+        type: 'Conversational AI',
+        year: '2024',
+        thumbWord: 'CONVERSE',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+            { title: 'Fine-tuned Model', detail: 'Trained on 50k anonymized chats for banking domain accuracy' },
+            { title: 'Source Citations', detail: 'Real-time confidence display with citations in React UI' },
+            { title: 'Dialogflow CX', detail: 'Multi-turn conversation management with intent branching' },
+            { title: 'Vertex AI', detail: 'GCP deployment with Vertex AI for scalable inference' },
+        ],
         title: 'Firo: Financial CSR Bot',
         description:
             'Gen‑AI assistant for customer‑support reps in banking. Fine‑tuned on 50k anonymized chats, '
-            + 'deployed with Vertex AI and Dialogflow CX. React‑based front‑end provides real‑time confidence and source citations.',
+            + 'deployed with Vertex AI and Dialogflow CX. React‑based front‑end provides real‑time confidence and source citations.',
         keywords: ['AWS Bedrock', 'React.js'],
         images: ['bot.png'],
         live_url: 'https://financial-csr-aibot-47pg.vercel.app/',
@@ -97,6 +188,18 @@ export const portfolioProjects = [
     },
     {
         projectId: 'ml-text-classifier',
+        category: 'data',
+        shortDesc: 'Finance topic classifier on 50k transcripts with SBERT',
+        type: 'Data Science',
+        year: '2024',
+        thumbWord: 'CLASSIFY',
+        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
+        highlights: [
+            { title: 'SBERT Embeddings', detail: '768-D vectors with SVC, Linear SVM and LR comparison' },
+            { title: 'Class Imbalance', detail: 'Synonym replacement + paraphrasing augmented minority classes' },
+            { title: 'Zero-shot Labels', detail: 'sentence-transformers generated fine-grained finance topics' },
+            { title: 'PII Governance', detail: 'Names, accounts, emails tokenised before any processing' },
+        ],
         title: 'Firo ML: User interaction topic classification',
         description: `<p> I built an end‑to‑end topic‑classification service that tags free‑form customer messages with precise business areas, streamlining triage in a highly regulated financial‑services environment.</p>
             <p><strong>Data Acquisition</strong></p>
@@ -106,15 +209,15 @@ export const portfolioProjects = [
             </ul>
             <p><strong>Main Challenges & Mitigations</strong></p>
             <ul>
-            <li><strong>Too few domain‑relevant classes</strong> – I expanded the label set with zero‑shot classification via sentence‑transformers to create fine‑grained finance topics such as <em>Debit Card Disputes</em> and <em>Investment Queries</em>.</li>
+            <li><strong>Too few domain‑relevant classes</strong> – I expanded the label set with zero‑shot classification via sentence‑transformers to create fine‑grained finance topics such as <em>Debit Card Disputes</em> and <em>Investment Queries</em>.</li>
             <li><strong>Severe class imbalance</strong> – Minority classes were boosted using data‑augmentation techniques implemented with an open‑source Python library for synonym replacement and paraphrasing.</li>
             <li><strong>Data‑governance constraints</strong> – All message text was anonymised before processing; names, account numbers and emails were tokenised to preserve privacy.</li>
             </ul>
             <p><strong>Modelling Workflow</strong></p>
             <ul>
             <li>Embedded each anonymised sentence with a compact Sentence‑BERT encoder (768‑D vectors).</li>
-            <li>Trained multiple classifiers: SVC, Linear SVM, Logistic Regression, Random Forest and HistGradientBoosting.</li>
-            <li>Selected the top performer through a naïve “best‑accuracy wins” vote; Linear SVM took the crown in the current run.</li>
+            <li>Trained multiple classifiers: SVC, Linear SVM, Logistic Regression, Random Forest and HistGradientBoosting.</li>
+            <li>Selected the top performer through a naïve "best‑accuracy wins" vote; Linear SVM took the crown in the current run.</li>
             </ul>
             <p><strong>Key Takeaways</strong></p>
             <ul>
@@ -137,17 +240,41 @@ export const portfolioProjects = [
     },
     {
         projectId: 'remote-system-monitoring',
+        category: 'cloud',
+        shortDesc: 'Streaming server metrics dashboard on Django + K8s + CodePipeline',
+        type: 'DevOps',
+        year: '2023',
+        thumbWord: 'MONITOR',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+            { title: 'Real-time Metrics', detail: 'Django backend streams health data to React dashboard via SSE' },
+            { title: 'Kubernetes', detail: 'Containerized workloads orchestrated on K8s cluster' },
+            { title: 'CI/CD', detail: 'AWS CodePipeline automates build, test and deploy stages' },
+            { title: 'Docker', detail: 'Fully containerized backend and frontend services' },
+        ],
         title: 'Remote System Monitoring',
         description:
             'Python‑Django back end streaming server health metrics to a React dashboard. '
             + 'CI/CD with AWS CodePipeline, containerized via Docker and orchestrated on Kubernetes.',
-        keywords: ['Python', 'Django', 'Kubernetes', 'Docker', 'React.js', 'AWS CodePipeline'],
+        keywords: ['Python', 'Django', 'Kubernetes', 'Docker', 'React.js', 'AWS CodePipeline'],
         images: ['remote_monitoring_arch.png'],
         live_url: 'https://react-client-seven.vercel.app/monitoring',
         github: 'https://github.com/Maester-Khris/remote-monitoring'
     },
     {
         projectId: 'taskalert-full-monitoring',
+        category: 'fullstack',
+        shortDesc: 'Angular 19 microfrontend with native federation and NgRx',
+        type: 'Fullstack',
+        year: '2024',
+        thumbWord: 'FEDERATE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+            { title: 'Microfrontend', detail: 'Angular 19 native federation for runtime remote loading' },
+            { title: 'NgRx', detail: 'Centralized store synchronized across federated micro-apps' },
+            { title: 'MongoDB', detail: 'Document store for flexible task and user data modeling' },
+            { title: 'No Build Coupling', detail: 'Remotes loaded at runtime without build-time dependencies' },
+        ],
         title: 'Taskalert Full UI',
         description:
             'Python‑Django back end streaming server health metrics to a React dashboard. '
@@ -159,20 +286,44 @@ export const portfolioProjects = [
     },
     {
         projectId: 'public-powerbi-dashboard',
-        title: 'Power BI Dashboard on Public Dataset',
+        category: 'data',
+        shortDesc: 'Power BI dashboard with storytelling on public dataset',
+        type: 'Data Visualization',
+        year: '2025',
+        thumbWord: 'ANALYSE',
+        thumbGradient: 'linear-gradient(135deg,#14090a 0%,#200d0c 100%)',
+        highlights: [
+            { title: 'Power BI', detail: 'Interactive dashboard with drill-down and cross-filter visuals' },
+            { title: 'DAX Measures', detail: 'Custom calculated columns and time-intelligence measures' },
+            { title: 'Storytelling', detail: 'Narrative structure guiding stakeholders through insights' },
+            { title: 'Public Dataset', detail: 'Open data with cleaning pipeline and normalization' },
+        ],
+        title: 'Power BI Dashboard on Public Dataset',
         description: ` <p class="mb--30">
                                         <iframe title="learn_visuals_next" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0852ec94-f01b-445e-9f6d-b6e4cf04b6cb&autoAuth=true&ctid=a59642f3-f516-4e5d-9a8b-3ba6bdd55283" frameborder="0" allowFullScreen="true"></iframe>
                                     </p>
                                     <div class="alert alert-warning" role="alert">
                                         <i class="bi bi-exclamation-triangle-fill"></i> Notes: The dashboard is not yet publicly available due to some data access policy limitation on the tenant. We are working to make the visualization available for the public. In between you can access the files in the github repository.
                                     </div>`,
-        keywords: ['DATA ANALYSIS', 'POWER BI', 'VISUALIZATION'],
+        keywords: ['DATA ANALYSIS', 'POWER BI', 'VISUALIZATION'],
         images: ['powerbi_dashboard.png'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/Powerbi-dashboard'
     },
     {
         projectId: 'skillrater-reactive-springboot',
+        category: 'backend',
+        shortDesc: 'Reactive Spring Boot with SSE and multi-threaded live voting',
+        type: 'Backend System',
+        year: '2023',
+        thumbWord: 'REACTIVE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'Spring WebFlux', detail: 'Non-blocking reactive pipeline with Reactor Sinks and Mono' },
+            { title: 'Server-Sent Events', detail: 'Real-time vote updates streamed to all connected clients' },
+            { title: 'Concurrency', detail: 'Multi-threaded producers simulate concurrent user load' },
+            { title: 'Flyway + MySQL', detail: 'Versioned schema migrations with atomic transaction handling' },
+        ],
         title: 'Reactive Springboot Skillrater App',
         description: ` We designed a web app that allows users or guest to decide which
             Language/Framerwork/Tools is the best by participating to a live perpetual vote.
@@ -195,6 +346,18 @@ export const portfolioProjects = [
     },
     {
         projectId: 'insight-hub-microservices',
+        category: 'backend',
+        shortDesc: 'Microservices issue tracker with Kafka, Resilience4J and LDAP',
+        type: 'Distributed System',
+        year: '2023',
+        thumbWord: 'MICRO',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'Circuit Breakers', detail: 'Spring Cloud + Resilience4J for fault-tolerant service mesh' },
+            { title: 'Kafka', detail: 'Async event bus for cross-service data synchronization' },
+            { title: 'LDAP Auth', detail: 'Dockerized LDAP for centralized identity and access management' },
+            { title: 'SQL Server', detail: 'Microsoft SQL Server with T-SQL stored procedures' },
+        ],
         title: 'Insight Hub: Springboot Microservices',
         description: ` The Issue Tracker project is an advanced solution aimed at effectively managing
             software issues
@@ -225,7 +388,19 @@ export const portfolioProjects = [
     },
     {
         projectId: 'taskalert-frontend',
-        title: 'Taskalert v2: Frontend Application',
+        category: 'fullstack',
+        shortDesc: 'MEAN stack task manager with NgRx and PusherJS notifications',
+        type: 'Fullstack',
+        year: '2023',
+        thumbWord: 'NGRX',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+            { title: 'NgRx State', detail: 'Centralized task state synchronized across multiple devices' },
+            { title: 'PusherJS', detail: 'Real-time push notifications for deadline reminders' },
+            { title: 'Angular Material 3', detail: 'Material Design component library for responsive UI' },
+            { title: 'MongoDB Atlas', detail: 'Full-text search with Atlas search indexes' },
+        ],
+        title: 'Taskalert v2: Frontend Application',
         description: ` The Taskalert project is an innovative real-time notes reminder application
             designed to enhance user engagement and productivity. Built using the MEAN stack
             (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
@@ -248,7 +423,19 @@ export const portfolioProjects = [
     },
     {
         projectId: 'taskalert-backend',
-        title: 'Taskalert v2: Backend Application',
+        category: 'backend',
+        shortDesc: 'Django REST backend with RabbitMQ and WebSocket channels',
+        type: 'Backend API',
+        year: '2023',
+        thumbWord: 'REST',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'Django REST', detail: 'CRUD + BREAD API with drf_spectacular OpenAPI docs' },
+            { title: 'Django Channels', detail: 'WebSocket layer for collaborative real-time editing' },
+            { title: 'RabbitMQ', detail: 'Message broker for async notification fanout' },
+            { title: 'MongoEngine', detail: 'ODM layer for MongoDB document modeling in Python' },
+        ],
+        title: 'Taskalert v2: Backend Application',
         description: ` The Taskalert project is an innovative real-time notes reminder application
             designed to enhance user engagement and productivity. Built using the MEAN stack
             (MongoDB, NodeJS, Express, Angular) and Angular Material 3, the app leverages
@@ -273,7 +460,19 @@ export const portfolioProjects = [
     },
     {
         projectId: 'ai-chat-filter',
-        title: 'Python AI Real‑Time Chat Message Filtering',
+        category: 'ai',
+        shortDesc: 'Kafka-powered AI agent monitoring live chat for policy compliance',
+        type: 'AI Pipeline',
+        year: '2023',
+        thumbWord: 'FILTER',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+            { title: 'Apache Kafka', detail: 'Node.js producer → Django consumer for real-time message streaming' },
+            { title: 'AI Moderation', detail: 'Intelligent compliance agent on live chat message streams' },
+            { title: 'Scale', detail: 'Designed to handle millions of concurrent chat messages' },
+            { title: 'Pipeline', detail: 'End-to-end from ingestion to policy decision in under 100ms' },
+        ],
+        title: 'Python AI Real‑Time Chat Message Filtering',
         description: `The "AI Chat Monitor" project addresses the need for intelligent monitoring in
             live communication services, such as chat applications. While these services are often free
             for personal use, challenges arise in multi-participant environments where
@@ -291,6 +490,18 @@ export const portfolioProjects = [
     },
     {
         projectId: 'python-async-scraper',
+        category: 'backend',
+        shortDesc: 'Async Django scraper with Selenium for dynamic JS-rendered sites',
+        type: 'Data Engineering',
+        year: '2023',
+        thumbWord: 'SCRAPE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'ASGI + Daphne', detail: 'Non-blocking async architecture for concurrent scraping' },
+            { title: 'Selenium', detail: 'Chrome Driver for JS-rendered Angular and React sites' },
+            { title: 'BeautifulSoup', detail: 'Static page extraction with CSS selector precision' },
+            { title: 'WebSocket Progress', detail: 'Django Channels streams scraping status to client' },
+        ],
         title: 'Python Asynchronous Web Data Scraper',
         description: ` This project aims to develop an asynchronous web scraper using Python with the
             Django framework,
@@ -312,6 +523,18 @@ export const portfolioProjects = [
     },
     {
         projectId: 'advanced-nlp-text-processing',
+        category: 'ai',
+        shortDesc: 'BERT-based text summarization and contextual keyword augmentation',
+        type: 'NLP Research',
+        year: '2023',
+        thumbWord: 'BERT',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+            { title: 'Extractive Summary', detail: 'Multilingual BERT for content-preserving text summarization' },
+            { title: 'Keyword Augmentation', detail: 'AutoSeq2Seq architecture for contextual synonym replacement' },
+            { title: 'Next Word Prediction', detail: 'BERT NWP for context-aware text expansion' },
+            { title: 'Flask API', detail: 'Flasgger-documented REST API serving NLP pipeline endpoints' },
+        ],
         title: 'Python Advanced NLP Text Processing',
         description: ` Text Ninja is a strategic enhancement designed to complement the custom
             conversational AI agent, Gemini, addressing two significant challenges:
@@ -333,13 +556,25 @@ export const portfolioProjects = [
                 <li><strong>Main tech stack</strong>:
                     Python, Flask, Flasgger, Spacy, Bert LLM, AutoSeq2Seq </li>
             </ul>`,
-        keywords: ['Python', 'Flask', 'Daphne', 'BERT LLM', 'NLP', 'SpaCy'],
+        keywords: ['Python', 'Flask', 'Daphne', 'BERT LLM', 'NLP', 'SpaCy'],
         images: ['textninja.png'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/NLP-ML-Text-Generation'
     },
     {
         projectId: 'mobile-ui-figma',
+        category: 'fullstack',
+        shortDesc: 'High-fidelity Figma prototype with mobile interaction patterns',
+        type: 'UI/UX Design',
+        year: '2023',
+        thumbWord: 'DESIGN',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+            { title: 'High-fidelity', detail: 'Production-ready prototype with full component library' },
+            { title: 'Interactions', detail: 'Micro-animations and transition patterns for mobile UX' },
+            { title: 'Design System', detail: 'Cohesive tokens, spacing, and typography scales' },
+            { title: 'User Flows', detail: 'End-to-end onboarding to core feature flows' },
+        ],
         title: 'Mobile Application UI & Interaction Design',
         description: `This project centers on designing the user interface (UI) and interaction
             patterns for a
