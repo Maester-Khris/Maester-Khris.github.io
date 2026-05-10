@@ -1,1039 +1,1770 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Joel Gouend — Software Engineer | Toronto</title>
+    <meta
+      name="description"
+      content="Software Engineer based in Toronto — specializing in backend engineering, distributed systems, cloud infrastructure and AI systems integration. Open to new opportunities."
+    />
+    <meta
+      name="keywords"
+      content="software engineer, backend engineer, Toronto, Java, Spring Boot, Kafka, AWS, Kubernetes, LangGraph, RAG, agentic AI, distributed systems, cloud native, fullstack"
+    />
+    <meta name="author" content="Nick Joel Gouend" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0c0c0f" />
+    <link rel="canonical" href="https://nknext.dev/" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nick Joel Gouend — Software Engineer | Toronto</title>
-  <meta name="description"
-    content="Software Engineer based in Toronto — specializing in backend engineering, distributed systems, cloud infrastructure and AI systems integration. Open to new opportunities.">
-  <meta name="keywords"
-    content="software engineer, backend engineer, Toronto, Java, Spring Boot, Kafka, AWS, Kubernetes, LangGraph, RAG, agentic AI, distributed systems, cloud native, fullstack">
-  <meta name="author" content="Nick Joel Gouend">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0c0c0f">
-  <link rel="canonical" href="https://nknext.dev/">
+    <!-- Open Graph (LinkedIn, Facebook, Slack previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nick Joel Gouend — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Backend engineer specializing in distributed systems, cloud infrastructure and AI systems integration. Based in Toronto, ON."
+    />
+    <meta property="og:url" content="https://nknext.dev/" />
+    <meta property="og:image" content="https://nknext.dev/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_CA" />
 
-  <!-- Open Graph (LinkedIn, Facebook, Slack previews) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nick Joel Gouend — Software Engineer">
-  <meta property="og:description"
-    content="Backend engineer specializing in distributed systems, cloud infrastructure and AI systems integration. Based in Toronto, ON.">
-  <meta property="og:url" content="https://nknext.dev/">
-  <meta property="og:image" content="https://nknext.dev/og-preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_CA">
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nick Joel Gouend — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Backend engineer specializing in distributed systems, cloud infrastructure and AI systems integration. Based in Toronto, ON."
+    />
+    <meta name="twitter:image" content="https://nknext.dev/og-preview.png" />
 
-  <!-- Twitter / X card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nick Joel Gouend — Software Engineer">
-  <meta name="twitter:description"
-    content="Backend engineer specializing in distributed systems, cloud infrastructure and AI systems integration. Based in Toronto, ON.">
-  <meta name="twitter:image" content="https://nknext.dev/og-preview.png">
+    <!-- Favicons -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/cropped_image.png"
+    />
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/cropped_image.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/additional.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/additional.css" rel="stylesheet">
+    <style></style>
 
-  <style>
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nick Joel Gouend",
+        "jobTitle": "Software Engineer",
+        "url": "https://nknext.dev/",
+        "email": "jombeh121@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "Ontario",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/joelgouend-thesysengineer/",
+          "https://github.com/Maester-Khris"
+        ],
+        "knowsAbout": [
+          "Backend Engineering",
+          "Distributed Systems",
+          "Cloud Infrastructure",
+          "AI Systems Integration",
+          "Kafka",
+          "Spring Boot",
+          "Kubernetes",
+          "LangGraph"
+        ]
+      }
+    </script>
+  </head>
 
-  </style>
+  <body class="index-page">
+    <noscript>
+      <h1>Nick Joel Gouend — Software Engineer</h1>
+      <p>
+        Backend engineer based in Toronto, Ontario. Specializing in distributed
+        systems, cloud infrastructure, Java/Spring Boot, Kafka, Kubernetes, AWS
+        and AI systems integration including LangGraph, RAG pipelines and
+        agentic workflows.
+      </p>
+      <p>Open to new opportunities. Contact: jombeh121@gmail.com</p>
+      <ul>
+        <li>AWS Solutions Architect Associate</li>
+        <li>Oracle Java Programmer I</li>
+        <li>MongoDB RAG Skill Badge</li>
+        <li>Anthropic AI Foundations</li>
+      </ul>
+    </noscript>
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nick Joel Gouend",
-    "jobTitle": "Software Engineer",
-    "url": "https://nknext.dev/",
-    "email": "jombeh121@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Toronto",
-      "addressRegion": "Ontario",
-      "addressCountry": "CA"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/joelgouend-thesysengineer/",
-      "https://github.com/Maester-Khris"
-    ],
-    "knowsAbout": [
-      "Backend Engineering", "Distributed Systems", "Cloud Infrastructure",
-      "AI Systems Integration", "Kafka", "Spring Boot", "Kubernetes", "LangGraph"
-    ]
-  }
-  </script>
-</head>
-
-<body class="index-page">
-
-  <noscript>
-    <h1>Nick Joel Gouend — Software Engineer</h1>
-    <p>Backend engineer based in Toronto, Ontario. Specializing in distributed systems, cloud infrastructure,
-      Java/Spring Boot, Kafka, Kubernetes, AWS and AI systems integration including LangGraph, RAG pipelines and agentic
-      workflows.</p>
-    <p>Open to new opportunities. Contact: jombeh121@gmail.com</p>
-    <ul>
-      <li>AWS Solutions Architect Associate</li>
-      <li>Oracle Java Programmer I</li>
-      <li>MongoDB RAG Skill Badge</li>
-      <li>Anthropic AI Foundations</li>
-    </ul>
-  </noscript>
-
-  <!-- Vertical side navbar — fixed, fully out of document flow -->
-  <nav id="side-nav" class="side-nav" role="navigation" aria-label="Site navigation">
-    <ul class="side-nav-list">
-
-      <!-- Group 1: Home · About · Resume -->
-      <li class="side-nav-item">
-        <a href="#hero" class="side-nav-link is-active" data-section="hero">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
-          </svg>
-          <span class="side-nav-tooltip">Home</span>
-        </a>
-      </li>
-      <li class="side-nav-item">
-        <a href="#about" class="side-nav-link" data-section="about">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-          </svg>
-          <span class="side-nav-tooltip">About</span>
-        </a>
-      </li>
-      <li class="side-nav-item">
-        <a href="#resume" class="side-nav-link" data-section="resume">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="16" y1="13" x2="8" y2="13" />
-            <line x1="16" y1="17" x2="8" y2="17" />
-            <line x1="10" y1="9" x2="8" y2="9" />
-          </svg>
-          <span class="side-nav-tooltip">Resume</span>
-        </a>
-      </li>
-      <li class="side-nav-item">
-        <a href="#skills" class="side-nav-link" data-section="skills">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <span class="side-nav-tooltip">Skills</span>
-        </a>
-      </li>
-
-      <li class="side-nav-divider" aria-hidden="true"></li>
-
-      <!-- Group 2: Portfolio · Community -->
-      <li class="side-nav-item">
-        <a href="#portfolio" class="side-nav-link" data-section="portfolio">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-            <line x1="8" y1="21" x2="16" y2="21" />
-            <line x1="12" y1="17" x2="12" y2="21" />
-          </svg>
-          <span class="side-nav-tooltip">Portfolio</span>
-        </a>
-      </li>
-
-      <li class="side-nav-divider" aria-hidden="true"></li>
-
-      <!-- Group 3: Contact -->
-      <li class="side-nav-item">
-        <a href="#contact" class="side-nav-link" data-section="contact">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          <span class="side-nav-tooltip">Contact</span>
-        </a>
-      </li>
-
-    </ul>
-  </nav>
-
-  <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section hero-v2">
-      <div class="hero-inner">
-
-        <!-- Left: typing effect -->
-        <div class="hero-left">
-          <p class="hero-label">Hi, I'm Nick. <br> I am</p>
-          <div class="hero-typed-line" id="hero-typed-text" aria-live="polite"></div>
-          <span class="hero-cursor" aria-hidden="true"></span>
-        </div>
-
-        <!-- Right: macOS terminal -->
-        <div class="hero-right" aria-hidden="true">
-          <div class="terminal-window">
-            <div class="terminal-bar">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-              <span class="terminal-title">trace — bash</span>
-            </div>
-            <div class="terminal-body" id="terminal-body"></div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About + Community — merged 100vh split section -->
-    <section id="about" class="about-community section">
-      <div class="ac-grid">
-
-        <!-- Left: profile panel -->
-        <div class="ac-left">
-          <span class="ac-section-label">About Me</span>
-
-          <div class="ac-photo">
-            <img src="assets/img/photo_portfolio.jpg" alt="Nick Joel Gouend">
-            <div class="ac-photo-overlay">
-              <p class="ac-photo-name">Nick Joel Gouend</p>
-              <p class="ac-photo-title">Fullstack Software Engineer</p>
-            </div>
-          </div>
-
-          <div class="ac-avail-badge">
-            <span class="ac-avail-dot"></span>
-            Open to opportunities
-          </div>
-
-          <div class="ac-contact-links">
-            <a class="ac-contact-item" href="mailto:jombeh121@gmail.com">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <div class="ac-contact-text">
-                <span class="ac-meta-lbl">Contact</span>
-                <span class="ac-meta-val">jombeh121@gmail.com</span>
-              </div>
-            </a>
-            <a class="ac-contact-item" href="https://www.linkedin.com/in/joelgouend-thesysengineer/" target="_blank"
-              rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              <div class="ac-contact-text">
-                <span class="ac-meta-lbl">LinkedIn</span>
-                <span class="ac-meta-val">Joel Gouend</span>
-              </div>
-            </a>
-            <a class="ac-contact-item" href="https://github.com/Maester-Khris" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
-              <div class="ac-contact-text">
-                <span class="ac-meta-lbl">GitHub</span>
-                <span class="ac-meta-val">Maester-Khris</span>
-              </div>
-            </a>
-            <div class="ac-contact-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <div class="ac-contact-text">
-                <span class="ac-meta-lbl">Location</span>
-                <span class="ac-meta-val">Toronto, Ontario</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="ac-tags">
-            <span class="ac-tag ac-tag--accent">Java</span>
-            <span class="ac-tag ac-tag--accent">Spring</span>
-            <span class="ac-tag ac-tag--accent">Kafka</span>
-            <span class="ac-tag ac-tag--neutral">AWS</span>
-            <span class="ac-tag ac-tag--neutral">K8s</span>
-            <span class="ac-tag ac-tag--neutral">LLM Ops</span>
-          </div>
-        </div>
-
-        <!-- Right: community mosaic carousel -->
-        <div class="ac-right">
-
-          <div class="ac-right-header">
-            <span class="ac-community-label">Community Involvement</span>
-            <div class="ac-nav-buttons">
-              <button class="ac-nav-btn" id="ac-prev" aria-label="Previous page">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-              <button class="ac-nav-btn" id="ac-next" aria-label="Next page">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="ac-mosaic" id="ac-mosaic">
-
-            <!-- Page 1 — AWS JAM Hackathon -->
-            <div class="ac-page ac-page--1 is-active">
-              <div class="ac-tile" style="background-image:url('assets/img/social/aws_jam_logo.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-                  </svg>
-                  AWS JAM
-                </span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/aws_jam.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg>
-                  AWS JAM
-                </span>
-                <span class="ac-tile-label">April Jam Session</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/aws_jam_team1.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  </svg>
-                  3rd Place · AWS Gen AI Jam
-                </span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/aws_jam_team2.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-                  </svg>
-                  Team
-                </span>
-              </div>
-            </div>
-
-            <!-- Page 2 — Google & NPower -->
-            <div class="ac-page ac-page--2">
-              <div class="ac-tile" style="background-image:url('assets/img/social/lobby.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="2" y="7" width="20" height="14" rx="2" />
-                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                  </svg>
-                  NPower × Google
-                </span>
-                <span class="ac-tile-label">Google Toronto Office</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/google_postair.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                  Google
-                </span>
-                <span class="ac-tile-label">Google I/O Extended</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/google2.jpg')">
-                <span class="ac-tile-label">Google I/O</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/mariana.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-                  </svg>
-                  Community
-                </span>
-              </div>
-            </div>
-
-            <!-- Page 3 — Networking & Workshops -->
-            <div class="ac-page ac-page--3">
-              <div class="ac-tile" style="background-image:url('assets/img/social/kiratirashi.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  </svg>
-                  George Brown College · Waterfront Campus
-                </span>
-                <span class="ac-tile-label">Networking Break · Toronto Tech Week 2025</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/group_photo.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  </svg>
-                  Community
-                </span>
-                <span class="ac-tile-label">Group Photo</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/idea_forge.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg>
-                  HackTheBrain
-                </span>
-                <span class="ac-tile-label">Idea Forge · Toronto Tech Week 2025</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/talking.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                  Pitch
-                </span>
-                <span class="ac-tile-label">Project Pitch · Toronto Tech Week 2025</span>
-              </div>
-            </div>
-
-            <!-- Page 4 — AI & DevOps Events -->
-            <div class="ac-page ac-page--4">
-              <div class="ac-tile" style="background-image:url('assets/img/social/crowd.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  </svg>
-                  Community
-                </span>
-                <span class="ac-tile-label">HackTheBrain · Closing talk</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/aicamp.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <rect x="9" y="9" width="6" height="6" />
-                    <path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2" />
-                  </svg>
-                  AI Camp
-                </span>
-                <span class="ac-tile-label">AI Summit</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/shutupcode.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                  Coding
-                </span>
-                <span class="ac-tile-label">Shut Up &amp; Code · Downtown TO</span>
-              </div>
-              <div class="ac-tile" style="background-image:url('assets/img/social/microsoft_devops.jpg')">
-                <span class="ac-tile-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                    <path d="M8 21h8M12 17v4" />
-                  </svg>
-                  Microsoft
-                </span>
-                <span class="ac-tile-label">DevOps Day</span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="ac-dots" id="ac-dots">
-            <span class="ac-dot is-active"></span>
-            <span class="ac-dot"></span>
-            <span class="ac-dot"></span>
-            <span class="ac-dot"></span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Expertise Section -->
-    <section id="skills" class="expertise-section">
-      <div class="expertise-heading">
-        <span class="expertise-label">Technical Stack</span>
-        <h2 class="expertise-title">Areas of Expertise</h2>
-      </div>
-
-      <div class="expertise-deck" id="expertise-deck">
-
-        <!-- Card 1: Backend Engineering -->
-        <div class="exp-card is-active" style="--exp-accent:#8aafcc">
-          <div class="exp-collapsed">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <path d="M8 21h8M12 17v4" />
-              <path d="M7 7h10M7 11h6" />
+    <!-- Vertical side navbar — fixed, fully out of document flow -->
+    <nav
+      id="side-nav"
+      class="side-nav"
+      role="navigation"
+      aria-label="Site navigation"
+    >
+      <ul class="side-nav-list">
+        <!-- Group 1: Home · About · Resume -->
+        <li class="side-nav-item">
+          <a href="#hero" class="side-nav-link is-active" data-section="hero">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
-            <span class="exp-vert-label">Backend Engineering</span>
+            <span class="side-nav-tooltip">Home</span>
+          </a>
+        </li>
+        <li class="side-nav-item">
+          <a href="#about" class="side-nav-link" data-section="about">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span class="side-nav-tooltip">About</span>
+          </a>
+        </li>
+        <li class="side-nav-item">
+          <a href="#resume" class="side-nav-link" data-section="resume">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <line x1="10" y1="9" x2="8" y2="9" />
+            </svg>
+            <span class="side-nav-tooltip">Resume</span>
+          </a>
+        </li>
+        <li class="side-nav-item">
+          <a href="#skills" class="side-nav-link" data-section="skills">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <span class="side-nav-tooltip">Skills</span>
+          </a>
+        </li>
+
+        <li class="side-nav-divider" aria-hidden="true"></li>
+
+        <!-- Group 2: Portfolio · Community -->
+        <li class="side-nav-item">
+          <a href="#portfolio" class="side-nav-link" data-section="portfolio">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+            <span class="side-nav-tooltip">Portfolio</span>
+          </a>
+        </li>
+
+        <li class="side-nav-divider" aria-hidden="true"></li>
+
+        <!-- Group 3: Contact -->
+        <li class="side-nav-item">
+          <a href="#contact" class="side-nav-link" data-section="contact">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span class="side-nav-tooltip">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section hero-v2">
+        <div class="hero-inner">
+          <!-- Left: typing effect -->
+          <div class="hero-left">
+            <p class="hero-label">
+              Hi, I'm Nick. <br />
+              I am
+            </p>
+            <div
+              class="hero-typed-line"
+              id="hero-typed-text"
+              aria-live="polite"
+            ></div>
+            <span class="hero-cursor" aria-hidden="true"></span>
           </div>
-          <div class="exp-expanded">
-            <div class="exp-exp-header">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+          <!-- Right: macOS terminal -->
+          <div class="hero-right" aria-hidden="true">
+            <div class="terminal-window">
+              <div class="terminal-bar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">trace — bash</span>
+              </div>
+              <div class="terminal-body" id="terminal-body"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About + Community — merged 100vh split section -->
+      <section id="about" class="about-community section">
+        <div class="ac-grid">
+          <!-- Left: profile panel -->
+          <div class="ac-left">
+            <span class="ac-section-label">About Me</span>
+
+            <div class="ac-photo">
+              <img
+                src="assets/img/photo_portfolio.jpg"
+                alt="Nick Joel Gouend"
+              />
+              <div class="ac-photo-overlay">
+                <p class="ac-photo-name">Nick Joel Gouend</p>
+                <p class="ac-photo-title">Fullstack Software Engineer</p>
+              </div>
+            </div>
+
+            <div class="ac-avail-badge">
+              <span class="ac-avail-dot"></span>
+              Open to opportunities
+            </div>
+
+            <div class="ac-contact-links">
+              <a class="ac-contact-item" href="mailto:jombeh121@gmail.com">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <div class="ac-contact-text">
+                  <span class="ac-meta-lbl">Contact</span>
+                  <span class="ac-meta-val">jombeh121@gmail.com</span>
+                </div>
+              </a>
+              <a
+                class="ac-contact-item"
+                href="https://www.linkedin.com/in/joelgouend-thesysengineer/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                <div class="ac-contact-text">
+                  <span class="ac-meta-lbl">LinkedIn</span>
+                  <span class="ac-meta-val">Joel Gouend</span>
+                </div>
+              </a>
+              <a
+                class="ac-contact-item"
+                href="https://github.com/Maester-Khris"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+                <div class="ac-contact-text">
+                  <span class="ac-meta-lbl">GitHub</span>
+                  <span class="ac-meta-val">Maester-Khris</span>
+                </div>
+              </a>
+              <div class="ac-contact-item">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <div class="ac-contact-text">
+                  <span class="ac-meta-lbl">Location</span>
+                  <span class="ac-meta-val">Toronto, Ontario</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ac-tags">
+              <span class="ac-tag ac-tag--accent">Java</span>
+              <span class="ac-tag ac-tag--accent">Spring</span>
+              <span class="ac-tag ac-tag--accent">Kafka</span>
+              <span class="ac-tag ac-tag--neutral">AWS</span>
+              <span class="ac-tag ac-tag--neutral">K8s</span>
+              <span class="ac-tag ac-tag--neutral">LLM Ops</span>
+            </div>
+          </div>
+
+          <!-- Right: community mosaic carousel -->
+          <div class="ac-right">
+            <div class="ac-right-header">
+              <span class="ac-community-label">Community Involvement</span>
+              <div class="ac-nav-buttons">
+                <button
+                  class="ac-nav-btn"
+                  id="ac-prev"
+                  aria-label="Previous page"
+                >
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <button class="ac-nav-btn" id="ac-next" aria-label="Next page">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="ac-mosaic" id="ac-mosaic">
+              <!-- Page 1 — AWS JAM Hackathon -->
+              <div class="ac-page ac-page--1 is-active">
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/aws_jam_logo.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                    </svg>
+                    AWS JAM
+                  </span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/aws_jam.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      />
+                    </svg>
+                    AWS JAM
+                  </span>
+                  <span class="ac-tile-label">April Jam Session</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/aws_jam_team1.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    </svg>
+                    3rd Place · AWS Gen AI Jam
+                  </span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/aws_jam_team2.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                    </svg>
+                    Team
+                  </span>
+                </div>
+              </div>
+
+              <!-- Page 2 — Google & NPower -->
+              <div class="ac-page ac-page--2">
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/lobby.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="2" y="7" width="20" height="14" rx="2" />
+                      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                    </svg>
+                    NPower × Google
+                  </span>
+                  <span class="ac-tile-label">Google Toronto Office</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/google_postair.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    Google
+                  </span>
+                  <span class="ac-tile-label">Google I/O Extended</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/google2.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-label">Google I/O</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/mariana.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                    </svg>
+                    Community
+                  </span>
+                </div>
+              </div>
+
+              <!-- Page 3 — Networking & Workshops -->
+              <div class="ac-page ac-page--3">
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/kiratirashi.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      />
+                    </svg>
+                    George Brown College · Waterfront Campus
+                  </span>
+                  <span class="ac-tile-label"
+                    >Networking Break · Toronto Tech Week 2025</span
+                  >
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/group_photo.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    </svg>
+                    Community
+                  </span>
+                  <span class="ac-tile-label">Group Photo</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/idea_forge.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      />
+                    </svg>
+                    HackTheBrain
+                  </span>
+                  <span class="ac-tile-label"
+                    >Idea Forge · Toronto Tech Week 2025</span
+                  >
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/talking.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    Pitch
+                  </span>
+                  <span class="ac-tile-label"
+                    >Project Pitch · Toronto Tech Week 2025</span
+                  >
+                </div>
+              </div>
+
+              <!-- Page 4 — AI & DevOps Events -->
+              <div class="ac-page ac-page--4">
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/crowd.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    </svg>
+                    Community
+                  </span>
+                  <span class="ac-tile-label">HackTheBrain · Closing talk</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/aicamp.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <rect x="9" y="9" width="6" height="6" />
+                      <path
+                        d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"
+                      />
+                    </svg>
+                    AI Camp
+                  </span>
+                  <span class="ac-tile-label">AI Summit</span>
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/shutupcode.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    Coding
+                  </span>
+                  <span class="ac-tile-label"
+                    >Shut Up &amp; Code · Downtown TO</span
+                  >
+                </div>
+                <div
+                  class="ac-tile"
+                  style="
+                    background-image: url(&quot;assets/img/social/microsoft_devops.jpg&quot;);
+                  "
+                >
+                  <span class="ac-tile-badge">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    Microsoft
+                  </span>
+                  <span class="ac-tile-label">DevOps Day</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ac-dots" id="ac-dots">
+              <span class="ac-dot is-active"></span>
+              <span class="ac-dot"></span>
+              <span class="ac-dot"></span>
+              <span class="ac-dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise Section -->
+      <section id="skills" class="expertise-section">
+        <div class="expertise-heading">
+          <span class="expertise-label">Technical Stack</span>
+          <h2 class="expertise-title">Areas of Expertise</h2>
+        </div>
+
+        <div class="expertise-deck" id="expertise-deck">
+          <!-- Card 1: Backend Engineering -->
+          <div class="exp-card is-active" style="--exp-accent: #8aafcc">
+            <div class="exp-collapsed">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <rect x="2" y="3" width="20" height="14" rx="2" />
                 <path d="M8 21h8M12 17v4" />
                 <path d="M7 7h10M7 11h6" />
               </svg>
-              <h3 class="exp-title">Backend Engineering</h3>
+              <span class="exp-vert-label">Backend Engineering</span>
             </div>
-            <ul class="exp-list">
-              <li><span class="exp-dash">—</span><span><strong>API Design</strong> REST at production grade —
-                  idempotency, versioning, ETag, conditional requests &amp; cache semantics</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Performance</strong> high-concurrency systems, CPU vs I/O
-                  thread modelling, distributed caching, cache stampede prevention</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Data Layer</strong> query optimization, batch processing,
-                  indexing strategies, denormalization &amp; partitioning decisions</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Debugging</strong> stress testing, memory leak
-                  investigation, profiling under load</span></li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">Spring Boot</span>
-              <span class="exp-tag">NestJS</span>
-              <span class="exp-tag">FastAPI</span>
-              <span class="exp-tag">Redis</span>
-              <span class="exp-tag">Kafka</span>
-              <span class="exp-tag">PostgreSQL</span>
+            <div class="exp-expanded">
+              <div class="exp-exp-header">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                  <path d="M7 7h10M7 11h6" />
+                </svg>
+                <h3 class="exp-title">Backend Engineering</h3>
+              </div>
+              <ul class="exp-list">
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>API Design</strong> REST at production grade —
+                    idempotency, versioning, ETag, conditional requests &amp;
+                    cache semantics</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Performance</strong> high-concurrency systems, CPU
+                    vs I/O thread modelling, distributed caching, cache stampede
+                    prevention</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Data Layer</strong> query optimization, batch
+                    processing, indexing strategies, denormalization &amp;
+                    partitioning decisions</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Debugging</strong> stress testing, memory leak
+                    investigation, profiling under load</span
+                  >
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Spring Boot</span>
+                <span class="exp-tag">NestJS</span>
+                <span class="exp-tag">FastAPI</span>
+                <span class="exp-tag">Redis</span>
+                <span class="exp-tag">Kafka</span>
+                <span class="exp-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="exp-progress-track">
+              <div class="exp-progress-bar" style="width: 90%"></div>
             </div>
           </div>
-          <div class="exp-progress-track">
-            <div class="exp-progress-bar" style="width:90%"></div>
-          </div>
-        </div>
 
-        <!-- Card 2: System Architecture -->
-        <div class="exp-card" style="--exp-accent:#9b7fd4">
-          <div class="exp-collapsed">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="3" width="7" height="7" rx="1" />
-              <rect x="3" y="14" width="7" height="7" rx="1" />
-              <rect x="14" y="14" width="7" height="7" rx="1" />
-            </svg>
-            <span class="exp-vert-label">System Architecture</span>
-          </div>
-          <div class="exp-expanded">
-            <div class="exp-exp-header">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Card 2: System Architecture -->
+          <div class="exp-card" style="--exp-accent: #9b7fd4">
+            <div class="exp-collapsed">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <rect x="3" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="3" width="7" height="7" rx="1" />
                 <rect x="3" y="14" width="7" height="7" rx="1" />
                 <rect x="14" y="14" width="7" height="7" rx="1" />
               </svg>
-              <h3 class="exp-title">System Architecture</h3>
+              <span class="exp-vert-label">System Architecture</span>
             </div>
-            <ul class="exp-list">
-              <li><span class="exp-dash">—</span><span><strong>Distributed Systems</strong> event-driven design, CQRS,
-                  Transactional Outbox, eventual consistency tradeoffs</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Scalability</strong> horizontal scaling patterns, async
-                  messaging, backpressure management</span></li>
-              <li><span class="exp-dash">—</span><span><strong>API Contracts</strong> schema-first design, breaking
-                  change governance, gRPC &amp; WebSocket streaming</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Reliability</strong> circuit breakers, retry policies,
-                  graceful degradation</span></li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">Kafka</span>
-              <span class="exp-tag">gRPC</span>
-              <span class="exp-tag">Event Sourcing</span>
-              <span class="exp-tag">CQRS</span>
-              <span class="exp-tag">Outbox</span>
+            <div class="exp-expanded">
+              <div class="exp-exp-header">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+                <h3 class="exp-title">System Architecture</h3>
+              </div>
+              <ul class="exp-list">
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Distributed Systems</strong> event-driven design,
+                    CQRS, Transactional Outbox, eventual consistency
+                    tradeoffs</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Scalability</strong> horizontal scaling patterns,
+                    async messaging, backpressure management</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>API Contracts</strong> schema-first design,
+                    breaking change governance, gRPC &amp; WebSocket
+                    streaming</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Reliability</strong> circuit breakers, retry
+                    policies, graceful degradation</span
+                  >
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Kafka</span>
+                <span class="exp-tag">gRPC</span>
+                <span class="exp-tag">Event Sourcing</span>
+                <span class="exp-tag">CQRS</span>
+                <span class="exp-tag">Outbox</span>
+              </div>
+            </div>
+            <div class="exp-progress-track">
+              <div class="exp-progress-bar" style="width: 85%"></div>
             </div>
           </div>
-          <div class="exp-progress-track">
-            <div class="exp-progress-bar" style="width:85%"></div>
-          </div>
-        </div>
 
-        <!-- Card 3: AI Systems Integration -->
-        <div class="exp-card" style="--exp-accent:#6a9a6f">
-          <div class="exp-collapsed">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="12 2 2 7 12 12 22 7 12 2" />
-              <polyline points="2 17 12 22 22 17" />
-              <polyline points="2 12 12 17 22 12" />
-            </svg>
-            <span class="exp-vert-label">AI Systems Integration</span>
-          </div>
-          <div class="exp-expanded">
-            <div class="exp-exp-header">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Card 3: AI Systems Integration -->
+          <div class="exp-card" style="--exp-accent: #6a9a6f">
+            <div class="exp-collapsed">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <polygon points="12 2 2 7 12 12 22 7 12 2" />
                 <polyline points="2 17 12 22 22 17" />
                 <polyline points="2 12 12 17 22 12" />
               </svg>
-              <h3 class="exp-title">AI Systems Integration</h3>
+              <span class="exp-vert-label">AI Systems Integration</span>
             </div>
-            <ul class="exp-list">
-              <li><span class="exp-dash">—</span><span><strong>Production LLMs</strong> integrating &amp; operating
-                  models in live systems — latency budgeting, fallback routing, cost control</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Agentic Pipelines</strong> multi-agent orchestration,
-                  self-correction loops, tool-use &amp; memory management</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Retrieval</strong> RAG architecture, semantic hybrid
-                  search, vector store selection &amp; tuning</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Data</strong> feature engineering pipelines, workflow
-                  orchestration, batch inference</span></li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">LangGraph</span>
-              <span class="exp-tag">RAG</span>
-              <span class="exp-tag">Qdrant</span>
-              <span class="exp-tag">Airflow</span>
-              <span class="exp-tag">Groq</span>
+            <div class="exp-expanded">
+              <div class="exp-exp-header">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+                <h3 class="exp-title">AI Systems Integration</h3>
+              </div>
+              <ul class="exp-list">
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Production LLMs</strong> integrating &amp;
+                    operating models in live systems — latency budgeting,
+                    fallback routing, cost control</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Agentic Pipelines</strong> multi-agent
+                    orchestration, self-correction loops, tool-use &amp; memory
+                    management</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Retrieval</strong> RAG architecture, semantic
+                    hybrid search, vector store selection &amp; tuning</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Data</strong> feature engineering pipelines,
+                    workflow orchestration, batch inference</span
+                  >
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">LangGraph</span>
+                <span class="exp-tag">RAG</span>
+                <span class="exp-tag">Qdrant</span>
+                <span class="exp-tag">Airflow</span>
+                <span class="exp-tag">Groq</span>
+              </div>
+            </div>
+            <div class="exp-progress-track">
+              <div class="exp-progress-bar" style="width: 75%"></div>
             </div>
           </div>
-          <div class="exp-progress-track">
-            <div class="exp-progress-bar" style="width:75%"></div>
-          </div>
-        </div>
 
-        <!-- Card 4: Cloud & Observability -->
-        <div class="exp-card" style="--exp-accent:#c8955a">
-          <div class="exp-collapsed">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-            </svg>
-            <span class="exp-vert-label">Cloud &amp; Observability</span>
-          </div>
-          <div class="exp-expanded">
-            <div class="exp-exp-header">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Card 4: Cloud & Observability -->
+          <div class="exp-card" style="--exp-accent: #c8955a">
+            <div class="exp-collapsed">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
               </svg>
-              <h3 class="exp-title">Cloud &amp; Observability</h3>
+              <span class="exp-vert-label">Cloud &amp; Observability</span>
             </div>
-            <ul class="exp-list">
-              <li><span class="exp-dash">—</span><span><strong>Infrastructure</strong> cloud-native deployments,
-                  container orchestration, IaC — built to survive on-call at 2am</span></li>
-              <li><span class="exp-dash">—</span><span><strong>CI/CD</strong> automated pipelines with build, test,
-                  security scan &amp; semantic versioning gates</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Observability</strong> distributed tracing, structured
-                  logging, SLO-based alerting — finding the signal in the noise</span></li>
-              <li><span class="exp-dash">—</span><span><strong>Incident</strong> RCA discipline, runbook authoring,
-                  post-mortem culture</span></li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">AWS</span>
-              <span class="exp-tag">Terraform</span>
-              <span class="exp-tag">K8s</span>
-              <span class="exp-tag">OpenTelemetry</span>
-              <span class="exp-tag">Grafana</span>
-              <span class="exp-tag">Splunk</span>
+            <div class="exp-expanded">
+              <div class="exp-exp-header">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                </svg>
+                <h3 class="exp-title">Cloud &amp; Observability</h3>
+              </div>
+              <ul class="exp-list">
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Infrastructure</strong> cloud-native deployments,
+                    container orchestration, IaC — built to survive on-call at
+                    2am</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>CI/CD</strong> automated pipelines with build,
+                    test, security scan &amp; semantic versioning gates</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Observability</strong> distributed tracing,
+                    structured logging, SLO-based alerting — finding the signal
+                    in the noise</span
+                  >
+                </li>
+                <li>
+                  <span class="exp-dash">—</span
+                  ><span
+                    ><strong>Incident</strong> RCA discipline, runbook
+                    authoring, post-mortem culture</span
+                  >
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">AWS</span>
+                <span class="exp-tag">Terraform</span>
+                <span class="exp-tag">K8s</span>
+                <span class="exp-tag">OpenTelemetry</span>
+                <span class="exp-tag">Grafana</span>
+                <span class="exp-tag">Splunk</span>
+              </div>
+            </div>
+            <div class="exp-progress-track">
+              <div class="exp-progress-bar" style="width: 70%"></div>
             </div>
           </div>
-          <div class="exp-progress-track">
-            <div class="exp-progress-bar" style="width:70%"></div>
-          </div>
-        </div>
 
-        <!-- Card 5: Industry Credentials -->
-        <div class="exp-card" style="--exp-accent:#c8955a">
-          <div class="exp-collapsed">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" />
-              <path d="M16 3.5l1.5 1.5L20 2" />
-            </svg>
-            <span class="exp-vert-label">Credentials</span>
-          </div>
-          <div class="exp-expanded">
-            <div class="exp-exp-header">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Card 5: Industry Credentials -->
+          <div class="exp-card" style="--exp-accent: #c8955a">
+            <div class="exp-collapsed">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" />
                 <path d="M16 3.5l1.5 1.5L20 2" />
               </svg>
-              <h3 class="exp-title">Industry Credentials</h3>
+              <span class="exp-vert-label">Credentials</span>
             </div>
-            <div class="cred-grid">
-
-              <!-- AWS Solutions Architect -->
-              <div class="cred-badge">
-                <div class="cred-icon" style="background:#1a1f0f;border-color:#2d3a18">
-                  <img src="assets/img/aws-certified-saaco3.png" alt="AWS"
-                    style="width:100%;height:100%;object-fit:contain;padding:4px">
+            <div class="exp-expanded">
+              <div class="exp-exp-header">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" />
+                  <path d="M16 3.5l1.5 1.5L20 2" />
+                </svg>
+                <h3 class="exp-title">Industry Credentials</h3>
+              </div>
+              <div class="cred-grid">
+                <!-- AWS Solutions Architect -->
+                <div class="cred-badge">
+                  <div
+                    class="cred-icon"
+                    style="background: #1a1f0f; border-color: #2d3a18"
+                  >
+                    <img
+                      src="assets/img/aws-certified-saaco3.png"
+                      alt="AWS"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        padding: 4px;
+                      "
+                    />
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">AWS Solutions Architect</span>
+                    <span class="cred-sub">Associate</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #6a9a6f"></span>
+                      <span class="cred-status-lbl" style="color: #6a9a6f"
+                        >verified</span
+                      >
+                    </div>
+                  </div>
                 </div>
-                <div class="cred-text">
-                  <span class="cred-name">AWS Solutions Architect</span>
-                  <span class="cred-sub">Associate</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#6a9a6f"></span>
-                    <span class="cred-status-lbl" style="color:#6a9a6f">verified</span>
+
+                <!-- Oracle Java Programmer I -->
+                <div class="cred-badge">
+                  <div
+                    class="cred-icon"
+                    style="background: #1a0f0f; border-color: #3a1a18"
+                  >
+                    <img
+                      src="assets/img/Oracle_badge.png"
+                      alt="Oracle"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        padding: 4px;
+                      "
+                    />
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">Oracle Java Programmer I</span>
+                    <span class="cred-sub">Associate</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #6a9a6f"></span>
+                      <span class="cred-status-lbl" style="color: #6a9a6f"
+                        >verified</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MongoDB RAG -->
+                <div class="cred-badge">
+                  <div
+                    class="cred-icon"
+                    style="background: #0f1a12; border-color: #1a3820"
+                  >
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#4db33d"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="display: block; margin: auto"
+                    >
+                      <path
+                        d="M12 2C8 2 6 6 6 10c0 3.5 2 6 6 8 4-2 6-4.5 6-8 0-4-2-8-6-8z"
+                      />
+                      <line x1="12" y1="18" x2="12" y2="22" />
+                    </svg>
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">MongoDB RAG</span>
+                    <span class="cred-sub">Skill Badge</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #6a9a6f"></span>
+                      <span class="cred-status-lbl" style="color: #6a9a6f"
+                        >verified</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Anthropic AI Foundations -->
+                <div class="cred-badge">
+                  <div
+                    class="cred-icon"
+                    style="background: #1a130f; border-color: #3a2818"
+                  >
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#c4793a"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="display: block; margin: auto"
+                    >
+                      <polygon
+                        points="12 2 15.5 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.5 8.5 12 2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">Anthropic AI</span>
+                    <span class="cred-sub">Foundations Badge</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #6a9a6f"></span>
+                      <span class="cred-status-lbl" style="color: #6a9a6f"
+                        >verified</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Azure AI Fundamentals -->
+                <div class="cred-badge">
+                  <div
+                    class="cred-icon"
+                    style="background: #0f141a; border-color: #18283a"
+                  >
+                    <img
+                      src="assets/img/azure-ai.png"
+                      alt="Azure AI"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        padding: 4px;
+                      "
+                    />
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">Azure AI Fundamentals</span>
+                    <span class="cred-sub">Microsoft</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #6a9a6f"></span>
+                      <span class="cred-status-lbl" style="color: #6a9a6f"
+                        >verified</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Building with Claude -->
+                <div class="cred-badge cred-badge--inprogress">
+                  <div
+                    class="cred-icon"
+                    style="background: #160f1a; border-color: #2e1a3a"
+                  >
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#c8955a"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="display: block; margin: auto"
+                    >
+                      <path
+                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                      />
+                      <line x1="9" y1="10" x2="15" y2="10" />
+                      <line x1="9" y1="14" x2="13" y2="14" />
+                    </svg>
+                  </div>
+                  <div class="cred-text">
+                    <span class="cred-name">Building with Claude</span>
+                    <span class="cred-sub">Anthropic</span>
+                    <div class="cred-status">
+                      <span class="cred-dot" style="background: #c8955a"></span>
+                      <span class="cred-status-lbl" style="color: #c8955a"
+                        >in progress</span
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Oracle Java Programmer I -->
-              <div class="cred-badge">
-                <div class="cred-icon" style="background:#1a0f0f;border-color:#3a1a18">
-                  <img src="assets/img/Oracle_badge.png" alt="Oracle"
-                    style="width:100%;height:100%;object-fit:contain;padding:4px">
-                </div>
-                <div class="cred-text">
-                  <span class="cred-name">Oracle Java Programmer I</span>
-                  <span class="cred-sub">Associate</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#6a9a6f"></span>
-                    <span class="cred-status-lbl" style="color:#6a9a6f">verified</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- MongoDB RAG -->
-              <div class="cred-badge">
-                <div class="cred-icon" style="background:#0f1a12;border-color:#1a3820">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#4db33d" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto">
-                    <path d="M12 2C8 2 6 6 6 10c0 3.5 2 6 6 8 4-2 6-4.5 6-8 0-4-2-8-6-8z" />
-                    <line x1="12" y1="18" x2="12" y2="22" />
-                  </svg>
-                </div>
-                <div class="cred-text">
-                  <span class="cred-name">MongoDB RAG</span>
-                  <span class="cred-sub">Skill Badge</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#6a9a6f"></span>
-                    <span class="cred-status-lbl" style="color:#6a9a6f">verified</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Anthropic AI Foundations -->
-              <div class="cred-badge">
-                <div class="cred-icon" style="background:#1a130f;border-color:#3a2818">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c4793a" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto">
-                    <polygon points="12 2 15.5 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.5 8.5 12 2" />
-                  </svg>
-                </div>
-                <div class="cred-text">
-                  <span class="cred-name">Anthropic AI</span>
-                  <span class="cred-sub">Foundations Badge</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#6a9a6f"></span>
-                    <span class="cred-status-lbl" style="color:#6a9a6f">verified</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Azure AI Fundamentals -->
-              <div class="cred-badge">
-                <div class="cred-icon" style="background:#0f141a;border-color:#18283a">
-                  <img src="assets/img/azure-ai.png" alt="Azure AI"
-                    style="width:100%;height:100%;object-fit:contain;padding:4px">
-                </div>
-                <div class="cred-text">
-                  <span class="cred-name">Azure AI Fundamentals</span>
-                  <span class="cred-sub">Microsoft</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#6a9a6f"></span>
-                    <span class="cred-status-lbl" style="color:#6a9a6f">verified</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Building with Claude -->
-              <div class="cred-badge cred-badge--inprogress">
-                <div class="cred-icon" style="background:#160f1a;border-color:#2e1a3a">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c8955a" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                    <line x1="9" y1="10" x2="15" y2="10" />
-                    <line x1="9" y1="14" x2="13" y2="14" />
-                  </svg>
-                </div>
-                <div class="cred-text">
-                  <span class="cred-name">Building with Claude</span>
-                  <span class="cred-sub">Anthropic</span>
-                  <div class="cred-status">
-                    <span class="cred-dot" style="background:#c8955a"></span>
-                    <span class="cred-status-lbl" style="color:#c8955a">in progress</span>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-
-
-    <!-- Resume / History Section -->
-    <section id="resume" class="resume-v2">
-
-      <div class="rv2-header">
-        <div class="rv2-header-left">
-          <span class="rv2-label">Background</span>
-          <h2 class="rv2-title">Experience &amp; Education</h2>
+      <!-- Resume / History Section -->
+      <section id="resume" class="resume-v2">
+        <div class="rv2-header">
+          <div class="rv2-header-left">
+            <span class="rv2-label">Background</span>
+            <h2 class="rv2-title">Experience &amp; Education</h2>
+          </div>
+          <div class="rv2-tabs" id="rv2-tabs">
+            <button class="rv2-tab is-active" data-filter="all">All</button>
+            <button class="rv2-tab" data-filter="work">Work</button>
+            <button class="rv2-tab" data-filter="edu">Education</button>
+          </div>
         </div>
-        <div class="rv2-tabs" id="rv2-tabs">
-          <button class="rv2-tab is-active" data-filter="all">All</button>
-          <button class="rv2-tab" data-filter="work">Work</button>
-          <button class="rv2-tab" data-filter="edu">Education</button>
-        </div>
-      </div>
 
-      <div class="rv2-timeline">
+        <div class="rv2-timeline">
+          <!-- Left column -->
+          <div class="rv2-col rv2-col--left">
+            <div class="rv2-card" data-type="work">
+              <span class="rv2-type-label">Work</span>
+              <span class="rv2-connector rv2-connector--right"></span>
+              <span class="rv2-org">Wiconet</span>
+              <h3 class="rv2-role">Fullstack Software Engineer</h3>
+              <span class="rv2-date">Jan 2024 — Sep 2024</span>
+              <p class="rv2-desc">
+                Early-stage research startup applying ML and computer networking
+                to real-world problems. Owned the full delivery cycle from API
+                to UI in a fast, research-driven environment.
+              </p>
+              <div class="rv2-tags">
+                <span class="rv2-tag">Python</span>
+                <span class="rv2-tag">React</span>
+                <span class="rv2-tag">Node.js</span>
+              </div>
+            </div>
 
-        <!-- Left column -->
-        <div class="rv2-col rv2-col--left">
-
-          <div class="rv2-card" data-type="work">
-            <span class="rv2-type-label">Work</span>
-            <span class="rv2-connector rv2-connector--right"></span>
-            <span class="rv2-org">Wiconet</span>
-            <h3 class="rv2-role">Fullstack Software Engineer</h3>
-            <span class="rv2-date">Jan 2024 — Sep 2024</span>
-            <p class="rv2-desc">Early-stage research startup applying ML and computer networking to real-world problems.
-              Owned the full delivery cycle from API to UI in a fast, research-driven environment.</p>
-            <div class="rv2-tags">
-              <span class="rv2-tag">Python</span>
-              <span class="rv2-tag">React</span>
-              <span class="rv2-tag">Node.js</span>
+            <div class="rv2-card" data-type="edu">
+              <span class="rv2-type-label">Education</span>
+              <span class="rv2-connector rv2-connector--right"></span>
+              <span class="rv2-org">University of Yaoundé I</span>
+              <h3 class="rv2-role">Master's — Computer Science</h3>
+              <span class="rv2-date">2021 — 2023</span>
+              <p class="rv2-desc">
+                Algorithms &amp; data structures, software testing, TDD,
+                architectural design patterns, Agile, data science and ML
+                fundamentals.
+              </p>
+              <div class="rv2-tags">
+                <span class="rv2-tag">Algorithms</span>
+                <span class="rv2-tag">TDD</span>
+                <span class="rv2-tag">ML</span>
+                <span class="rv2-tag">Architecture</span>
+              </div>
             </div>
           </div>
 
-          <div class="rv2-card" data-type="edu">
-            <span class="rv2-type-label">Education</span>
-            <span class="rv2-connector rv2-connector--right"></span>
-            <span class="rv2-org">University of Yaoundé I</span>
-            <h3 class="rv2-role">Master's — Computer Science</h3>
-            <span class="rv2-date">2021 — 2023</span>
-            <p class="rv2-desc">Algorithms &amp; data structures, software testing, TDD, architectural design patterns,
-              Agile, data science and ML fundamentals.</p>
-            <div class="rv2-tags">
-              <span class="rv2-tag">Algorithms</span>
-              <span class="rv2-tag">TDD</span>
-              <span class="rv2-tag">ML</span>
-              <span class="rv2-tag">Architecture</span>
+          <!-- Center spine -->
+          <div class="rv2-spine"></div>
+
+          <!-- Right column -->
+          <div class="rv2-col rv2-col--right">
+            <div class="rv2-card" data-type="work">
+              <span class="rv2-type-label">Work</span>
+              <span class="rv2-connector rv2-connector--left"></span>
+              <span class="rv2-org">Firesoftware</span>
+              <h3 class="rv2-role">Fullstack Engineer → Project Lead</h3>
+              <span class="rv2-date">Sep 2021 — May 2024</span>
+              <p class="rv2-desc">
+                Joined as an intern, grew into delivery ownership. Led client
+                meetings, managed the full software lifecycle and drove
+                technical decisions across Java backend and Angular frontend.
+              </p>
+              <div class="rv2-tags">
+                <span class="rv2-tag">Java</span>
+                <span class="rv2-tag">Angular</span>
+                <span class="rv2-tag">PHP</span>
+              </div>
+            </div>
+
+            <div class="rv2-card" data-type="edu">
+              <span class="rv2-type-label">Education</span>
+              <span class="rv2-connector rv2-connector--left"></span>
+              <span class="rv2-org">NPower Canada</span>
+              <h3 class="rv2-role">Junior Data Analyst Program</h3>
+              <span class="rv2-date">Apr 2025 — Jul 2025</span>
+              <p class="rv2-desc">
+                Intensive training in data analytics — visualization,
+                storytelling with data, exploration and data-driven decision
+                making.
+              </p>
+              <div class="rv2-tags">
+                <span class="rv2-tag">Data Viz</span>
+                <span class="rv2-tag">Analytics</span>
+                <span class="rv2-tag">Storytelling</span>
+              </div>
             </div>
           </div>
-
         </div>
+      </section>
 
-        <!-- Center spine -->
-        <div class="rv2-spine"></div>
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="pf-section">
+        <div class="pf-header">
+          <span class="pf-label">Work</span>
+          <h2 class="pf-title">My Portfolio</h2>
+        </div>
+        <div class="pf-filters" id="pf-filters">
+          <button class="pf-pill is-active" data-filter="all">All</button>
+          <button class="pf-pill" data-filter="ai">AI &amp; Agentic</button>
+          <button class="pf-pill" data-filter="backend">Backend</button>
+          <button class="pf-pill" data-filter="cloud">Cloud &amp; ML</button>
+          <button class="pf-pill" data-filter="data">Data Science</button>
+          <button class="pf-pill" data-filter="fullstack">Fullstack</button>
+        </div>
+        <div class="pf-grid" id="pf-grid"></div>
+      </section>
 
-        <!-- Right column -->
-        <div class="rv2-col rv2-col--right">
+      <!-- Contact Section -->
+      <section id="contact" class="ct-bar">
+        <div class="ct-glow" aria-hidden="true"></div>
 
-          <div class="rv2-card" data-type="work">
-            <span class="rv2-type-label">Work</span>
-            <span class="rv2-connector rv2-connector--left"></span>
-            <span class="rv2-org">Firesoftware</span>
-            <h3 class="rv2-role">Fullstack Engineer → Project Lead</h3>
-            <span class="rv2-date">Sep 2021 — May 2024</span>
-            <p class="rv2-desc">Joined as an intern, grew into delivery ownership. Led client meetings, managed the full
-              software lifecycle and drove technical decisions across Java backend and Angular frontend.</p>
-            <div class="rv2-tags">
-              <span class="rv2-tag">Java</span>
-              <span class="rv2-tag">Angular</span>
-              <span class="rv2-tag">PHP</span>
-            </div>
+        <div class="ct-row">
+          <!-- Left: text -->
+          <div class="ct-left">
+            <span class="ct-label">Contact</span>
+            <span class="ct-title">Let's build together.</span>
+            <span class="ct-tagline"
+              >Open to roles, collabs &amp; good conversations.</span
+            >
           </div>
 
-          <div class="rv2-card" data-type="edu">
-            <span class="rv2-type-label">Education</span>
-            <span class="rv2-connector rv2-connector--left"></span>
-            <span class="rv2-org">NPower Canada</span>
-            <h3 class="rv2-role">Junior Data Analyst Program</h3>
-            <span class="rv2-date">Apr 2025 — Jul 2025</span>
-            <p class="rv2-desc">Intensive training in data analytics — visualization, storytelling with data,
-              exploration and data-driven decision making.</p>
-            <div class="rv2-tags">
-              <span class="rv2-tag">Data Viz</span>
-              <span class="rv2-tag">Analytics</span>
-              <span class="rv2-tag">Storytelling</span>
-            </div>
-          </div>
+          <!-- Divider -->
+          <div class="ct-divider" aria-hidden="true"></div>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="pf-section">
-      <div class="pf-header">
-        <span class="pf-label">Work</span>
-        <h2 class="pf-title">My Portfolio</h2>
-      </div>
-      <div class="pf-filters" id="pf-filters">
-        <button class="pf-pill is-active" data-filter="all">All</button>
-        <button class="pf-pill" data-filter="ai">AI &amp; Agentic</button>
-        <button class="pf-pill" data-filter="backend">Backend</button>
-        <button class="pf-pill" data-filter="cloud">Cloud &amp; ML</button>
-        <button class="pf-pill" data-filter="data">Data Science</button>
-        <button class="pf-pill" data-filter="fullstack">Fullstack</button>
-      </div>
-      <div class="pf-grid" id="pf-grid"></div>
-    </section>
-
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="ct-bar">
-      <div class="ct-glow" aria-hidden="true"></div>
-
-      <div class="ct-row">
-
-        <!-- Left: text -->
-        <div class="ct-left">
-          <span class="ct-label">Contact</span>
-          <span class="ct-title">Let's build together.</span>
-          <span class="ct-tagline">Open to roles, collabs &amp; good conversations.</span>
-        </div>
-
-        <!-- Divider -->
-        <div class="ct-divider" aria-hidden="true"></div>
-
-        <!-- Middle: social icons -->
-        <div class="ct-mid">
-          <a href="https://www.linkedin.com/in/joelgouend-thesysengineer/" target="_blank" rel="noopener"
-            class="ct-icon-btn" aria-label="LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-          <a href="https://github.com/Maester-Khris" target="_blank" rel="noopener" class="ct-icon-btn"
-            aria-label="GitHub">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-          </a>
-          <!-- <a href="https://x.com/" target="_blank" rel="noopener" class="ct-icon-btn" aria-label="Twitter / X">
+          <!-- Middle: social icons -->
+          <div class="ct-mid">
+            <a
+              href="https://www.linkedin.com/in/joelgouend-thesysengineer/"
+              target="_blank"
+              rel="noopener"
+              class="ct-icon-btn"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/Maester-Khris"
+              target="_blank"
+              rel="noopener"
+              class="ct-icon-btn"
+              aria-label="GitHub"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+            </a>
+            <!-- <a href="https://x.com/" target="_blank" rel="noopener" class="ct-icon-btn" aria-label="Twitter / X">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M4 4l16 16M4 20L20 4" />
             </svg>
           </a> -->
+          </div>
+
+          <!-- Divider -->
+          <div class="ct-divider" aria-hidden="true"></div>
+
+          <!-- Right: action buttons -->
+          <div class="ct-right">
+            <a
+              href="mailto:jombeh121@gmail.com?subject=Let's connect"
+              class="ct-btn ct-btn--ghost"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/joelgouend-thesysengineer/"
+              target="_blank"
+              rel="noopener"
+              class="ct-btn ct-btn--linkedin"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="/assets/files/joel_gouend_resume.pdf"
+              download
+              class="ct-btn ct-btn--primary"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Resume
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <!-- Divider -->
-        <div class="ct-divider" aria-hidden="true"></div>
+    <!-- Portfolio modal overlay -->
+    <div class="pf-overlay" id="pf-overlay" aria-hidden="true">
+      <div class="pf-modal" id="pf-modal" role="dialog" aria-modal="true"></div>
+    </div>
 
-        <!-- Right: action buttons -->
-        <div class="ct-right">
-          <a href="mailto:jombeh121@gmail.com?subject=Let's connect" class="ct-btn ct-btn--ghost">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            Email me
-          </a>
-          <a href="https://www.linkedin.com/in/joelgouend-thesysengineer/" target="_blank" rel="noopener"
-            class="ct-btn ct-btn--linkedin">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-            LinkedIn
-          </a>
-          <a href="/assets/files/joel_gouend_resume.pdf" download class="ct-btn ct-btn--primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Resume
-          </a>
-        </div>
+    <div id="modals-root"></div>
 
-      </div>
-    </section>
-  </main>
-
-  <!-- Portfolio modal overlay -->
-  <div class="pf-overlay" id="pf-overlay" aria-hidden="true">
-    <div class="pf-modal" id="pf-modal" role="dialog" aria-modal="true"></div>
-  </div>
-
-  <div id="modals-root"></div>
-
-  <!-- <footer id="footer" class="footer">
+    <!-- <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright text-center ">
         <p>NK Portfolio, customization made on top of © <strong class="px-1 sitename">EasyFolio</strong><span>All Rights
@@ -1042,375 +1773,37 @@
     </div>
   </footer> -->
 
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Umami tracking code -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="ff280a38-7d98-4db9-b21a-be16b413032a"
+    ></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- About+Community mosaic carousel -->
-  <script>
-    (() => {
-      const pages = document.querySelectorAll('.ac-page');
-      const dots = document.querySelectorAll('.ac-dot');
-      let current = 0;
-
-      function goTo(n) {
-        pages[current].classList.remove('is-active');
-        dots[current].classList.remove('is-active');
-        current = ((n % pages.length) + pages.length) % pages.length;
-        pages[current].classList.add('is-active');
-        dots[current].classList.add('is-active');
-      }
-
-      document.getElementById('ac-prev').addEventListener('click', () => goTo(current - 1));
-      document.getElementById('ac-next').addEventListener('click', () => goTo(current + 1));
-      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
-    })();
-  </script>
-
-  <!-- Side nav scroll-spy -->
-  <script>
-    (() => {
-      const links = document.querySelectorAll('.side-nav-link[data-section]');
-
-      function update() {
-        const mid = window.scrollY + window.innerHeight * 0.4;
-        let activeId = null;
-        document.querySelectorAll('section[id]').forEach(sec => {
-          if (sec.offsetTop <= mid) activeId = sec.id;
-        });
-        links.forEach(l => l.classList.toggle('is-active', l.dataset.section === activeId));
-      }
-
-      window.addEventListener('scroll', update, { passive: true });
-      update();
-    })();
-  </script>
-
-  <!-- Hero typing effect + terminal replay -->
-  <script>
-    (() => {
-      /* ── Typing effect ────────────────────────────────────────────────── */
-      const PHRASES = [
-        "a Backend Developer",
-        "designing systems",
-        "orchestrating pipelines",
-        "shipping AI infrastructure",
-        "monitoring production",
-        "a Software Engineer",   // final — never erased
-      ];
-      const TYPE_SPEED = 60;   // ms / char while typing
-      const ERASE_SPEED = 35;   // ms / char while erasing
-      const PAUSE_MS = 1300; // pause before erasing
-
-      const el = document.getElementById('hero-typed-text');
-      let phraseIdx = 0;
-      let charIdx = 0;
-      let erasing = false;
-
-      function tick() {
-        const phrase = PHRASES[phraseIdx];
-        const isFinal = phraseIdx === PHRASES.length - 1;
-
-        if (!erasing) {
-          charIdx++;
-          el.textContent = phrase.slice(0, charIdx);
-          if (charIdx < phrase.length) {
-            setTimeout(tick, TYPE_SPEED);
-          } else if (!isFinal) {
-            setTimeout(() => { erasing = true; tick(); }, PAUSE_MS);
-          }
-          // final phrase: stop — cursor keeps blinking
-        } else {
-          charIdx--;
-          el.textContent = phrase.slice(0, charIdx);
-          if (charIdx > 0) {
-            setTimeout(tick, ERASE_SPEED);
-          } else {
-            erasing = false;
-            phraseIdx++;
-            setTimeout(tick, 220);
-          }
-        }
-      }
-
-      tick();
-
-      /* ── Terminal replay ──────────────────────────────────────────────── */
-      const LINES = [
-        { cls: 'tl-prompt', text: '$ curl -X POST https://api.acme.io/v1/orders \\' },
-        { cls: 'tl-cmd', text: '    -H "Authorization: Bearer $TOKEN" -d @payload.json' },
-        { cls: 'tl-dim', text: '* Connecting to api.acme.io:443 …' },
-        { cls: 'tl-ok', text: '* SSL handshake OK  (TLS 1.3, 22ms)' },
-        { cls: 'tl-ok', text: '→ Auth verified      [jwt: valid, scope: orders:write]' },
-        { cls: 'tl-ok', text: '→ Cache              [HIT — inventory snapshot, age 4s]' },
-        { cls: 'tl-warn', text: '→ Inventory lock     [acquired +89ms]  ⚠ slow' },
-        { cls: 'tl-dim', text: '→ Payment gateway    [Stripe charge_id: ch_3Px…Kz]' },
-        { cls: 'tl-status', text: '< HTTP/2 201 Created' },
-        { cls: 'tl-dim', text: '< x-request-id: 8f3a-c12d | x-latency: 214ms' },
-        { cls: 'tl-warn', text: '⚠ p95 latency 214ms — review lock contention' },
-      ];
-      const LINE_DELAY = 75;   // ms between each line
-      const SLOW_PAUSE = 520;  // extra pause on the "slow" lock line
-      const LOOP_PAUSE = 3200; // pause after last line before loop
-
-      const body = document.getElementById('terminal-body');
-
-      function playTerminal() {
-        body.innerHTML = '';
-        let delay = 0;
-        LINES.forEach((line, i) => {
-          const extra = line.cls === 'tl-warn' && i === 6 ? SLOW_PAUSE : 0;
-          delay += LINE_DELAY + extra;
-          setTimeout(() => {
-            const span = document.createElement('span');
-            span.className = `tl ${line.cls}`;
-            span.textContent = line.text;
-            body.appendChild(span);
-          }, delay);
-        });
-        setTimeout(playTerminal, delay + LOOP_PAUSE);
-      }
-
-      playTerminal();
-    })();
-  </script>
-
-  <!-- Resume tab filter -->
-  <script>
-    (() => {
-      const tabs = document.querySelectorAll('#rv2-tabs .rv2-tab');
-      const cards = document.querySelectorAll('.rv2-card');
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('is-active'));
-          tab.classList.add('is-active');
-          const f = tab.dataset.filter;
-          cards.forEach(c => {
-            c.classList.toggle('rv2-hidden', f !== 'all' && c.dataset.type !== f);
-          });
-        });
-      });
-    })();
-  </script>
-
-  <!-- Expertise accordion -->
-  <script>
-    (() => {
-      const deck = document.getElementById('expertise-deck');
-      if (!deck) return;
-      deck.addEventListener('click', e => {
-        const card = e.target.closest('.exp-card');
-        if (!card || card.classList.contains('is-active')) return;
-        deck.querySelectorAll('.exp-card.is-active').forEach(c => c.classList.remove('is-active'));
-        card.classList.add('is-active');
-      });
-    })();
-  </script>
-
-  <script type="module">
-    import { portfolioProjects } from './portfolioData.js';
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const projectMap = new Map(portfolioProjects.map(p => [p.projectId, p]));
-      const grid = document.getElementById('pf-grid');
-
-      /* ── Build cards ── */
-      portfolioProjects.forEach(p => {
-        const tagRow = p.keywords.slice(0, 3).map(k => k.toUpperCase()).join(' · ');
-
-        const card = document.createElement('div');
-        card.className = 'pf-card';
-        card.dataset.projectId = p.projectId;
-        card.dataset.category = p.category || 'fullstack';
-        card.dataset.stack = p.keywords.join(',');
-        card.dataset.type = p.type || '';
-        card.dataset.year = p.year || '';
-        card.dataset.github = p.github || '';
-        card.dataset.live = p.live_url || '';
-        card.dataset.images = p.images.join(',');
-        card.dataset.highlights = JSON.stringify(p.highlights || []);
-
-        card.innerHTML =
-          '<div class="pf-thumb">' +
-          '<img src="assets/img/' + p.images[0] + '" alt="' + p.title + '" class="pf-thumb-img" loading="lazy">' +
-          '<div class="pf-thumb-overlay"><span class="pf-view-pill">View project</span></div>' +
-          '</div>' +
-          '<div class="pf-body">' +
-          '<div class="pf-tag-row">' + tagRow + '</div>' +
-          '<h3 class="pf-card-title">' + p.title + '</h3>' +
-          '<p class="pf-card-desc">' + (p.shortDesc || '') + '</p>' +
-          '<div class="pf-card-footer">' +
-          '<span class="pf-type-label">' + (p.type || '') + '</span>' +
-          '<span class="pf-arrow-box">' +
-          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>' +
-          '</svg>' +
-          '</span>' +
-          '</div>' +
-          '</div>';
-
-        grid.appendChild(card);
-      });
-
-      /* ── Filter pills ── */
-      const pills = document.querySelectorAll('#pf-filters .pf-pill');
-      pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          pills.forEach(p => p.classList.remove('is-active'));
-          pill.classList.add('is-active');
-          const f = pill.dataset.filter;
-          document.querySelectorAll('.pf-card').forEach(c => {
-            c.classList.toggle('pf-hidden', f !== 'all' && c.dataset.category !== f);
-          });
-        });
-      });
-
-      /* ── Modal ── */
-      const overlay = document.getElementById('pf-overlay');
-      const modal = document.getElementById('pf-modal');
-
-      function buildModalMedia(images, projectId, type) {
-        const controls =
-          '<span class="pf-modal-type-badge">' + type + '</span>' +
-          '<button class="pf-modal-close" id="pf-close" aria-label="Close">' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>' +
-          '</svg>' +
-          '</button>';
-        if (images.length === 1) {
-          return '<div class="pf-modal-thumb">' +
-            '<img src="assets/img/' + images[0] + '" alt="" class="pf-modal-thumb-img">' +
-            controls +
-            '</div>';
-        }
-        const cid = 'pf-mc-' + projectId;
-        const dots = images.map((_, i) =>
-          '<button type="button" data-bs-target="#' + cid + '" data-bs-slide-to="' + i + '"' +
-          (i === 0 ? ' class="active" aria-current="true"' : '') +
-          ' aria-label="Slide ' + (i + 1) + '"></button>'
-        ).join('');
-        const slides = images.map((img, i) =>
-          '<div class="carousel-item' + (i === 0 ? ' active' : '') + '">' +
-          '<img src="assets/img/' + img + '" class="pf-modal-carousel-img" alt="Slide ' + (i + 1) + '">' +
-          '</div>'
-        ).join('');
-        return '<div class="pf-modal-thumb">' +
-          '<div id="' + cid + '" class="carousel slide h-100" data-bs-ride="carousel">' +
-          '<div class="carousel-indicators">' + dots + '</div>' +
-          '<div class="carousel-inner h-100">' + slides + '</div>' +
-          '<button class="carousel-control-prev" type="button" data-bs-target="#' + cid + '" data-bs-slide="prev">' +
-          '<span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
-          '<span class="visually-hidden">Previous</span>' +
-          '</button>' +
-          '<button class="carousel-control-next" type="button" data-bs-target="#' + cid + '" data-bs-slide="next">' +
-          '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
-          '<span class="visually-hidden">Next</span>' +
-          '</button>' +
-          '</div>' +
-          controls +
-          '</div>';
-      }
-
-      function openModal(card) {
-        const d = card.dataset;
-        const project = projectMap.get(d.projectId);
-        const highlights = JSON.parse(d.highlights || '[]');
-        const images = d.images ? d.images.split(',') : [];
-
-        const pillsHtml = d.stack.split(',').map(s =>
-          '<span class="pf-modal-pill">' + s.trim() + '</span>'
-        ).join('');
-
-        const hlHtml = highlights.length
-          ? '<div class="pf-modal-divider"></div>' +
-          '<span class="pf-modal-section-label">Engineering highlights</span>' +
-          '<div class="pf-highlights-grid">' +
-          highlights.map(h =>
-            '<div class="pf-highlight-cell">' +
-            '<div class="pf-highlight-header">' +
-            '<span class="pf-highlight-dot"></span>' +
-            '<span class="pf-highlight-title">' + h.title + '</span>' +
-            '</div>' +
-            '<p class="pf-highlight-detail">' + h.detail + '</p>' +
-            '</div>'
-          ).join('') +
-          '</div>'
-          : '';
-
-        const rawDesc = project ? project.description : '';
-        const descHtml = typeof rawDesc === 'string' ? rawDesc : '';
-
-        const githubBtn = d.github
-          ? '<a href="' + d.github + '" target="_blank" rel="noopener" class="pf-btn-ghost">' +
-          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>' +
-          '</svg>GitHub</a>'
-          : '';
-
-        const liveBtn = d.live
-          ? '<a href="' + d.live + '" target="_blank" rel="noopener" class="pf-btn-primary">' +
-          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>' +
-          '</svg>Live Demo</a>'
-          : '';
-
-        modal.innerHTML =
-          buildModalMedia(images, d.projectId, d.type) +
-          '<div class="pf-modal-body">' +
-          '<div class="pf-modal-pills">' + pillsHtml + '</div>' +
-          '<h2 class="pf-modal-title"></h2>' +
-          '<span class="pf-modal-sublabel">' + d.year + ' · ' + d.type + '</span>' +
-          '<div class="pf-modal-divider"></div>' +
-          '<span class="pf-modal-section-label">Overview</span>' +
-          '<div class="pf-modal-desc">' + descHtml + '</div>' +
-          hlHtml +
-          '</div>' +
-          '<div class="pf-modal-footer">' +
-          '<span class="pf-modal-year">' + d.year + '</span>' +
-          '<div class="pf-modal-actions">' + githubBtn + liveBtn + '</div>' +
-          '</div>';
-
-        /* Fix: set title after innerHTML (dataset ref was wrong above) */
-        modal.querySelector('.pf-modal-title').textContent = d.title;
-
-        overlay.classList.add('is-open');
-        overlay.removeAttribute('aria-hidden');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('pf-close').addEventListener('click', closeModal);
-      }
-
-      function closeModal() {
-        overlay.classList.remove('is-open');
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
-      });
-      grid.addEventListener('click', e => {
-        const card = e.target.closest('.pf-card');
-        if (card) openModal(card);
-      });
-    });
-  </script>
-</body>
-
+    <!-- App JS -->
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
 </html>
 
 <!-- /* ----- Modal ----- */-->
