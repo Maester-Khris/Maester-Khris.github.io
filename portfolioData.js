@@ -106,7 +106,7 @@ export const portfolioProjects = [
         images: [
             'city_health_map.png',
         ],
-        live_url: 'https://ai-healthtech-coordinator.vercel.app/',
+        live_url: 'https://medicoord.nknext.dev/',
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
     },
     {
