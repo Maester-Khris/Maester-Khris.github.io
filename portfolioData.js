@@ -234,7 +234,7 @@ export const portfolioProjects = [
             <p>The result is a production‑ready classifier that meets accuracy targets while upholding stringent financial‑data standards.</p>
             `,
         keywords: ['Data Science', 'Machine Learning', 'NLP', 'Topic Classification', 'ML Model Deployment'],
-        images: ['multiclass classification.webp', 'eda1.webp', 'eda2.webp', 'model_deployment.png'],
+        images: ['multiclass classification.webp', 'eda1.webp', 'eda2.webp', 'model_deployment.webp'],
         live_url: 'https://colab.research.google.com/drive/1Rshf8DBmcvw6QUJ_T-KettrUG8WgxewU?usp=sharing',
         github: 'https://github.com/Maester-Khris/financial-csr-aibot/blob/main/notebooks'
     },
