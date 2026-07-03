@@ -22,10 +22,10 @@ export const portfolioProjects = [
             'Architected with a mobile-first responsive layout, settings management for session defaults, and a clean auth layer with per-user data isolation.',
         keywords: ['React.js', 'Node.js', 'PostgreSQL', 'Data Visualization', 'Fullstack'],
         images: [
-            'commitr-home.png',
-            'commitr-mobile-showcase.png',
-            'commitr-stats-contrib.png',
-            'commitr-stats-summary.png',
+            'commitr-home.webp',
+            'commitr-mobile-showcase.webp',
+            'commitr-stats-contrib.webp',
+            'commitr-stats-summary.webp',
         ],
         live_url: 'https://commitr.nknext.dev/',
         github: 'https://github.com/Maester-Khris/commitr'
@@ -52,7 +52,7 @@ export const portfolioProjects = [
             'Features a custom-built HITL (Human-in-the-Loop) dashboard to facilitate RLHF, using Zustand for low-latency state management across complex evaluation traces.',
         keywords: ['Agentic Workflows', 'Qdrant Vector DB', 'LangGraph', 'Zustand', 'Python'],
         images: [
-            'aievaluator.png',
+            'aievaluator.webp',
         ],
         live_url: 'https://ai-evaluator-mk72409rm-nkops-projects.vercel.app',
         github: 'https://github.com/Maester-Khris/AI-Evaluator'
@@ -79,7 +79,7 @@ export const portfolioProjects = [
             'reducing p99 latency by 48% through aggressive caching and lean query optimization.',
         keywords: ['Node.js', 'Redis Streams', 'EDA', 'MongoDB', 'Performance Optimization'],
         images: [
-            'ng-postair.png',
+            'ng-postair.webp',
         ],
         live_url: 'https://postair.nknext.dev/',
         github: 'https://github.com/Maester-Khris/Angular-state-management'
@@ -104,7 +104,7 @@ export const portfolioProjects = [
             + 'Combines real‑time ambulance telemetry, AWS SageMaker inference, and Leaflet maps to help city planners reallocate staff dynamically.',
         keywords: ['AI', 'AWS Cloud ML deployment', 'Dynamic scheduling', 'Leaflet Map'],
         images: [
-            'city_health_map.png',
+            'city_health_map.webp',
         ],
         live_url: 'https://medicoord.nknext.dev/',
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
@@ -159,7 +159,7 @@ export const portfolioProjects = [
             <p>The result is a production‑grade, low‑latency service that helps clinicians prioritise patient care while meeting stringent privacy and performance requirements.</p>
             `,
         keywords: ['GCP', 'Vertex AI', 'LLM Fine-tuning', 'Ml Model deployment'],
-        images: ['vertexai.png', 'llm_finetuning.png', 'aicoordinator_arch.png'],
+        images: ['vertexai.webp', 'llm_finetuning.webp', 'aicoordinator_arch.webp'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator/tree/main/fine_tuning_training'
     },
@@ -182,7 +182,7 @@ export const portfolioProjects = [
             'Gen‑AI assistant for customer‑support reps in banking. Fine‑tuned on 50k anonymized chats, '
             + 'deployed with Vertex AI and Dialogflow CX. React‑based front‑end provides real‑time confidence and source citations.',
         keywords: ['AWS Bedrock', 'React.js'],
-        images: ['bot.png'],
+        images: ['bot.webp'],
         live_url: 'https://financial-csr-aibot-47pg.vercel.app/',
         github: 'https://github.com/Maester-Khris/financial-csr-aibot'
     },
@@ -234,7 +234,7 @@ export const portfolioProjects = [
             <p>The result is a production‑ready classifier that meets accuracy targets while upholding stringent financial‑data standards.</p>
             `,
         keywords: ['Data Science', 'Machine Learning', 'NLP', 'Topic Classification', 'ML Model Deployment'],
-        images: ['multiclass classification.png', 'eda1.png', 'eda2.png', 'model_deployment.png'],
+        images: ['multiclass classification.webp', 'eda1.webp', 'eda2.webp', 'model_deployment.png'],
         live_url: 'https://colab.research.google.com/drive/1Rshf8DBmcvw6QUJ_T-KettrUG8WgxewU?usp=sharing',
         github: 'https://github.com/Maester-Khris/financial-csr-aibot/blob/main/notebooks'
     },
@@ -257,7 +257,7 @@ export const portfolioProjects = [
             'Python‑Django back end streaming server health metrics to a React dashboard. '
             + 'CI/CD with AWS CodePipeline, containerized via Docker and orchestrated on Kubernetes.',
         keywords: ['Python', 'Django', 'Kubernetes', 'Docker', 'React.js', 'AWS CodePipeline'],
-        images: ['remote_monitoring_arch.png'],
+        images: ['remote_monitoring_arch.webp'],
         live_url: 'https://react-client-seven.vercel.app/monitoring',
         github: 'https://github.com/Maester-Khris/remote-monitoring'
     },
@@ -280,7 +280,7 @@ export const portfolioProjects = [
             'Python‑Django back end streaming server health metrics to a React dashboard. '
             + 'CI/CD with AWS CodePipeline, containerized via Docker and orchestrated on Kubernetes.',
         keywords: ['Angular 19', 'Microfrontend', 'Native federation', 'NgRx', 'MongoDB'],
-        images: ['taskalert_front.png'],
+        images: ['taskalert_front.webp'],
         live_url: '',
         github: ''
     },
@@ -306,7 +306,7 @@ export const portfolioProjects = [
                                         <i class="bi bi-exclamation-triangle-fill"></i> Notes: The dashboard is not yet publicly available due to some data access policy limitation on the tenant. We are working to make the visualization available for the public. In between you can access the files in the github repository.
                                     </div>`,
         keywords: ['DATA ANALYSIS', 'POWER BI', 'VISUALIZATION'],
-        images: ['powerbi_dashboard.png'],
+        images: ['powerbi_dashboard.webp'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/Powerbi-dashboard'
     },
@@ -340,7 +340,7 @@ export const portfolioProjects = [
             <strong>Main tech stack</strong>: Java 8, Springboot, SpringWebFLux, Flyway,
             Mysql, Server Sent Event, Websocket, Docker, Github Action`,
         keywords: ['JAVA', 'SPRINGBOOT', 'Rest API', 'Docker', 'MySQL'],
-        images: ['skillrater.png'],
+        images: ['skillrater.webp'],
         live_url: 'https://spring-skillrater.onrender.com/',
         github: 'https://github.com/Maester-Khris/java-spring-reactive-rater'
     },
@@ -382,7 +382,7 @@ export const portfolioProjects = [
                 </li>
             </ul>`,
         keywords: ['SPRINGBOOT', 'MSSQL', 'T‑SQL', 'LDAP', 'KAFKA'],
-        images: ['insighthub.png'],
+        images: ['insighthub.webp'],
         live_url: '',
         github: ''
     },
@@ -417,7 +417,7 @@ export const portfolioProjects = [
                     Interceptor, NgRx, Netlify </li>
             </ul>`,
         keywords: ['ANGULAR', 'ANGULAR MATERIAL', 'NETLIFY'],
-        images: ['taskalert_front.png'],
+        images: ['taskalert_front.webp'],
         live_url: 'https://taskalertmaterial.netlify.app/',
         github: 'https://github.com/Maester-Khris/Taskalertv2'
     },
@@ -454,7 +454,7 @@ export const portfolioProjects = [
                     Channels, drf_spectacular, MongoDB, MongoEngine, PyMongo, RabbitMQ</li>
             </ul>`,
         keywords: ['PYTHON', 'DJANGO', 'MONGODB', 'RABBITMQ'],
-        images: ['taskalert_backend.png'],
+        images: ['taskalert_backend.webp'],
         live_url: 'https://nkml.pythonanywhere.com/',
         github: 'https://github.com/Maester-Khris/Taskalertv2_django_backend'
     },
@@ -484,7 +484,7 @@ export const portfolioProjects = [
             To tackle this, we propose an intelligent agent designed to monitor
             conversations and ensure adherence to platform rules.`,
         keywords: ['PYTHON', 'DJANGO', 'NODE.JS', 'APACHE KAFKA'],
-        images: ['django_nodejs.png'],
+        images: ['django_nodejs.webp'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/AI-Chat-Monitor'
     },
@@ -517,7 +517,7 @@ export const portfolioProjects = [
             Python, Django, Django Channels, Websocket, Daphne, BeautifulSoup, Selenium,
             Thread`,
         keywords: ['Python', 'Django', 'ASGI', 'Selenium'],
-        images: ['scrapper.png'],
+        images: ['scrapper.webp'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/django-web-worker'
     },
@@ -557,7 +557,7 @@ export const portfolioProjects = [
                     Python, Flask, Flasgger, Spacy, Bert LLM, AutoSeq2Seq </li>
             </ul>`,
         keywords: ['Python', 'Flask', 'Daphne', 'BERT LLM', 'NLP', 'SpaCy'],
-        images: ['textninja.png'],
+        images: ['textninja.webp'],
         live_url: '',
         github: 'https://github.com/Maester-Khris/NLP-ML-Text-Generation'
     },
@@ -591,7 +591,7 @@ export const portfolioProjects = [
             development
             of a compelling mobile application.`,
         keywords: ['FIGMA'],
-        images: ['portfolio-05.jpg', 'ui_design1.png', 'ui_design2.png', 'figma_design1.png'],
+        images: ['portfolio-05.webp', 'ui_design1.webp', 'ui_design2.webp', 'figma_design1.webp'],
         live_url: '',
         github: ''
     }
