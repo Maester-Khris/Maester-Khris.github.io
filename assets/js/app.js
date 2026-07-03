@@ -164,57 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectMap = new Map(portfolioProjects.map((p) => [p.projectId, p]));
   const grid = document.getElementById("pf-grid");
 
-  portfolioProjects.forEach((p) => {
-    const tagRow = p.keywords
-      .slice(0, 3)
-      .map((k) => k.toUpperCase())
-      .join(" · ");
-
-    const card = document.createElement("div");
-    card.className = "pf-card";
-    card.dataset.projectId = p.projectId;
-    card.dataset.category = p.category || "fullstack";
-    card.dataset.stack = p.keywords.join(",");
-    card.dataset.type = p.type || "";
-    card.dataset.year = p.year || "";
-    card.dataset.github = p.github || "";
-    card.dataset.live = p.live_url || "";
-    card.dataset.images = p.images.join(",");
-    card.dataset.highlights = JSON.stringify(p.highlights || []);
-
-    card.innerHTML =
-      '<div class="pf-thumb">' +
-      '<img src="assets/img/' +
-      p.images[0] +
-      '" alt="' +
-      p.title +
-      '" class="pf-thumb-img" loading="lazy">' +
-      '<div class="pf-thumb-overlay"><span class="pf-view-pill">View project</span></div>' +
-      "</div>" +
-      '<div class="pf-body">' +
-      '<div class="pf-tag-row">' +
-      tagRow +
-      "</div>" +
-      '<h3 class="pf-card-title">' +
-      p.title +
-      "</h3>" +
-      '<p class="pf-card-desc">' +
-      (p.shortDesc || "") +
-      "</p>" +
-      '<div class="pf-card-footer">' +
-      '<span class="pf-type-label">' +
-      (p.type || "") +
-      "</span>" +
-      '<span class="pf-arrow-box">' +
-      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>' +
-      "</svg>" +
-      "</span>" +
-      "</div>" +
-      "</div>";
-
-    grid.appendChild(card);
-  });
+  // Cards are pre-rendered into index.html by scripts/build-projects.mjs
+  // (run after editing portfolioData.js) so crawlers see project content
+  // without executing JS. Nothing to build here — cards already exist in the DOM.
 
   const pills = document.querySelectorAll("#pf-filters .pf-pill");
   pills.forEach((pill) => {
