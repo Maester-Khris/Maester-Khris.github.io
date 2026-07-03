@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "</div>" +
       "</div>";
 
-    modal.querySelector(".pf-modal-title").textContent = d.title;
+    modal.querySelector(".pf-modal-title").textContent = project.title;
 
     overlay.classList.add("is-open");
     overlay.removeAttribute("aria-hidden");
