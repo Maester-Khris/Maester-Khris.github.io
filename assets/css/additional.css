@@ -1279,7 +1279,7 @@
    line-height: 1.5;
  }
 
- .exp-list strong {
+ .exp-list .term-label {
    color: var(--exp-term);
    font-weight: 600;
  }
