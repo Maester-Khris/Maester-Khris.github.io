@@ -161,6 +161,11 @@ import { portfolioProjects } from "../../portfolioData.js";
 
 /* ── Portfolio grid + modal ───────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
+  const emailDisplay = document.getElementById("ac-email-display");
+  if (emailDisplay) {
+    emailDisplay.textContent = emailDisplay.dataset.u + "@" + emailDisplay.dataset.d;
+  }
+
   const projectMap = new Map(portfolioProjects.map((p) => [p.projectId, p]));
   const grid = document.getElementById("pf-grid");
 
