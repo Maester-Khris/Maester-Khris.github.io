@@ -330,6 +330,10 @@
    margin-bottom: 6px;
  }
 
+ .term-label {
+   font-weight: 700;
+ }
+
  .hero-typed-line {
    font-family: var(--hero-display-font);
    font-size: clamp(2rem, 4.5vw, 3.4rem);
