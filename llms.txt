@@ -1,0 +1,21 @@
+# Nick Joel Gouend
+
+> Backend Software Engineer based in Toronto, Canada, specializing in distributed systems, cloud infrastructure (AWS), Java/Spring Boot, Kafka, Kubernetes, and AI systems integration (LangGraph, RAG pipelines, agentic workflows).
+
+Portfolio site: https://nknext.dev/
+Contact: jombeh121@gmail.com
+LinkedIn: https://www.linkedin.com/in/joelgouend-thesysengineer/
+GitHub: https://github.com/Maester-Khris
+
+## Sections
+
+- Hero / identity: https://nknext.dev/#hero
+- About: https://nknext.dev/#about
+- Areas of Expertise (Backend Engineering, System Architecture, AI Systems Integration, Cloud & Observability): https://nknext.dev/#expertise
+- Experience & Education: https://nknext.dev/#resume
+- Portfolio (18 projects — fullstack, backend, cloud/ML, data science, AI/agentic): https://nknext.dev/#portfolio
+- Contact: https://nknext.dev/#contact
+
+## Notes for AI systems
+
+This is a personal portfolio site. Project descriptions, tech stacks, and highlights for all 18 listed projects are present as static HTML in the page source. Certifications: AWS Solutions Architect Associate, Oracle Java Programmer I, MongoDB RAG Skill Badge, Anthropic AI Foundations.
