@@ -1,5 +1,60 @@
 export const portfolioProjects = [
     {
+        projectId: 'ledgerlens-fintech-ai',
+        category: 'ai',
+        shortDesc: 'Double-entry ledger plus cited document-intelligence chat for advisory contracts',
+        type: 'AI System',
+        year: '2026',
+        thumbWord: 'LEDGER',
+        thumbGradient: 'linear-gradient(135deg,#080f0c 0%,#0c1a10 100%)',
+        highlights: [
+            { title: 'Ledger Core', detail: 'Idempotent postings, balance invariants enforced inside Postgres, append-only history' },
+            { title: 'Verified Answers', detail: 'LangGraph agent whose numbers are machine-checked against its citations' },
+            { title: 'Privacy', detail: 'Local Docling parsing with Presidio PII tokenisation before any model call' },
+            { title: 'Eval Gate', detail: '30-case golden set with an enforced go/no-go gate; 387 backend tests passing' },
+        ],
+        title: 'LedgerLens: Fintech Ledger + Document Intelligence',
+        description:
+            'A two-part product for wealth-management software: a double-entry ledger core and a document-intelligence chat over investment-advisory contracts. ' +
+            'The ledger enforces balance invariants and append-only history inside Postgres 18, with idempotent postings, compensating reversals and versioned household fee schedules. ' +
+            'The chat layer parses PDFs locally with Docling, tokenises PII with Presidio, retrieves with hybrid search on Pinecone, and runs a LangGraph agent that never calculates: numbers are verified against citations before display. ' +
+            'A contract-versus-billing fee-leakage tool proposes corrections that post only after human approval. ' +
+            'Built solo with FastAPI, SQLAlchemy 2.0, React 19 and TypeScript, Langfuse tracing, a public demo mode with rate limiting, and a 258-commit history.',
+        keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
+        images: [
+            'ledgerlens-chat.webp',
+        ],
+        live_url: 'https://ledgerlens.nknext.dev',
+        github: ''
+    },
+    {
+        projectId: 'docciter-annotation-citation',
+        category: 'fullstack',
+        shortDesc: 'PDF annotation workspace with OCR capture, built toward cited answers',
+        type: 'Fullstack MVP',
+        year: '2026',
+        thumbWord: 'CITE',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0d1220 100%)',
+        highlights: [
+            { title: 'Annotation UX', detail: 'Draw green capture and red ignore regions directly on PDF pages with pdf.js' },
+            { title: 'OCR Pipeline', detail: 'FastAPI background tasks with pytesseract and PDF-to-pixel bounding-box math' },
+            { title: 'Eval Harness', detail: 'CER/WER harness for measuring OCR quality' },
+            { title: 'Roadmap', detail: 'Retrieval and cited Q&A over captured regions are planned, not yet built' },
+        ],
+        title: 'docciter: Document Annotation & Citation MVP',
+        description:
+            'An early-stage document-annotation workspace: upload a PDF, mark regions to capture or ignore, and OCR the captures. The goal is answers that cite the exact page and region they came from. ' +
+            'Built on React 18 and Vite with a FastAPI and SQLite backend. The UI was rebuilt against design mocks in a focused sprint, including an annotation inspector and a pipeline status bar. ' +
+            'The backend originated in a take-home exercise; retrieval and question answering are still on the roadmap.',
+        keywords: ['React', 'FastAPI', 'OCR', 'pdf.js', 'SQLite'],
+        images: [
+            'docciter-workspace.webp',
+            'docciter-annotations.webp',
+        ],
+        live_url: '',
+        github: ''
+    },
+    {
         projectId: 'commitr-session-tracker',
         category: 'fullstack',
         shortDesc: 'Developer focus tracker with GitHub-style activity heatmap',
