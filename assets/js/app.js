@@ -45,11 +45,11 @@ import { portfolioProjects } from "../../portfolioData.js";
 /* ── Hero typing effect + terminal replay ────────────────────────────── */
 (() => {
   const PHRASES = [
-    "a Backend Developer",
-    "designing systems",
-    "orchestrating pipelines",
-    "shipping AI infrastructure",
-    "monitoring production",
+    "a Backend Engineer",
+    "shipping production AI systems",
+    "evaluating LLM agents",
+    "designing data pipelines",
+    "contributing to civic tech",
     "a Software Engineer",
   ];
   const TYPE_SPEED = 60;
