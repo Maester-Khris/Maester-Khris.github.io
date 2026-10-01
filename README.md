@@ -23,7 +23,7 @@ Backend engineer focused on distributed systems, cloud-native infrastructure and
 
 - **Backend Engineering** — production REST APIs, high-concurrency systems, cache stampede prevention, memory profiling
 - **System Architecture** — event-driven design, CQRS, distributed tracing, reliability patterns
-- **AI Systems Integration** — agentic pipelines with LangGraph, RAG architecture, LLM ops in production
+- **AI & Agentic Systems** — LangGraph agents, hybrid RAG (RRF + cross-encoder reranking), eval gates, Langfuse tracing
 - **Cloud & Observability** — AWS, Terraform, Kubernetes, OpenTelemetry, CI/CD with semantic versioning
 
 ## Credentials
@@ -31,7 +31,7 @@ Backend engineer focused on distributed systems, cloud-native infrastructure and
 | Badge | Issuer | Status |
 |---|---|---|
 | AWS Solutions Architect Associate | Amazon Web Services | ✅ Verified |
-| Oracle Java Programmer I | Oracle | ✅ Verified |
+| Confluent Data Streaming Engineer (Foundations) | Confluent | ✅ Verified |
 | MongoDB RAG Skill Badge | MongoDB | ✅ Verified |
 | Anthropic AI Foundations | Anthropic | ✅ Verified |
 | Azure AI Fundamentals | Microsoft | ✅ Verified |

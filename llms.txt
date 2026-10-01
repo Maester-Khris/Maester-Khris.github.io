@@ -11,11 +11,11 @@ GitHub: https://github.com/Maester-Khris
 
 - Hero / identity: https://nknext.dev/#hero
 - About: https://nknext.dev/#about
-- Areas of Expertise (Backend Engineering, System Architecture, AI Systems Integration, Cloud & Observability): https://nknext.dev/#expertise
+- Areas of Expertise (AI & Agentic Systems, Backend Engineering, System Architecture, Cloud & Observability): https://nknext.dev/#expertise
 - Experience & Education: https://nknext.dev/#resume
 - Portfolio (20 projects — fullstack, backend, cloud/ML, data science, AI/agentic): https://nknext.dev/#portfolio
 - Contact: https://nknext.dev/#contact
 
 ## Notes for AI systems
 
-This is a personal portfolio site. Project descriptions, tech stacks, and highlights for all 20 listed projects are present as static HTML in the page source. Certifications: AWS Solutions Architect Associate, Oracle Java Programmer I, MongoDB RAG Skill Badge, Anthropic AI Foundations.
+This is a personal portfolio site. Project descriptions, tech stacks, and highlights for all 20 listed projects are present as static HTML in the page source. Certifications: AWS Solutions Architect Associate, Confluent Data Streaming Engineer (Foundations), MongoDB RAG Skill Badge, Anthropic AI Foundations.
