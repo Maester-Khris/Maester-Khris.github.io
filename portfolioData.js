@@ -28,6 +28,61 @@ export const portfolioProjects = [
         github: ''
     },
     {
+        projectId: 'ai-healthcare-city-monitor',
+        category: 'ai',
+        shortDesc: 'Toronto health-triage system: LLM triage, graph grounding, AWS data pipeline',
+        type: 'AI System',
+        year: '2026',
+        thumbWord: 'TRIAGE',
+        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
+        highlights: [
+            { title: 'LLM Triage', detail: 'Two-pass tool-orchestrated agent with prompt-injection defense and a provider-agnostic LLM layer' },
+            { title: 'Evaluation', detail: 'Two eval tracks incl. DeepEval faithfulness 0.956; GraphRAG v1 vs v2 compared end to end' },
+            { title: 'Data Pipeline', detail: 'S3, Lambda, EventBridge and dbt on AWS SAM, with 13/13 automated data-quality tests' },
+            { title: 'Shipped Solo', detail: '400+ commits, 40 PRs and 17 sprints in about 10 weeks, with PostGIS facility search' },
+        ],
+        title: 'MediCoord AI: Toronto Health Coordination',
+        description:
+            'A city-wide health coordination system: a patient describes symptoms in chat, an LLM agent classifies severity, a deterministic backend finds the nearest eligible facility and the result renders on a live map with routing. ' +
+            'Rebuilt from a Toronto Tech Week hackathon prototype into a deployed, authenticated, observability-instrumented system in about ten weeks as sole platform engineer. ' +
+            'Includes a FastAPI backend on Postgres with PostGIS and RLS, a SNOMED-CT/Neo4j GraphRAG experiment evaluated against a static lookup and against no grounding, and an event-driven AWS data pipeline. ' +
+            'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy.',
+        keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
+        images: [
+            'medicoord-landing.webp',
+            'aicoordinator_arch.webp',
+        ],
+        live_url: 'https://medicoord.nknext.dev/',
+        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
+    },
+    {
+        projectId: 'postair-content-sharing',
+        category: 'backend',
+        shortDesc: 'Content platform with 3-tier hybrid AI search and graceful degradation',
+        type: 'Fullstack + AI',
+        year: '2026',
+        thumbWord: 'SEARCH',
+        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
+        highlights: [
+            { title: 'Hybrid Search', detail: '3 tiers: keyword, Reciprocal Rank Fusion over Qdrant vectors, and LLM query expansion' },
+            { title: 'Partial Failure', detail: 'Per-leg degraded_legs contract so one failing search leg never breaks the response' },
+            { title: 'Resilient Backend', detail: 'Node/Express 5 with BullMQ jobs, Redis failover, rate limiting and an exact-match cache' },
+            { title: 'Reactive Frontend', detail: 'Angular 21 signals + RxJS, event bus and IntersectionObserver-driven feeds' },
+        ],
+        title: 'Postair: Content Platform with Hybrid AI Search',
+        description:
+            'A multi-service content-sharing platform: Angular 21 frontend, Node/Express 5 API, a Python/Flask search service, MongoDB, Qdrant and Redis, deployed across Vercel and Railway with Doppler-managed secrets. ' +
+            'The search pipeline layers keyword matching, Reciprocal Rank Fusion over vector results and LLM query expansion, with Exa-over-MCP web search and an exact-match Redis cache. ' +
+            'Every search leg reports through a degraded_legs contract so the UI can show partial results instead of failing. ' +
+            'Backed by ADR-driven architecture, OpenAPI docs, feature-flag kill switches and a Vitest regression suite recovered after a real production bug was caught.',
+        keywords: ['Angular', 'Node.js', 'Qdrant', 'Redis', 'Hybrid Search', 'MongoDB'],
+        images: [
+            'ng-postair.webp',
+        ],
+        live_url: 'https://postair.nknext.dev/',
+        github: 'https://github.com/Maester-Khris/Angular-state-management'
+    },
+    {
         projectId: 'docciter-annotation-citation',
         category: 'fullstack',
         shortDesc: 'PDF annotation workspace with OCR capture, built toward cited answers',
@@ -111,61 +166,6 @@ export const portfolioProjects = [
         ],
         live_url: 'https://ai-evaluator-mk72409rm-nkops-projects.vercel.app',
         github: 'https://github.com/Maester-Khris/AI-Evaluator'
-    },
-    {
-        projectId: 'postair-content-sharing',
-        category: 'backend',
-        shortDesc: 'Content platform with 3-tier hybrid AI search and graceful degradation',
-        type: 'Fullstack + AI',
-        year: '2026',
-        thumbWord: 'SEARCH',
-        thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
-        highlights: [
-            { title: 'Hybrid Search', detail: '3 tiers: keyword, Reciprocal Rank Fusion over Qdrant vectors, and LLM query expansion' },
-            { title: 'Partial Failure', detail: 'Per-leg degraded_legs contract so one failing search leg never breaks the response' },
-            { title: 'Resilient Backend', detail: 'Node/Express 5 with BullMQ jobs, Redis failover, rate limiting and an exact-match cache' },
-            { title: 'Reactive Frontend', detail: 'Angular 21 signals + RxJS, event bus and IntersectionObserver-driven feeds' },
-        ],
-        title: 'Postair: Content Platform with Hybrid AI Search',
-        description:
-            'A multi-service content-sharing platform: Angular 21 frontend, Node/Express 5 API, a Python/Flask search service, MongoDB, Qdrant and Redis, deployed across Vercel and Railway with Doppler-managed secrets. ' +
-            'The search pipeline layers keyword matching, Reciprocal Rank Fusion over vector results and LLM query expansion, with Exa-over-MCP web search and an exact-match Redis cache. ' +
-            'Every search leg reports through a degraded_legs contract so the UI can show partial results instead of failing. ' +
-            'Backed by ADR-driven architecture, OpenAPI docs, feature-flag kill switches and a Vitest regression suite recovered after a real production bug was caught.',
-        keywords: ['Angular', 'Node.js', 'Qdrant', 'Redis', 'Hybrid Search', 'MongoDB'],
-        images: [
-            'ng-postair.webp',
-        ],
-        live_url: 'https://postair.nknext.dev/',
-        github: 'https://github.com/Maester-Khris/Angular-state-management'
-    },
-    {
-        projectId: 'ai-healthcare-city-monitor',
-        category: 'ai',
-        shortDesc: 'Toronto health-triage system: LLM triage, graph grounding, AWS data pipeline',
-        type: 'AI System',
-        year: '2026',
-        thumbWord: 'TRIAGE',
-        thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
-        highlights: [
-            { title: 'LLM Triage', detail: 'Two-pass tool-orchestrated agent with prompt-injection defense and a provider-agnostic LLM layer' },
-            { title: 'Evaluation', detail: 'Two eval tracks incl. DeepEval faithfulness 0.956; GraphRAG v1 vs v2 compared end to end' },
-            { title: 'Data Pipeline', detail: 'S3, Lambda, EventBridge and dbt on AWS SAM, with 13/13 automated data-quality tests' },
-            { title: 'Shipped Solo', detail: '400+ commits, 40 PRs and 17 sprints in about 10 weeks, with PostGIS facility search' },
-        ],
-        title: 'MediCoord AI: Toronto Health Coordination',
-        description:
-            'A city-wide health coordination system: a patient describes symptoms in chat, an LLM agent classifies severity, a deterministic backend finds the nearest eligible facility and the result renders on a live map with routing. ' +
-            'Rebuilt from a Toronto Tech Week hackathon prototype into a deployed, authenticated, observability-instrumented system in about ten weeks as sole platform engineer. ' +
-            'Includes a FastAPI backend on Postgres with PostGIS and RLS, a SNOMED-CT/Neo4j GraphRAG experiment evaluated against a static lookup and against no grounding, and an event-driven AWS data pipeline. ' +
-            'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy.',
-        keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
-        images: [
-            'city_health_map.webp',
-            'aicoordinator_arch.webp',
-        ],
-        live_url: 'https://medicoord.nknext.dev/',
-        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
     },
     {
         projectId: 'ai-healthcare-ml',
