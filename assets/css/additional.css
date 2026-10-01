@@ -2509,3 +2509,75 @@
 @media (max-width: 768px) {
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 40px; }
 }
+
+/* ---- Showroom ---- */
+.sr-section { padding-top: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--pf-border); }
+.sr-note { color: var(--pf-text-muted); font-size: 13px; margin: 8px 0 0; }
+.sr-bay { width: 100%; }
+.sr-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 40px; margin-bottom: 20px; }
+.sr-pitch { color: var(--pf-text-primary); font-size: clamp(20px, 2.4vw, 30px); margin: 0 0 12px; }
+.sr-line { color: #aaa; font-size: 14px; margin: 0 0 6px; max-width: 80ch; }
+.sr-line b { color: var(--pf-accent); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-right: 8px; }
+.sr-numbers { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 0; }
+.sr-numbers li { background: var(--pf-card-bg); border: 1px solid var(--pf-border); border-radius: 10px; padding: 10px 16px; display: flex; flex-direction: column; }
+.sr-numbers b { color: var(--pf-text-primary); font-size: 20px; }
+.sr-numbers span { color: var(--pf-text-muted); font-size: 11px; }
+
+.sr-stage { position: relative; border: 1px solid var(--pf-border); border-radius: 16px; background: #07070a; overflow: hidden; outline-offset: 3px; box-shadow: 0 30px 80px -40px rgba(200, 149, 90, .35); }
+.sr-steps { list-style: none; padding: 0; margin: 0; }
+.sr-step figure { margin: 0; }
+.sr-frame { aspect-ratio: 16 / 9; max-height: 78vh; width: 100%; display: grid; place-items: center; background: #07070a; overflow: hidden; }
+.sr-frame img, .sr-frame video { width: 100%; height: 100%; object-fit: contain; display: block; }
+.sr-step figcaption { padding: 14px 20px 18px; color: #aaa; font-size: 14px; background: var(--pf-card-bg); border-top: 1px solid var(--pf-border); }
+.sr-step figcaption b { color: var(--pf-text-primary); display: block; margin-bottom: 2px; }
+.sr-step figcaption span { display: block; max-width: 90ch; }
+.sr-video { width: 100%; height: 100%; border: 0; background: radial-gradient(circle at 50% 40%, #1a1a22, #000); color: var(--pf-text-primary); cursor: pointer; font-family: var(--pf-sans); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+.sr-play { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--pf-accent); color: var(--pf-accent); display: grid; place-items: center; font-size: 26px; padding-left: 5px; transition: transform .25s, background .25s, color .25s; }
+.sr-video:hover .sr-play { transform: scale(1.1); background: var(--pf-accent); color: #fff; }
+.sr-video-live { border: 0; }
+
+/* carousel mechanics only when JS runs; without JS the steps simply stack */
+.sr-js .sr-viewport { overflow: hidden; }
+.sr-js .sr-steps { display: flex; transition: transform .7s cubic-bezier(.65, 0, .25, 1); }
+.sr-js .sr-step { flex: 0 0 100%; min-width: 0; }
+.sr-js .sr-step img { transform: scale(1); transition: transform 1s ease; }
+.sr-js .sr-step.is-active img { animation: sr-drift 9s ease-out forwards; }
+.sr-js .sr-step figcaption > * { opacity: 0; transform: translateY(8px); transition: opacity .5s ease .25s, transform .5s ease .25s; }
+.sr-js .sr-step.is-active figcaption > * { opacity: 1; transform: none; }
+@keyframes sr-drift { from { transform: scale(1); } to { transform: scale(1.035); } }
+.sr-arrow { display: none; position: absolute; top: calc(50% - 40px); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); background: rgba(10,10,14,.6); backdrop-filter: blur(6px); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; opacity: 0; transition: opacity .25s, background .25s; }
+.sr-js .sr-arrow { display: block; }
+.sr-stage:hover .sr-arrow, .sr-stage:focus-within .sr-arrow { opacity: 1; }
+.sr-arrow:hover { background: var(--pf-accent); }
+.sr-prev { left: 14px; } .sr-next { right: 14px; }
+@media (hover: none) { .sr-arrow { opacity: .85; } }
+
+.sr-dots { display: none; flex-wrap: wrap; gap: 8px; margin: 16px 0 12px; }
+.sr-js .sr-dots { display: flex; }
+.sr-dot { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 20px; font-size: 13px; background: #111318; border: 1px solid #1f222a; color: #777; cursor: pointer; font-family: var(--pf-sans); transition: border-color .2s, color .2s; }
+.sr-dot i { font-style: normal; color: var(--pf-accent); }
+.sr-dot:hover { border-color: var(--pf-accent); color: var(--pf-text-primary); }
+.sr-dot.is-active { border-color: var(--pf-accent); color: var(--pf-text-primary); }
+.sr-dot span { display: none; }
+.sr-dot.is-active span { display: inline; }
+@media (min-width: 760px) { .sr-dot span { display: inline; } }
+.sr-dot::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--pf-accent); transform: scaleX(0); transform-origin: left; }
+.sr-playing .sr-dot.is-active::after { animation: sr-fill 6s linear forwards; }
+.sr-paused .sr-dot.is-active::after { animation-play-state: paused; }
+@keyframes sr-fill { to { transform: scaleX(1); } }
+
+/* reveal on first view */
+.sr-js .sr-bay .sr-head, .sr-js .sr-bay .sr-stage { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.sr-js .sr-bay.sr-in .sr-head, .sr-js .sr-bay.sr-in .sr-stage { opacity: 1; transform: none; }
+.sr-js .sr-bay.sr-in .sr-stage { transition-delay: .12s; }
+
+.sr-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.sr-cta { padding: 8px 18px; border-radius: 20px; border: 1px solid var(--pf-accent); color: var(--pf-accent); font-size: 13px; text-decoration: none; }
+.sr-cta:hover { background: var(--pf-accent); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-js .sr-steps, .sr-js .sr-step img, .sr-js .sr-step figcaption > *, .sr-js .sr-bay .sr-head, .sr-js .sr-bay .sr-stage { transition: none; animation: none !important; }
+  .sr-js .sr-bay .sr-head, .sr-js .sr-bay .sr-stage { opacity: 1; transform: none; }
+  .sr-playing .sr-dot.is-active::after { animation: none; }
+}
+@media (min-width: 900px) { .sr-section { padding-left: 110px; padding-right: 5%; } }

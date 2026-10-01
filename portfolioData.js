@@ -18,7 +18,7 @@ export const portfolioProjects = [
             'A two-part product for wealth-management software: a double-entry ledger core and a document-intelligence chat over investment-advisory contracts. ' +
             'The ledger enforces balance invariants and append-only history inside Postgres 18, with idempotent postings, compensating reversals and versioned household fee schedules. ' +
             'The chat layer parses PDFs locally with Docling, tokenises PII with Presidio, retrieves with hybrid search on Pinecone, and runs a LangGraph agent that never calculates: numbers are verified against citations before display. ' +
-            'A contract-versus-billing fee-leakage tool proposes corrections that post only after human approval. ' +
+            'A contract-versus-billing reconciliation tool flags fee mismatches and proposes a balanced correcting journal entry; every AI decision is audit-logged, and in the public demo the human approval step is shown but nothing is written to the ledger. ' +
             'Built solo with FastAPI, SQLAlchemy 2.0, React 19 and TypeScript, Langfuse tracing, a public demo mode with rate limiting, and a 258-commit history.',
                 decisions: [
             { title: 'The model never calculates', detail: 'Totals are computed by tools, and a verification gate checks every number, citation and absence claim before an answer is shown.' },
