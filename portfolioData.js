@@ -60,24 +60,24 @@ export const portfolioProjects = [
     {
         projectId: 'postair-content-sharing',
         category: 'backend',
-        shortDesc: 'Sub-50ms p99 content distribution with Transactional Outbox',
-        type: 'Backend System',
-        year: '2024',
-        thumbWord: 'STREAM',
+        shortDesc: 'Content platform with 3-tier hybrid AI search and graceful degradation',
+        type: 'Fullstack + AI',
+        year: '2026',
+        thumbWord: 'SEARCH',
         thumbGradient: 'linear-gradient(135deg,#080b14 0%,#0a1020 100%)',
         highlights: [
-            { title: 'Redis Streams', detail: 'Decoupled I/O from event loop — sub-50ms p99 under load' },
-            { title: 'Transactional Outbox', detail: 'Guaranteed consistency across MongoDB and Kafka' },
-            { title: 'Thundering Herd', detail: 'Back-pressure + async messaging prevents cascade failures' },
-            { title: 'Atomic State', detail: 'React Context optimized for lean re-render cycles' },
+            { title: 'Hybrid Search', detail: '3 tiers: keyword, Reciprocal Rank Fusion over Qdrant vectors, and LLM query expansion' },
+            { title: 'Partial Failure', detail: 'Per-leg degraded_legs contract so one failing search leg never breaks the response' },
+            { title: 'Resilient Backend', detail: 'Node/Express 5 with BullMQ jobs, Redis failover, rate limiting and an exact-match cache' },
+            { title: 'Reactive Frontend', detail: 'Angular 21 signals + RxJS, event bus and IntersectionObserver-driven feeds' },
         ],
-        title: 'Postair: High-Throughput Content Engine',
+        title: 'Postair: Content Platform with Hybrid AI Search',
         description:
-            'An enterprise-grade content distribution platform architected to solve the "thundering herd" problem in real-time sharing. ' +
-            'Utilizes a non-blocking Node.js core with Redis Streams to decouple heavy I/O operations from the main event loop, ensuring sub-50ms p99 latency under load. ' +
-            'Implemented the Transactional Outbox pattern to guarantee data consistency across MongoDB and Kafka, and optimized frontend delivery using React Context for atomic auth state and efficient re-render cycles.' +
-            'reducing p99 latency by 48% through aggressive caching and lean query optimization.',
-        keywords: ['Node.js', 'Redis Streams', 'EDA', 'MongoDB', 'Performance Optimization'],
+            'A multi-service content-sharing platform: Angular 21 frontend, Node/Express 5 API, a Python/Flask search service, MongoDB, Qdrant and Redis, deployed across Vercel and Railway with Doppler-managed secrets. ' +
+            'The search pipeline layers keyword matching, Reciprocal Rank Fusion over vector results and LLM query expansion, with Exa-over-MCP web search and an exact-match Redis cache. ' +
+            'Every search leg reports through a degraded_legs contract so the UI can show partial results instead of failing. ' +
+            'Backed by ADR-driven architecture, OpenAPI docs, feature-flag kill switches and a Vitest regression suite recovered after a real production bug was caught.',
+        keywords: ['Angular', 'Node.js', 'Qdrant', 'Redis', 'Hybrid Search', 'MongoDB'],
         images: [
             'ng-postair.webp',
         ],
@@ -86,25 +86,28 @@ export const portfolioProjects = [
     },
     {
         projectId: 'ai-healthcare-city-monitor',
-        category: 'cloud',
-        shortDesc: 'Real-time ER congestion prediction across Toronto hospitals',
-        type: 'Cloud ML',
-        year: '2024',
-        thumbWord: 'PREDICT',
+        category: 'ai',
+        shortDesc: 'Toronto health-triage system: LLM triage, graph grounding, AWS data pipeline',
+        type: 'AI System',
+        year: '2026',
+        thumbWord: 'TRIAGE',
         thumbGradient: 'linear-gradient(135deg,#0c0814 0%,#140d20 100%)',
         highlights: [
-            { title: 'SageMaker', detail: 'Real-time ambulance telemetry fed to AWS SageMaker inference endpoints' },
-            { title: 'Dynamic Scheduling', detail: 'Planners reallocate staff using live congestion scores' },
-            { title: 'Leaflet Maps', detail: 'Hospital heatmap with real-time updates across Toronto' },
-            { title: 'Event-driven', detail: 'Streaming telemetry pipeline for low-latency model calls' },
+            { title: 'LLM Triage', detail: 'Two-pass tool-orchestrated agent with prompt-injection defense and a provider-agnostic LLM layer' },
+            { title: 'Evaluation', detail: 'Two eval tracks incl. DeepEval faithfulness 0.956; GraphRAG v1 vs v2 compared end to end' },
+            { title: 'Data Pipeline', detail: 'S3, Lambda, EventBridge and dbt on AWS SAM, with 13/13 automated data-quality tests' },
+            { title: 'Shipped Solo', detail: '400+ commits, 40 PRs and 17 sprints in about 10 weeks, with PostGIS facility search' },
         ],
-        title: 'AI Healthcare City Monitor',
+        title: 'MediCoord AI: Toronto Health Coordination',
         description:
-            'End‑to‑end platform that predicts emergency‑room congestion across Toronto hospitals. '
-            + 'Combines real‑time ambulance telemetry, AWS SageMaker inference, and Leaflet maps to help city planners reallocate staff dynamically.',
-        keywords: ['AI', 'AWS Cloud ML deployment', 'Dynamic scheduling', 'Leaflet Map'],
+            'A city-wide health coordination system: a patient describes symptoms in chat, an LLM agent classifies severity, a deterministic backend finds the nearest eligible facility and the result renders on a live map with routing. ' +
+            'Rebuilt from a Toronto Tech Week hackathon prototype into a deployed, authenticated, observability-instrumented system in about ten weeks as sole platform engineer. ' +
+            'Includes a FastAPI backend on Postgres with PostGIS and RLS, a SNOMED-CT/Neo4j GraphRAG experiment evaluated against a static lookup and against no grounding, and an event-driven AWS data pipeline. ' +
+            'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy.',
+        keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
         images: [
             'city_health_map.webp',
+            'aicoordinator_arch.webp',
         ],
         live_url: 'https://medicoord.nknext.dev/',
         github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
