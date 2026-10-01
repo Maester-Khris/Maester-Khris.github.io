@@ -20,9 +20,19 @@ export const portfolioProjects = [
             'The chat layer parses PDFs locally with Docling, tokenises PII with Presidio, retrieves with hybrid search on Pinecone, and runs a LangGraph agent that never calculates: numbers are verified against citations before display. ' +
             'A contract-versus-billing fee-leakage tool proposes corrections that post only after human approval. ' +
             'Built solo with FastAPI, SQLAlchemy 2.0, React 19 and TypeScript, Langfuse tracing, a public demo mode with rate limiting, and a 258-commit history.',
-        keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
+                decisions: [
+            { title: 'The model never calculates', detail: 'Totals are computed by tools, and a verification gate checks every number, citation and absence claim before an answer is shown.' },
+            { title: 'Invariants live in Postgres', detail: 'Balance rules are deferred constraint triggers and history is append-only via triggers and revoked privileges, so a buggy app cannot corrupt the ledger.' },
+            { title: 'Eval integrity', detail: 'A 30-case golden set with an enforced go/no-go gate and config-hashed reports; an eval contamination was found and corrected.' },
+        ],
+keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
         images: [
             'ledgerlens-chat.webp',
+            'shots/fintech/2026-09-29_05-22-30.webp',
+            'shots/fintech/2026-09-22_19-13-56.webp',
+            'shots/fintech/2026-09-22_19-28-09.webp',
+            'shots/fintech/2026-09-24_22-22-35.webp',
+            'shots/fintech/2026-09-22_19-22-15.webp',
         ],
         live_url: 'https://ledgerlens.nknext.dev',
         github: ''
@@ -47,13 +57,23 @@ export const portfolioProjects = [
             'Rebuilt from a Toronto Tech Week hackathon prototype into a deployed, authenticated, observability-instrumented system in about ten weeks as sole platform engineer. ' +
             'Includes a FastAPI backend on Postgres with PostGIS and RLS, a SNOMED-CT/Neo4j GraphRAG experiment evaluated against a static lookup and against no grounding, and an event-driven AWS data pipeline. ' +
             'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy.',
-        keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
+                decisions: [
+            { title: 'Best retrieval, worst triage', detail: 'On a small vignette set, the static lookup with 100% isolated retrieval hit-rate produced the worst end-to-end triage accuracy of three legs, below no grounding at all.' },
+            { title: 'The model never invents a facility', detail: 'One LLM pass classifies severity, a deterministic backend finds the real facility, and a second pass writes the reply.' },
+            { title: 'Provider swap without downtime', detail: 'A single LLM interface (Groq default, Anthropic fallback) let a deprecated model ID be replaced without an outage.' },
+        ],
+keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
         images: [
             'medicoord-landing.webp',
+            'shots/medicoord/2026-07-08_15-58-51.webp',
+            'shots/medicoord/2026-09-10_08-22-21.webp',
+            'shots/medicoord/2026-09-10_09-38-09.webp',
+            'shots/medicoord/2026-08-03_22-10-48.webp',
             'aicoordinator_arch.webp',
         ],
         live_url: 'https://medicoord.nknext.dev/',
-        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator'
+        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator',
+        case_study_url: 'https://medicoord.nknext.dev/for-engineers'
     },
     {
         projectId: 'postair-content-sharing',
@@ -75,9 +95,19 @@ export const portfolioProjects = [
             'The search pipeline layers keyword matching, Reciprocal Rank Fusion over vector results and LLM query expansion, with Exa-over-MCP web search and an exact-match Redis cache. ' +
             'Every search leg reports through a degraded_legs contract so the UI can show partial results instead of failing. ' +
             'Backed by ADR-driven architecture, OpenAPI docs, feature-flag kill switches and a Vitest regression suite recovered after a real production bug was caught.',
-        keywords: ['Angular', 'Node.js', 'Qdrant', 'Redis', 'Hybrid Search', 'MongoDB'],
+                decisions: [
+            { title: 'A fusion bug caught by the eval harness', detail: 'Hybrid search was the worst of four legs on a 54-query precision@5 set because of a fusion bug; the harness caught it and RRF became the best leg after the fix.' },
+            { title: 'Embedding provider reversal', detail: 'Moved embeddings to a hosted provider, caught a silent failure, and went back to local fastembed.' },
+            { title: 'Partial failure by contract', detail: 'Each search leg reports through a degraded_legs field, so the UI shows partial results instead of an error.' },
+        ],
+keywords: ['Angular', 'Node.js', 'Qdrant', 'Redis', 'Hybrid Search', 'MongoDB'],
         images: [
             'ng-postair.webp',
+            'shots/postair/2026-08-08_16-59-19.webp',
+            'shots/postair/2026-08-09_10-48-13.webp',
+            'shots/postair/2026-08-19_23-59-05.webp',
+            'shots/postair/2026-08-19_21-13-07.webp',
+            'shots/postair/2026-09-05_21-21-47.webp',
         ],
         live_url: 'https://postair.nknext.dev/',
         github: 'https://github.com/Maester-Khris/Angular-state-management'
@@ -101,10 +131,17 @@ export const portfolioProjects = [
             'An early-stage document-annotation workspace: upload a PDF, mark regions to capture or ignore, and OCR the captures. The goal is answers that cite the exact page and region they came from. ' +
             'Built on React 18 and Vite with a FastAPI and SQLite backend. The UI was rebuilt against design mocks in a focused sprint, including an annotation inspector and a pipeline status bar. ' +
             'The backend originated in a take-home exercise; retrieval and question answering are still on the roadmap.',
-        keywords: ['React', 'FastAPI', 'OCR', 'pdf.js', 'SQLite'],
+                decisions: [
+            { title: 'The UI only claims what exists', detail: 'The unbuilt answer flow is shown as a placeholder instead of faked; the last image is the planned retrieval design, not shipped code.' },
+            { title: 'Coordinate math with a self-check', detail: 'PDF-to-pixel bounding-box conversion ships with a self-check so captured regions line up with the page.' },
+            { title: 'Measure OCR before building on it', detail: 'A CER/WER harness scores OCR quality before retrieval is layered on top.' },
+        ],
+keywords: ['React', 'FastAPI', 'OCR', 'pdf.js', 'SQLite'],
         images: [
             'docciter-workspace.webp',
             'docciter-annotations.webp',
+            'shots/docciter/2026-09-13_14-05-01.webp',
+            'shots/docciter/2026-09-02_13-49-45.webp',
         ],
         live_url: '',
         github: ''

@@ -300,8 +300,39 @@ document.addEventListener("DOMContentLoaded", () => {
         "</div>"
       : "";
 
+    const decisions = (project && project.decisions) || [];
+    const decHtml = decisions.length
+      ? '<div class="pf-modal-divider"></div>' +
+        '<span class="pf-modal-section-label">Key engineering decisions</span>' +
+        '<div class="pf-highlights-grid pf-highlights-grid--stack">' +
+        decisions
+          .map(
+            (x) =>
+              '<div class="pf-highlight-cell">' +
+              '<div class="pf-highlight-header">' +
+              '<span class="pf-highlight-dot"></span>' +
+              '<span class="pf-highlight-title">' +
+              x.title +
+              "</span>" +
+              "</div>" +
+              '<p class="pf-highlight-detail">' +
+              x.detail +
+              "</p>" +
+              "</div>",
+          )
+          .join("") +
+        "</div>"
+      : "";
+
     const rawDesc = project ? project.description : "";
     const descHtml = typeof rawDesc === "string" ? rawDesc : "";
+
+    const caseBtn =
+      project && project.case_study_url
+        ? '<a href="' +
+          project.case_study_url +
+          '" target="_blank" rel="noopener" class="pf-btn-ghost">Case studies</a>'
+        : "";
 
     const githubBtn = d.github
       ? '<a href="' +
@@ -339,12 +370,14 @@ document.addEventListener("DOMContentLoaded", () => {
       descHtml +
       "</div>" +
       hlHtml +
+      decHtml +
       "</div>" +
       '<div class="pf-modal-footer">' +
       '<span class="pf-modal-year">' +
       d.year +
       "</span>" +
       '<div class="pf-modal-actions">' +
+      caseBtn +
       githubBtn +
       liveBtn +
       "</div>" +
