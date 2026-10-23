@@ -10,8 +10,8 @@ export const portfolioProjects = [
         highlights: [
             { title: 'Ledger Core', detail: 'Idempotent postings, balance invariants enforced inside Postgres, append-only history' },
             { title: 'Verified Answers', detail: 'LangGraph agent whose numbers are machine-checked against its citations' },
-            { title: 'Privacy', detail: 'Local Docling parsing with Presidio PII tokenisation before any model call' },
-            { title: 'Eval Gate', detail: '30-case golden set with an enforced go/no-go gate; 387 backend tests passing' },
+            { title: 'Privacy', detail: 'Local Docling parsing with Presidio PII tokenisation before any model call; error reports scrubbed of user text' },
+            { title: 'Eval Gate', detail: '49-question golden set with a pass/fail release gate; corpus-wide check of 277 questions over 102 SEC contracts: 94.8% citation recall, 79.4% correct (95% CI 72.8-84.8, one run)' },
         ],
         title: 'LedgerLens: Fintech Ledger + Document Intelligence',
         description:
@@ -19,11 +19,12 @@ export const portfolioProjects = [
             'The ledger enforces balance invariants and append-only history inside Postgres 18, with idempotent postings, compensating reversals and versioned household fee schedules. ' +
             'The chat layer parses PDFs locally with Docling, tokenises PII with Presidio, retrieves with hybrid search on Pinecone, and runs a LangGraph agent that never calculates: numbers are verified against citations before display. ' +
             'A contract-versus-billing reconciliation tool flags fee mismatches and proposes a balanced correcting journal entry; every AI decision is audit-logged, and in the public demo the human approval step is shown but nothing is written to the ledger. ' +
-            'Built solo with FastAPI, SQLAlchemy 2.0, React 19 and TypeScript, Langfuse tracing, a public demo mode with rate limiting, and a 258-commit history.',
+            'Built solo with FastAPI, SQLAlchemy 2.0, React 19 and TypeScript, Langfuse tracing, and a public demo mode with rate limiting and admission control. ' +
+            'Latest sprint was measurement: the corpus grew from 4 to 102 contracts, median cost fell to $0.0093 per answer (prompt 24k to 4.4k tokens), and a free-tools security review fixed 3 high dependency findings. Load numbers are local with a mocked provider.',
                 decisions: [
             { title: 'The model never calculates', detail: 'Totals are computed by tools, and a verification gate checks every number, citation and absence claim before an answer is shown.' },
             { title: 'Invariants live in Postgres', detail: 'Balance rules are deferred constraint triggers and history is append-only via triggers and revoked privileges, so a buggy app cannot corrupt the ledger.' },
-            { title: 'Eval integrity', detail: 'A 30-case golden set with an enforced go/no-go gate and config-hashed reports; an eval contamination was found and corrected.' },
+            { title: 'Eval integrity', detail: 'A 49-case golden gate with config-hashed reports, and a 277-case corpus-wide eval reported with 95% intervals. It was measured at a stricter threshold than the deployed one, and 26 of 36 wrong answers were retrieval failures.' },
         ],
 keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
         images: [
@@ -35,12 +36,12 @@ keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
             'shots/fintech/2026-09-22_19-22-15.webp',
         ],
         live_url: 'https://ledgerlens.nknext.dev',
-        github: ''
+        github: 'https://github.com/Maester-Khris/ledger-lens'
     },
     {
         projectId: 'ai-healthcare-city-monitor',
         category: 'ai',
-        shortDesc: 'Toronto health-triage system: LLM triage, graph grounding, AWS data pipeline',
+        shortDesc: 'Toronto health-triage system: LLM triage, graph grounding, AWS data pipeline, load-tested on staging at about 35 messages/s per server',
         type: 'AI System',
         year: '2026',
         thumbWord: 'TRIAGE',
@@ -49,20 +50,21 @@ keywords: ['FastAPI', 'PostgreSQL', 'LangGraph', 'RAG', 'React', 'Langfuse'],
             { title: 'LLM Triage', detail: 'Two-pass tool-orchestrated agent with prompt-injection defense and a provider-agnostic LLM layer' },
             { title: 'Evaluation', detail: 'Two eval tracks incl. DeepEval faithfulness 0.956; GraphRAG v1 vs v2 compared end to end' },
             { title: 'Data Pipeline', detail: 'S3, Lambda, EventBridge and dbt on AWS SAM, with 13/13 automated data-quality tests' },
-            { title: 'Shipped Solo', detail: '400+ commits, 40 PRs and 17 sprints in about 10 weeks, with PostGIS facility search' },
+            { title: 'Scale & Shipped Solo', detail: 'Load-tested on a 1 vCPU staging server with a mock AI provider calibrated against 1,935 real calls (p95 within 2%): about 35 messages/s, 95% of accepted replies under 3.3 s at 2.5x capacity, 93,322 messages in a 1-hour run with zero failures. The 1,000+ concurrent target was not reached. 600+ commits, 22 sprints, solo' },
         ],
         title: 'MediCoord AI: Toronto Health Coordination',
         description:
             'A city-wide health coordination system: a patient describes symptoms in chat, an LLM agent classifies severity, a deterministic backend finds the nearest eligible facility and the result renders on a live map with routing. ' +
             'Rebuilt from a Toronto Tech Week hackathon prototype into a deployed, authenticated, observability-instrumented system in about ten weeks as sole platform engineer. ' +
             'Includes a FastAPI backend on Postgres with PostGIS and RLS, a SNOMED-CT/Neo4j GraphRAG experiment evaluated against a static lookup and against no grounding, and an event-driven AWS data pipeline. ' +
-            'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy.',
+            'The eval work produced a counter-intuitive, honestly reported finding: the best retrieval did not give the best triage accuracy. ' +
+            'The latest sprint load-tested one staging server with a mock provider calibrated against real calls: about 35 turns/s, 93,322 turns in an hour with none failed, and admission control holding accepted p95 at 3.3 s at 2.5x capacity. The 1,000-2,000 concurrent-turn goal was not reached.',
                 decisions: [
             { title: 'Best retrieval, worst triage', detail: 'On a small vignette set, the static lookup with 100% isolated retrieval hit-rate produced the worst end-to-end triage accuracy of three legs, below no grounding at all.' },
             { title: 'The model never invents a facility', detail: 'One LLM pass classifies severity, a deterministic backend finds the real facility, and a second pass writes the reply.' },
             { title: 'Provider swap without downtime', detail: 'A single LLM interface (Groq default, Anthropic fallback) let a deprecated model ID be replaced without an outage.' },
         ],
-keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
+keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals', 'Load Testing'],
         images: [
             'medicoord-landing.webp',
             'shots/medicoord/2026-07-08_15-58-51.webp',
@@ -72,7 +74,7 @@ keywords: ['FastAPI', 'LLM Agents', 'GraphRAG', 'PostGIS', 'AWS', 'Evals'],
             'aicoordinator_arch.webp',
         ],
         live_url: 'https://medicoord.nknext.dev/',
-        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator',
+        github: 'https://github.com/Maester-Khris/medicoordai',
         case_study_url: 'https://medicoord.nknext.dev/for-engineers'
     },
     {
@@ -256,7 +258,7 @@ keywords: ['React', 'FastAPI', 'OCR', 'pdf.js', 'SQLite'],
         keywords: ['GCP', 'Vertex AI', 'LLM Fine-tuning', 'Ml Model deployment'],
         images: ['vertexai.webp', 'llm_finetuning.webp', 'aicoordinator_arch.webp'],
         live_url: '',
-        github: 'https://github.com/Maester-Khris/ai-healthtech-coordinator/tree/main/fine_tuning_training'
+        github: 'https://github.com/Maester-Khris/medicoordai/tree/main/fine_tuning_training'
     },
     {
         projectId: 'firo-financial-csr-bot',

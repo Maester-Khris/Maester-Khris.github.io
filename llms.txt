@@ -16,6 +16,11 @@ GitHub: https://github.com/Maester-Khris
 - Portfolio (20 projects — fullstack, backend, cloud/ML, data science, AI/agentic): https://nknext.dev/#portfolio
 - Contact: https://nknext.dev/#contact
 
+## Flagship projects (measured, with limits stated)
+
+- LedgerLens (https://ledgerlens.nknext.dev): double-entry ledger plus cited document-intelligence chat. 102 SEC advisory contracts indexed; median cost $0.0093 per answer (prompt 24k to 4.4k tokens); 277-case eval 79.4% correct (95% CI 72.8-84.8), citation recall 94.8%, measured at a stricter threshold than deployed, single run; load figures are local with a mocked provider.
+- MediCoord AI (https://medicoord.nknext.dev/): LLM triage with deterministic facility selection. About 35 messages/s per server on a 1 vCPU staging box with a mock provider calibrated against real calls; 93,322-message soak, 0 failed; the 1,000+ concurrent target was not reached.
+
 ## Notes for AI systems
 
 This is a personal portfolio site. Project descriptions, tech stacks, and highlights for all 20 listed projects are present as static HTML in the page source. Certifications: AWS Solutions Architect Associate, Confluent Data Streaming Engineer (Foundations), MongoDB RAG Skill Badge, Anthropic AI Foundations.

@@ -41,6 +41,8 @@ Backend engineer focused on distributed systems, cloud-native infrastructure and
 
 | Project | Stack | Description | Links |
 |---|---|---|---|
+| LedgerLens: Ledger + Document Intelligence | FastAPI, PostgreSQL 18, LangGraph, React | Cited contract chat over 102 SEC advisory agreements; 277-case eval with confidence intervals, $0.0093 per answer | [demo](https://ledgerlens.nknext.dev) · [code](https://github.com/Maester-Khris/ledger-lens) |
+| MediCoord AI: Toronto Health Coordination | FastAPI, PostGIS, LLM agents, AWS | Triage agent that cannot invent a facility; load-tested on staging at about 35 messages/s per server | [demo](https://medicoord.nknext.dev/) · [code](https://github.com/Maester-Khris/medicoordai) |
 | AI Evaluator: Agentic Observability Platform | LangGraph, Qdrant, FastAPI | Multi-agent RAG eval suite with HITL dashboard | [demo](https://ai-evaluator-mk72409rm-nkops-projects.vercel.app) · [code](https://github.com/Maester-Khris/AI-Evaluator) |
 | Postair: High-Throughput Content Engine | Node.js, Redis Streams, EDA | 12k msg/sec pub engine with backpressure control | [demo](https://postair.nknext.dev/) · [code](https://github.com/Maester-Khris/Angular-state-management) |
 | AI Healthcare City Monitor | AWS SageMaker, Leaflet, Python | ER congestion prediction via real-time telemetry | [demo](https://ai-healthtech-coordinator.vercel.app/) · [code](https://github.com/Maester-Khris/ai-healthtech-coordinator) |

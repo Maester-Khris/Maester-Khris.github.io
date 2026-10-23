@@ -10,10 +10,10 @@ export const showroomBays = [
         pitch: 'AI proposes, a human approves, the ledger stays correct.',
         problem: 'Advisers need answers from contracts they can trust, and corrections that never touch the books unchecked.',
         system: 'Document-intelligence chat over advisory contracts with a verification gate, on top of a double-entry ledger.',
-        numbers: [['387', 'backend tests'], ['30', 'case eval gate'], ['258', 'commits']],
+        numbers: [['102', 'SEC contracts indexed'], ['49', 'question eval gate'], ['$0.0093', 'median cost per answer']],
         steps: [
-            { img: 'showroom/ll-1-dashboard.webp', title: 'Landing', proves: 'A working product shell, with the ledger and review queue next to the chat.' },
-            { img: 'showroom/ll-2-contracts.webp', title: 'Contracts in scope', proves: 'Parsed contracts become scoped context, with suggested questions drawn from them.' },
+            { img: 'showroom/ll-1-dashboard.webp', title: 'Dashboard', proves: 'Corpus health at a glance: 102 of 102 contracts indexed, 817 extracted fields waiting for a person, and the golden-set eval result.' },
+            { img: 'showroom/ll-2-contracts.webp', title: '102 contracts, one pipeline', proves: 'Every contract shows its steps: stored, parsed and PII-tokenised locally, fee terms extracted and verified, then indexed.' },
             { img: 'showroom/ll-3-cited-answer.webp', title: 'Cited answer', proves: 'Every figure in the answer links to the page it came from; the model does not calculate.' },
             { img: 'showroom/ll-4-approval.webp', title: 'Human approval gate', proves: 'A fee mismatch becomes a proposed balanced journal entry that waits for a person. Demo mode: nothing is written.' },
             { img: 'showroom/ll-5-audit.webp', title: 'Audit trail', proves: 'Each AI decision is logged with tool, model, prompt hash and inputs.' },
@@ -31,7 +31,7 @@ export const showroomBays = [
         pitch: 'An AI triage that is not allowed to invent a clinic.',
         problem: 'Patients need a nearby, appropriate facility, and a language model alone will happily make one up.',
         system: 'One LLM pass classifies severity, a deterministic PostGIS backend picks a real facility, a second pass writes the reply.',
-        numbers: [['0.956', 'DeepEval faithfulness'], ['13/13', 'data-quality tests'], ['400+', 'commits']],
+        numbers: [['0.956', 'DeepEval faithfulness'], ['35/s', 'messages per server'], ['600+', 'commits']],
         steps: [
             { img: 'showroom/mc-1-map.webp', title: 'Chat and facility map', proves: 'The city\'s 308 facilities are real records on a live map, next to the assistant.' },
             { img: 'showroom/mc-2-triage.webp', title: 'Follow-up questions', proves: 'The agent asks targeted clarifying questions before deciding severity.' },

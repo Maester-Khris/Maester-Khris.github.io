@@ -2510,6 +2510,9 @@
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 40px; }
 }
 
+.skills-proof { padding-top: 8px; padding-bottom: 32px; }
+.skills-proof .hero-stat-num { color: var(--hero-text, #f5e6c8); }
+
 /* ---- Showroom ---- */
 .sr-section { padding-top: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--pf-border); }
 .sr-note { color: var(--pf-text-muted); font-size: 13px; margin: 8px 0 0; }
